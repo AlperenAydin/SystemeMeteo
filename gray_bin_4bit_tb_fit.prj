@@ -1,0 +1,2 @@
+vhdl work "netgen/fit/gray_bin_4bit_timesim.vhd"
+vhdl work "gray_bin_4bit_tb.vhd"

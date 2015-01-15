@@ -1,0 +1,47 @@
+Pin Freeze File:  version P.20131013
+
+2C64A44VQ XC2C64A-7-VQ44
+code_select S:PIN23
+weathercock<0> S:PIN22
+weathercock<1> S:PIN21
+weathercock<2> S:PIN20
+weathercock<3> S:PIN19
+code_display<0> S:PIN38
+code_display<1> S:PIN37
+code_display<2> S:PIN28
+code_display<3> S:PIN27
+wind_dir<0> S:PIN36
+wind_dir<1> S:PIN40
+wind_dir<2> S:PIN41
+wind_dir<3> S:PIN42
+wind_dir<4> S:PIN43
+wind_dir<5> S:PIN44
+wind_dir<6> S:PIN1
+wind_dir<7> S:PIN2
+wind_dir<8> S:PIN3
+wind_dir<9> S:PIN29
+wind_dir<10> S:PIN34
+wind_dir<11> S:PIN33
+wind_dir<12> S:PIN32
+wind_dir<13> S:PIN31
+wind_dir<14> S:PIN30
+wind_dir<15> S:PIN39
+
+
+;The remaining section of the .gyd file is for documentation purposes only.
+;It shows where your internal equations were placed in the last successful fit.
+
+PARTITION FB1_1 code_display<0> code_display<1> wind_dir<0>
+PARTITION FB1_9 wind_dir<10> wind_dir<11> wind_dir<12> wind_dir<13>
+		 wind_dir<14>
+
+PARTITION FB2_1 wind_dir<15> wind_dir<1>
+PARTITION FB2_5 wind_dir<2> wind_dir<3> wind_dir<4> wind_dir<5>
+		
+PARTITION FB2_10 wind_dir<6>
+PARTITION FB2_12 wind_dir<7> wind_dir<8>
+
+PARTITION FB3_1 wind_dir<9> code_display<2> code_display<3>
+
+
+

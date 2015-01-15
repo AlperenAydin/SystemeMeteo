@@ -1,0 +1,4 @@
+vhdl work "mux_2x1x4bit.vhd"
+vhdl work "gray_decoder_4bit.vhd"
+vhdl work "gray_bin_4bit.vhd"
+vhdl work "decoder.vhd"

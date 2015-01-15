@@ -1,0 +1,9 @@
+xst -intstyle ise -ifn "/share/users/alperen.aydin/home/TPElec/ELN1/SysMeteo/decoder.xst" -ofn "/share/users/alperen.aydin/home/TPElec/ELN1/SysMeteo/decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -i -p xc2c64a-VQ44-7 decoder.ngc decoder.ngd  
+cpldfit -intstyle ise -p xc2c64a-7-VQ44 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 decoder.ngd 
+tsim -intstyle ise decoder decoder.nga 
+hprep6 -s IEEE1149 -i decoder 
+XSLTProcess decoder_build.xml 
+XSLTProcess decoder_build.xml 
+XSLTProcess decoder_build.xml 
+XSLTProcess decoder_build.xml 

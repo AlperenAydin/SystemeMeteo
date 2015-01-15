@@ -1,0 +1,424 @@
+<html><head><link type='text/css' href='style.css' rel='stylesheet'></head><body class='pgBgnd'>
+<h3 align='center'>Equations</h3>
+<table width='90%' align='center' border='1' cellpadding='0' cellspacing='0'>
+<tr><td>
+</td></tr><tr><td>
+********** Mapped Logic **********
+</td></tr><tr><td>
+FDCPE_U1/U_counter_5bit/count_int0: FDCPE port map (U1/U_counter_5bit/count_int(0),U1/U_counter_5bit/count_int_D(0),clock,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;U1/U_counter_5bit/count_int_D(0) <= ((NOT U1/U_counter_5bit/counter_rst_delay AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_counter_5bit/count_int(0) AND NOT U1/counter_ena)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT U1/U_counter_5bit/counter_rst_delay AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT U1/U_counter_5bit/count_int(0) AND U1/counter_ena));
+</td></tr><tr><td>
+FTCPE_U1/U_counter_5bit/count_int1: FTCPE port map (U1/U_counter_5bit/count_int(1),U1/U_counter_5bit/count_int_T(1),clock,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;U1/U_counter_5bit/count_int_T(1) <= ((U1/U_counter_5bit/counter_rst_delay AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_counter_5bit/count_int(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT U1/U_counter_5bit/counter_rst_delay AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_counter_5bit/count_int(0) AND U1/counter_ena));
+</td></tr><tr><td>
+FTCPE_U1/U_counter_5bit/count_int2: FTCPE port map (U1/U_counter_5bit/count_int(2),U1/U_counter_5bit/count_int_T(2),clock,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;U1/U_counter_5bit/count_int_T(2) <= ((U1/U_counter_5bit/counter_rst_delay AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_counter_5bit/count_int(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT U1/U_counter_5bit/counter_rst_delay AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_counter_5bit/count_int(0) AND U1/counter_ena AND U1/U_counter_5bit/count_int(1)));
+</td></tr><tr><td>
+FTCPE_U1/U_counter_5bit/count_int3: FTCPE port map (U1/U_counter_5bit/count_int(3),U1/U_counter_5bit/count_int_T(3),clock,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;U1/U_counter_5bit/count_int_T(3) <= ((U1/U_counter_5bit/counter_rst_delay AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_counter_5bit/count_int(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT U1/U_counter_5bit/counter_rst_delay AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_counter_5bit/count_int(0) AND U1/counter_ena AND U1/U_counter_5bit/count_int(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_counter_5bit/count_int(2)));
+</td></tr><tr><td>
+FTCPE_U1/U_counter_5bit/count_int4: FTCPE port map (U1/U_counter_5bit/count_int(4),U1/U_counter_5bit/count_int_T(4),clock,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;U1/U_counter_5bit/count_int_T(4) <= ((U1/U_counter_5bit/count_int(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_counter_5bit/counter_rst_delay)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT U1/U_counter_5bit/counter_rst_delay AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_counter_5bit/count_int(0) AND U1/counter_ena AND U1/U_counter_5bit/count_int(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_counter_5bit/count_int(2) AND U1/U_counter_5bit/count_int(3)));
+</td></tr><tr><td>
+FDCPE_U1/U_counter_5bit/counter_rst_delay: FDCPE port map (U1/U_counter_5bit/counter_rst_delay,U1/counter_rst,clock,'0','0','1');
+</td></tr><tr><td>
+FTCPE_U1/U_freq_divider/count_int0: FTCPE port map (U1/U_freq_divider/count_int(0),'0',clock,'0','0','1');
+</td></tr><tr><td>
+FTCPE_U1/U_freq_divider/count_int1: FTCPE port map (U1/U_freq_divider/count_int(1),U1/U_freq_divider/count_int(0),clock,'0','0','1');
+</td></tr><tr><td>
+FTCPE_U1/U_freq_divider/count_int2: FTCPE port map (U1/U_freq_divider/count_int(2),U1/U_freq_divider/count_int_T(2),clock,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;U1/U_freq_divider/count_int_T(2) <= (U1/U_freq_divider/count_int(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(1));
+</td></tr><tr><td>
+FTCPE_U1/U_freq_divider/count_int3: FTCPE port map (U1/U_freq_divider/count_int(3),U1/U_freq_divider/count_int_T(3),clock,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;U1/U_freq_divider/count_int_T(3) <= (U1/U_freq_divider/count_int(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(1) AND U1/U_freq_divider/count_int(2));
+</td></tr><tr><td>
+FTCPE_U1/U_freq_divider/count_int4: FTCPE port map (U1/U_freq_divider/count_int(4),U1/U_freq_divider/count_int_T(4),clock,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;U1/U_freq_divider/count_int_T(4) <= (U1/U_freq_divider/count_int(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(1) AND U1/U_freq_divider/count_int(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(3));
+</td></tr><tr><td>
+FTCPE_U1/U_freq_divider/count_int5: FTCPE port map (U1/U_freq_divider/count_int(5),U1/U_freq_divider/count_int_T(5),clock,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;U1/U_freq_divider/count_int_T(5) <= (U1/U_freq_divider/count_int(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(1) AND U1/U_freq_divider/count_int(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(3) AND U1/U_freq_divider/count_int(4));
+</td></tr><tr><td>
+FTCPE_U1/U_freq_divider/count_int6: FTCPE port map (U1/U_freq_divider/count_int(6),U1/U_freq_divider/count_int_T(6),clock,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;U1/U_freq_divider/count_int_T(6) <= (U1/U_freq_divider/count_int(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(1) AND U1/U_freq_divider/count_int(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(3) AND U1/U_freq_divider/count_int(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(5));
+</td></tr><tr><td>
+FTCPE_U1/U_freq_divider/count_int7: FTCPE port map (U1/U_freq_divider/count_int(7),U1/U_freq_divider/count_int_T(7),clock,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;U1/U_freq_divider/count_int_T(7) <= (U1/U_freq_divider/count_int(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(1) AND U1/U_freq_divider/count_int(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(3) AND U1/U_freq_divider/count_int(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(5) AND U1/U_freq_divider/count_int(6));
+</td></tr><tr><td>
+FTCPE_U1/U_freq_divider/count_int8: FTCPE port map (U1/U_freq_divider/count_int(8),U1/U_freq_divider/count_int_T(8),clock,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;U1/U_freq_divider/count_int_T(8) <= (U1/U_freq_divider/count_int(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(1) AND U1/U_freq_divider/count_int(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(3) AND U1/U_freq_divider/count_int(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(5) AND U1/U_freq_divider/count_int(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(7));
+</td></tr><tr><td>
+FTCPE_U1/U_freq_divider/count_int9: FTCPE port map (U1/U_freq_divider/count_int(9),U1/U_freq_divider/count_int_T(9),clock,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;U1/U_freq_divider/count_int_T(9) <= (U1/U_freq_divider/count_int(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(1) AND U1/U_freq_divider/count_int(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(3) AND U1/U_freq_divider/count_int(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(5) AND U1/U_freq_divider/count_int(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(7) AND U1/U_freq_divider/count_int(8));
+</td></tr><tr><td>
+FTCPE_U1/U_freq_divider/count_int10: FTCPE port map (U1/U_freq_divider/count_int(10),U1/U_freq_divider/count_int_T(10),clock,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;U1/U_freq_divider/count_int_T(10) <= (U1/U_freq_divider/count_int(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(1) AND U1/U_freq_divider/count_int(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(3) AND U1/U_freq_divider/count_int(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(5) AND U1/U_freq_divider/count_int(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(7) AND U1/U_freq_divider/count_int(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(9));
+</td></tr><tr><td>
+FTCPE_U1/U_freq_divider/count_int11: FTCPE port map (U1/U_freq_divider/count_int(11),U1/U_freq_divider/count_int_T(11),clock,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;U1/U_freq_divider/count_int_T(11) <= (U1/U_freq_divider/count_int(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(10) AND U1/U_freq_divider/count_int(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(2) AND U1/U_freq_divider/count_int(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(4) AND U1/U_freq_divider/count_int(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(6) AND U1/U_freq_divider/count_int(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(8) AND U1/U_freq_divider/count_int(9));
+</td></tr><tr><td>
+FTCPE_U1/U_freq_divider/count_int12: FTCPE port map (U1/U_freq_divider/count_int(12),U1/U_freq_divider/count_int_T(12),clock,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;U1/U_freq_divider/count_int_T(12) <= (U1/U_freq_divider/count_int(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(10) AND U1/U_freq_divider/count_int(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(2) AND U1/U_freq_divider/count_int(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(4) AND U1/U_freq_divider/count_int(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(6) AND U1/U_freq_divider/count_int(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(8) AND U1/U_freq_divider/count_int(9) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(11));
+</td></tr><tr><td>
+FTCPE_U1/U_freq_divider/count_int13: FTCPE port map (U1/U_freq_divider/count_int(13),U1/U_freq_divider/count_int_T(13),clock,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;U1/U_freq_divider/count_int_T(13) <= (U1/U_freq_divider/count_int(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(10) AND U1/U_freq_divider/count_int(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(2) AND U1/U_freq_divider/count_int(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(4) AND U1/U_freq_divider/count_int(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(6) AND U1/U_freq_divider/count_int(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(8) AND U1/U_freq_divider/count_int(9) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(11) AND U1/U_freq_divider/count_int(12));
+</td></tr><tr><td>
+FTCPE_U1/U_freq_divider/count_int14: FTCPE port map (U1/U_freq_divider/count_int(14),U1/U_freq_divider/count_int_T(14),clock,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;U1/U_freq_divider/count_int_T(14) <= (U1/U_freq_divider/count_int(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(10) AND U1/U_freq_divider/count_int(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(2) AND U1/U_freq_divider/count_int(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(4) AND U1/U_freq_divider/count_int(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(6) AND U1/U_freq_divider/count_int(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(8) AND U1/U_freq_divider/count_int(9) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(11) AND U1/U_freq_divider/count_int(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(13));
+</td></tr><tr><td>
+FTCPE_U1/U_freq_divider/count_int15: FTCPE port map (U1/U_freq_divider/count_int(15),U1/U_freq_divider/count_int_T(15),clock,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;U1/U_freq_divider/count_int_T(15) <= (U1/U_freq_divider/count_int(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(10) AND U1/U_freq_divider/count_int(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(2) AND U1/U_freq_divider/count_int(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(4) AND U1/U_freq_divider/count_int(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(6) AND U1/U_freq_divider/count_int(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(8) AND U1/U_freq_divider/count_int(9) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(11) AND U1/U_freq_divider/count_int(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(13) AND U1/U_freq_divider/count_int(14));
+</td></tr><tr><td>
+FTCPE_U1/U_freq_divider/count_int16: FTCPE port map (U1/U_freq_divider/count_int(16),U1/U_freq_divider/count_int_T(16),clock,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;U1/U_freq_divider/count_int_T(16) <= (U1/U_freq_divider/count_int(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(10) AND U1/U_freq_divider/count_int(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(2) AND U1/U_freq_divider/count_int(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(4) AND U1/U_freq_divider/count_int(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(6) AND U1/U_freq_divider/count_int(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(8) AND U1/U_freq_divider/count_int(9) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(11) AND U1/U_freq_divider/count_int(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(13) AND U1/U_freq_divider/count_int(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(15));
+</td></tr><tr><td>
+FTCPE_U1/U_freq_divider/count_int17: FTCPE port map (U1/U_freq_divider/count_int(17),U1/U_freq_divider/count_int_T(17),clock,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;U1/U_freq_divider/count_int_T(17) <= (U1/U_freq_divider/count_int(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(10) AND U1/U_freq_divider/count_int(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(2) AND U1/U_freq_divider/count_int(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(4) AND U1/U_freq_divider/count_int(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(6) AND U1/U_freq_divider/count_int(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(8) AND U1/U_freq_divider/count_int(9) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(11) AND U1/U_freq_divider/count_int(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(13) AND U1/U_freq_divider/count_int(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(15) AND U1/U_freq_divider/count_int(16));
+</td></tr><tr><td>
+FTCPE_U1/U_freq_divider/count_int18: FTCPE port map (U1/U_freq_divider/count_int(18),U1/U_freq_divider/count_int_T(18),clock,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;U1/U_freq_divider/count_int_T(18) <= (U1/U_freq_divider/count_int(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(10) AND U1/U_freq_divider/count_int(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(2) AND U1/U_freq_divider/count_int(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(4) AND U1/U_freq_divider/count_int(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(6) AND U1/U_freq_divider/count_int(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(8) AND U1/U_freq_divider/count_int(9) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(11) AND U1/U_freq_divider/count_int(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(13) AND U1/U_freq_divider/count_int(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(15) AND U1/U_freq_divider/count_int(16) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(17));
+</td></tr><tr><td>
+FTCPE_U1/U_freq_divider/count_int19: FTCPE port map (U1/U_freq_divider/count_int(19),U1/U_freq_divider/count_int_T(19),clock,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;U1/U_freq_divider/count_int_T(19) <= (U1/U_freq_divider/count_int(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(10) AND U1/U_freq_divider/count_int(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(2) AND U1/U_freq_divider/count_int(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(4) AND U1/U_freq_divider/count_int(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(6) AND U1/U_freq_divider/count_int(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(8) AND U1/U_freq_divider/count_int(9) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(11) AND U1/U_freq_divider/count_int(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(13) AND U1/U_freq_divider/count_int(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(15) AND U1/U_freq_divider/count_int(16) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(17) AND U1/U_freq_divider/count_int(18));
+</td></tr><tr><td>
+FTCPE_U1/U_freq_divider/count_int20: FTCPE port map (U1/U_freq_divider/count_int(20),U1/U_freq_divider/count_int_T(20),clock,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;U1/U_freq_divider/count_int_T(20) <= (U1/U_freq_divider/count_int(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(10) AND U1/U_freq_divider/count_int(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(2) AND U1/U_freq_divider/count_int(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(4) AND U1/U_freq_divider/count_int(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(6) AND U1/U_freq_divider/count_int(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(8) AND U1/U_freq_divider/count_int(9) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(11) AND U1/U_freq_divider/count_int(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(13) AND U1/U_freq_divider/count_int(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(15) AND U1/U_freq_divider/count_int(16) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(17) AND U1/U_freq_divider/count_int(18) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(19));
+</td></tr><tr><td>
+FTCPE_U1/U_freq_divider/count_int21: FTCPE port map (U1/U_freq_divider/count_int(21),U1/U_freq_divider/count_int_T(21),clock,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;U1/U_freq_divider/count_int_T(21) <= (U1/U_freq_divider/count_int(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(10) AND U1/U_freq_divider/count_int(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(2) AND U1/U_freq_divider/count_int(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(4) AND U1/U_freq_divider/count_int(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(6) AND U1/U_freq_divider/count_int(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(8) AND U1/U_freq_divider/count_int(9) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(11) AND U1/U_freq_divider/count_int(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(13) AND U1/U_freq_divider/count_int(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(15) AND U1/U_freq_divider/count_int(16) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(17) AND U1/U_freq_divider/count_int(18) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_freq_divider/count_int(19) AND U1/U_freq_divider/count_int(20));
+</td></tr><tr><td>
+FDCPE_U1/U_risingedge_detector/anemometer_reg: FDCPE port map (U1/U_risingedge_detector/anemometer_reg,anemometer,clock,'0','0','1');
+</td></tr><tr><td>
+FDCPE_U1/counter_ena: FDCPE port map (U1/counter_ena,U1/counter_ena_D,clock,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;U1/counter_ena_D <= ((anemometer AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT U1/U_risingedge_detector/anemometer_reg)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT code_select AND NOT anemometer AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/U_risingedge_detector/anemometer_reg));
+</td></tr><tr><td>
+FDCPE_U1/counter_rst: FDCPE port map (U1/counter_rst,U1/counter_rst_D,clock,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;U1/counter_rst_D <= (NOT U1/U_freq_divider/count_int(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT U1/U_freq_divider/count_int(10) AND NOT U1/U_freq_divider/count_int(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT U1/U_freq_divider/count_int(2) AND NOT U1/U_freq_divider/count_int(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT U1/U_freq_divider/count_int(4) AND NOT U1/U_freq_divider/count_int(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT U1/U_freq_divider/count_int(6) AND NOT U1/U_freq_divider/count_int(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT U1/U_freq_divider/count_int(8) AND NOT U1/U_freq_divider/count_int(9) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT U1/U_freq_divider/count_int(11) AND NOT U1/U_freq_divider/count_int(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT U1/U_freq_divider/count_int(13) AND NOT U1/U_freq_divider/count_int(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT U1/U_freq_divider/count_int(15) AND NOT U1/U_freq_divider/count_int(16) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT U1/U_freq_divider/count_int(17) AND NOT U1/U_freq_divider/count_int(18) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT U1/U_freq_divider/count_int(19) AND NOT U1/U_freq_divider/count_int(20) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT U1/U_freq_divider/count_int(21));
+</td></tr><tr><td>
+FDCPE_U1/speed_code0: FDCPE port map (U1/speed_code(0),U1/U_counter_5bit/count_int(0),clock,'0','0',U1/counter_rst);
+</td></tr><tr><td>
+FDCPE_U1/speed_code1: FDCPE port map (U1/speed_code(1),U1/U_counter_5bit/count_int(1),clock,'0','0',U1/counter_rst);
+</td></tr><tr><td>
+FDCPE_U1/speed_code2: FDCPE port map (U1/speed_code(2),U1/U_counter_5bit/count_int(2),clock,'0','0',U1/counter_rst);
+</td></tr><tr><td>
+FDCPE_U1/speed_code3: FDCPE port map (U1/speed_code(3),U1/U_counter_5bit/count_int(3),clock,'0','0',U1/counter_rst);
+</td></tr><tr><td>
+FDCPE_U1/speed_code4: FDCPE port map (U1/speed_code(4),U1/U_counter_5bit/count_int(4),clock,'0','0',U1/counter_rst);
+</td></tr><tr><td>
+</td></tr><tr><td>
+code_wind_speed(0) <= (weathercock(0) AND NOT mode_select)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR ((mode_select AND NOT U1/speed_code(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT U1/speed_code(3) AND NOT U1/speed_code(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT mode_select AND weathercock(3) AND weathercock(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	weathercock(1) AND NOT code_select)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT mode_select AND weathercock(3) AND NOT weathercock(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT weathercock(1) AND NOT code_select)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT mode_select AND NOT weathercock(3) AND weathercock(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT weathercock(1) AND NOT code_select)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT mode_select AND NOT weathercock(3) AND NOT weathercock(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	weathercock(1) AND NOT code_select));
+</td></tr><tr><td>
+</td></tr><tr><td>
+code_wind_speed(1) <= (NOT mode_select AND weathercock(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR ((NOT mode_select AND weathercock(3) AND NOT weathercock(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT code_select)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT mode_select AND NOT weathercock(3) AND weathercock(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT code_select)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (mode_select AND NOT U1/speed_code(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT U1/speed_code(3) AND NOT U1/speed_code(2) AND NOT U1/speed_code(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (mode_select AND NOT U1/speed_code(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT U1/speed_code(3) AND NOT U1/speed_code(2) AND NOT U1/speed_code(1)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+code_wind_speed(2) <= (NOT mode_select AND weathercock(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR ((NOT mode_select AND weathercock(3) AND NOT code_select)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (mode_select AND NOT U1/speed_code(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT U1/speed_code(3) AND NOT U1/speed_code(2) AND NOT U1/speed_code(1)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+code_wind_speed(3) <= ((NOT mode_select AND weathercock(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (mode_select AND NOT U1/speed_code(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT U1/speed_code(3) AND NOT U1/speed_code(2) AND NOT U1/speed_code(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT U1/speed_code(1)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+wind_dir_speed(0) <= NOT (((mode_select AND U1/speed_code(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/speed_code(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (mode_select AND U1/speed_code(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/speed_code(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (weathercock(0) AND NOT mode_select AND NOT weathercock(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	weathercock(2) AND weathercock(1))));
+</td></tr><tr><td>
+</td></tr><tr><td>
+wind_dir_speed(1) <= NOT (((mode_select AND U1/speed_code(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/speed_code(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (mode_select AND U1/speed_code(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/speed_code(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (mode_select AND U1/speed_code(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/speed_code(0) AND U1/speed_code(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT weathercock(0) AND NOT mode_select AND NOT weathercock(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	weathercock(2) AND weathercock(1))));
+</td></tr><tr><td>
+</td></tr><tr><td>
+wind_dir_speed(2) <= NOT ((mode_select AND U1/speed_code(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR ((NOT weathercock(0) AND NOT mode_select AND NOT weathercock(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	weathercock(2) AND NOT weathercock(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (mode_select AND U1/speed_code(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT U1/speed_code(3) AND NOT U1/speed_code(2) AND NOT U1/speed_code(1))));
+</td></tr><tr><td>
+</td></tr><tr><td>
+wind_dir_speed(3) <= NOT ((mode_select AND U1/speed_code(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR ((weathercock(0) AND NOT mode_select AND NOT weathercock(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	weathercock(2) AND NOT weathercock(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (mode_select AND U1/speed_code(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT U1/speed_code(3) AND NOT U1/speed_code(2) AND NOT U1/speed_code(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT U1/speed_code(1))));
+</td></tr><tr><td>
+</td></tr><tr><td>
+wind_dir_speed(4) <= NOT (((mode_select AND U1/speed_code(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (weathercock(0) AND NOT mode_select AND NOT weathercock(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT weathercock(2) AND NOT weathercock(1))));
+</td></tr><tr><td>
+</td></tr><tr><td>
+wind_dir_speed(5) <= NOT (((mode_select AND U1/speed_code(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT weathercock(0) AND NOT mode_select AND NOT weathercock(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT weathercock(2) AND NOT weathercock(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (mode_select AND U1/speed_code(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/speed_code(2) AND U1/speed_code(0) AND U1/speed_code(1))));
+</td></tr><tr><td>
+</td></tr><tr><td>
+wind_dir_speed(6) <= NOT (((mode_select AND U1/speed_code(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (mode_select AND U1/speed_code(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/speed_code(2) AND U1/speed_code(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT weathercock(0) AND NOT mode_select AND NOT weathercock(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT weathercock(2) AND weathercock(1))));
+</td></tr><tr><td>
+</td></tr><tr><td>
+wind_dir_speed(7) <= NOT (((mode_select AND U1/speed_code(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (mode_select AND U1/speed_code(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/speed_code(2) AND U1/speed_code(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (mode_select AND U1/speed_code(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/speed_code(2) AND U1/speed_code(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (weathercock(0) AND NOT mode_select AND NOT weathercock(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT weathercock(2) AND weathercock(1))));
+</td></tr><tr><td>
+</td></tr><tr><td>
+wind_dir_speed(8) <= NOT (((mode_select AND U1/speed_code(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (mode_select AND U1/speed_code(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/speed_code(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (weathercock(0) AND NOT mode_select AND weathercock(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT weathercock(2) AND weathercock(1))));
+</td></tr><tr><td>
+</td></tr><tr><td>
+wind_dir_speed(9) <= NOT (((mode_select AND U1/speed_code(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (mode_select AND U1/speed_code(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/speed_code(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (mode_select AND U1/speed_code(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/speed_code(0) AND U1/speed_code(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT weathercock(0) AND NOT mode_select AND weathercock(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT weathercock(2) AND weathercock(1))));
+</td></tr><tr><td>
+</td></tr><tr><td>
+wind_dir_speed(10) <= NOT (((mode_select AND U1/speed_code(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (mode_select AND U1/speed_code(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/speed_code(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (mode_select AND U1/speed_code(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/speed_code(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT weathercock(0) AND NOT mode_select AND weathercock(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT weathercock(2) AND NOT weathercock(1))));
+</td></tr><tr><td>
+</td></tr><tr><td>
+wind_dir_speed(11) <= NOT (mode_select
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR ((mode_select AND NOT U1/speed_code(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT U1/speed_code(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (weathercock(0) AND NOT mode_select AND weathercock(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT weathercock(2) AND NOT weathercock(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (mode_select AND NOT U1/speed_code(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT U1/speed_code(2) AND NOT U1/speed_code(0) AND NOT U1/speed_code(1))));
+</td></tr><tr><td>
+</td></tr><tr><td>
+wind_dir_speed(12) <= NOT (((mode_select AND U1/speed_code(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (mode_select AND U1/speed_code(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (weathercock(0) AND NOT mode_select AND weathercock(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	weathercock(2) AND NOT weathercock(1))));
+</td></tr><tr><td>
+</td></tr><tr><td>
+wind_dir_speed(13) <= NOT (((mode_select AND U1/speed_code(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (mode_select AND U1/speed_code(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (mode_select AND U1/speed_code(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/speed_code(0) AND U1/speed_code(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT weathercock(0) AND NOT mode_select AND weathercock(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	weathercock(2) AND NOT weathercock(1))));
+</td></tr><tr><td>
+</td></tr><tr><td>
+wind_dir_speed(14) <= NOT (((mode_select AND U1/speed_code(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (mode_select AND U1/speed_code(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (mode_select AND U1/speed_code(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	U1/speed_code(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT weathercock(0) AND NOT mode_select AND weathercock(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	weathercock(2) AND weathercock(1))));
+</td></tr><tr><td>
+</td></tr><tr><td>
+wind_dir_speed(15) <= NOT (mode_select
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR ((mode_select AND NOT U1/speed_code(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT U1/speed_code(3) AND NOT U1/speed_code(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (weathercock(0) AND NOT mode_select AND weathercock(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	weathercock(2) AND weathercock(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (mode_select AND NOT U1/speed_code(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT U1/speed_code(3) AND NOT U1/speed_code(0) AND NOT U1/speed_code(1))));
+</td></tr><tr><td>
+</td></tr><tr><td>
+Register Legend:
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FDCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FDDCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FTCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FTDCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LDCP  (Q,D,G,CLR,PRE); 
+</td></tr><tr><td>
+</td></tr>
+</table>
+<form><span class="pgRef"><table width="90%" align="center"><tr>
+<td align="left"><input type="button" onclick="javascript:parent.leftnav.showTop()" onmouseover="window.status='goto top of page'; return true;" onmouseout="window.status=''" value="back to top"></td>
+<td align="right"><input type="button" onclick="window.print()" onmouseover="window.status='print page'; return true;" onmouseout="window.status=''" value="print page"></td>
+</tr></table></span></form>
+</body></html>

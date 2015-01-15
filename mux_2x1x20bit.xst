@@ -1,0 +1,5 @@
+set -tmpdir "/share/users/alperen.aydin/home/TPElec/ELN1/SysMeteo/xst/projnav.tmp"
+set -xsthdpdir "/share/users/alperen.aydin/home/TPElec/ELN1/SysMeteo/xst"
+elaborate
+-ifn mux_2x1x20bit.prj
+-ifmt mixed

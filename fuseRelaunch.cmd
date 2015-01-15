@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "/fs02/share/users/alperen.aydin/home/TPElec/ELN1/SysMeteo/gray_bin_4bit_tb_isim_fit.exe" -prj "/fs02/share/users/alperen.aydin/home/TPElec/ELN1/SysMeteo/gray_bin_4bit_tb_fit.prj" "work.gray_bin_4bit_tb" 

@@ -1,0 +1,225 @@
+NDS Database:  version P.20131013
+
+NDS_INFO | xbr | 2C64A44VQ | XC2C64A-7-VQ44
+
+DEVICE | 2C64A | 2C64A44VQ | 
+
+NETWORK | gray_bin_4bit | 0 | 0 | 1073758214 | 0
+
+MACROCELL_INSTANCE | NULL | binary_code<0>_MC | gray_bin_4bit_COPY_0_COPY_0 | 0 | 2 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<0>_II/UIM | 150 | ? | 0 | 0 | gray_bin_4bit_COPY_0_COPY_0 | NULL | NULL | weathercock<0>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | binary_code<1>_MC.UIM | 166 | ? | 0 | 0 | gray_bin_4bit_COPY_0_COPY_0 | NULL | binary_code<1>_MC.Q | binary_code<1>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | binary_code<0>_MC.Q | 168 | ? | 0 | 0 | gray_bin_4bit_COPY_0_COPY_0 | NULL | binary_code<0>_MC.Q | binary_code<0>_MC | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | binary_code<0>_MC.SI | binary_code<0>_MC | 0 | 2 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<0>_II/UIM | 150 | ? | 0 | 0 | gray_bin_4bit_COPY_0_COPY_0 | NULL | NULL | weathercock<0>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | binary_code<1>_MC.UIM | 166 | ? | 0 | 0 | gray_bin_4bit_COPY_0_COPY_0 | NULL | binary_code<1>_MC.Q | binary_code<1>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | binary_code<0>_MC.D1 | 148 | ? | 0 | 0 | binary_code<0>_MC | NULL | NULL | binary_code<0>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | binary_code<0>_MC.D2 | 147 | ? | 0 | 0 | binary_code<0>_MC | NULL | NULL | binary_code<0>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_TRUE | weathercock<0>_II/UIM | IV_FALSE | binary_code<1>_MC.UIM
+SPPTERM | 2 | IV_FALSE | weathercock<0>_II/UIM | IV_TRUE | binary_code<1>_MC.UIM
+
+SRFF_INSTANCE | binary_code<0>_MC.REG | binary_code<0>_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | binary_code<0>_MC.D | 146 | ? | 0 | 0 | binary_code<0>_MC | NULL | NULL | binary_code<0>_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | binary_code<0>_MC.Q | 167 | ? | 0 | 0 | binary_code<0>_MC | NULL | NULL | binary_code<0>_MC.REG | 0 | 8 | SRFF_Q
+
+INPUT_INSTANCE | 0 | 0 | NULL | weathercock<0>_II | gray_bin_4bit_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | weathercock<0> | 149 | PI | 0 | 0 | gray_bin_4bit_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | weathercock<0>_II/UIM | 150 | ? | 0 | 0 | gray_bin_4bit_COPY_0_COPY_0 | NULL | NULL | weathercock<0>_II | 0 | 5 | II_IMUX
+
+MACROCELL_INSTANCE | NULL | binary_code<1>_MC | gray_bin_4bit_COPY_0_COPY_0 | 0 | 2 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<1>_II/UIM | 155 | ? | 0 | 0 | gray_bin_4bit_COPY_0_COPY_0 | NULL | NULL | weathercock<1>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | binary_code<2>_MC.UIM | 164 | ? | 0 | 0 | gray_bin_4bit_COPY_0_COPY_0 | NULL | binary_code<2>_MC.Q | binary_code<2>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | binary_code<1>_MC.Q | 170 | ? | 0 | 0 | gray_bin_4bit_COPY_0_COPY_0 | NULL | binary_code<1>_MC.Q | binary_code<1>_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | binary_code<1>_MC.UIM | 166 | ? | 0 | 0 | gray_bin_4bit_COPY_0_COPY_0 | NULL | binary_code<1>_MC.Q | binary_code<1>_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | binary_code<1>_MC.SI | binary_code<1>_MC | 0 | 2 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<1>_II/UIM | 155 | ? | 0 | 0 | gray_bin_4bit_COPY_0_COPY_0 | NULL | NULL | weathercock<1>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | binary_code<2>_MC.UIM | 164 | ? | 0 | 0 | gray_bin_4bit_COPY_0_COPY_0 | NULL | binary_code<2>_MC.Q | binary_code<2>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | binary_code<1>_MC.D1 | 153 | ? | 0 | 0 | binary_code<1>_MC | NULL | NULL | binary_code<1>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | binary_code<1>_MC.D2 | 152 | ? | 0 | 0 | binary_code<1>_MC | NULL | NULL | binary_code<1>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_TRUE | weathercock<1>_II/UIM | IV_FALSE | binary_code<2>_MC.UIM
+SPPTERM | 2 | IV_FALSE | weathercock<1>_II/UIM | IV_TRUE | binary_code<2>_MC.UIM
+
+SRFF_INSTANCE | binary_code<1>_MC.REG | binary_code<1>_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | binary_code<1>_MC.D | 151 | ? | 0 | 0 | binary_code<1>_MC | NULL | NULL | binary_code<1>_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | binary_code<1>_MC.Q | 165 | ? | 0 | 0 | binary_code<1>_MC | NULL | NULL | binary_code<1>_MC.REG | 0 | 8 | SRFF_Q
+
+INPUT_INSTANCE | 0 | 0 | NULL | weathercock<1>_II | gray_bin_4bit_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | weathercock<1> | 154 | PI | 0 | 0 | gray_bin_4bit_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | weathercock<1>_II/UIM | 155 | ? | 0 | 0 | gray_bin_4bit_COPY_0_COPY_0 | NULL | NULL | weathercock<1>_II | 0 | 5 | II_IMUX
+
+MACROCELL_INSTANCE | NULL | binary_code<2>_MC | gray_bin_4bit_COPY_0_COPY_0 | 0 | 2 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<3>_II/UIM | 160 | ? | 0 | 0 | gray_bin_4bit_COPY_0_COPY_0 | NULL | NULL | weathercock<3>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<2>_II/UIM | 162 | ? | 0 | 0 | gray_bin_4bit_COPY_0_COPY_0 | NULL | NULL | weathercock<2>_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | binary_code<2>_MC.Q | 172 | ? | 0 | 0 | gray_bin_4bit_COPY_0_COPY_0 | NULL | binary_code<2>_MC.Q | binary_code<2>_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | binary_code<2>_MC.UIM | 164 | ? | 0 | 0 | gray_bin_4bit_COPY_0_COPY_0 | NULL | binary_code<2>_MC.Q | binary_code<2>_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | binary_code<2>_MC.SI | binary_code<2>_MC | 0 | 2 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<3>_II/UIM | 160 | ? | 0 | 0 | gray_bin_4bit_COPY_0_COPY_0 | NULL | NULL | weathercock<3>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<2>_II/UIM | 162 | ? | 0 | 0 | gray_bin_4bit_COPY_0_COPY_0 | NULL | NULL | weathercock<2>_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | binary_code<2>_MC.D1 | 158 | ? | 0 | 0 | binary_code<2>_MC | NULL | NULL | binary_code<2>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | binary_code<2>_MC.D2 | 157 | ? | 0 | 0 | binary_code<2>_MC | NULL | NULL | binary_code<2>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_TRUE | weathercock<3>_II/UIM | IV_FALSE | weathercock<2>_II/UIM
+SPPTERM | 2 | IV_FALSE | weathercock<3>_II/UIM | IV_TRUE | weathercock<2>_II/UIM
+
+SRFF_INSTANCE | binary_code<2>_MC.REG | binary_code<2>_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | binary_code<2>_MC.D | 156 | ? | 0 | 0 | binary_code<2>_MC | NULL | NULL | binary_code<2>_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | binary_code<2>_MC.Q | 163 | ? | 0 | 0 | binary_code<2>_MC | NULL | NULL | binary_code<2>_MC.REG | 0 | 8 | SRFF_Q
+
+INPUT_INSTANCE | 0 | 0 | NULL | weathercock<3>_II | gray_bin_4bit_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | weathercock<3> | 159 | PI | 0 | 0 | gray_bin_4bit_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | weathercock<3>_II/UIM | 160 | ? | 0 | 0 | gray_bin_4bit_COPY_0_COPY_0 | NULL | NULL | weathercock<3>_II | 0 | 5 | II_IMUX
+
+INPUT_INSTANCE | 0 | 0 | NULL | weathercock<2>_II | gray_bin_4bit_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | weathercock<2> | 161 | PI | 0 | 0 | gray_bin_4bit_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | weathercock<2>_II/UIM | 162 | ? | 0 | 0 | gray_bin_4bit_COPY_0_COPY_0 | NULL | NULL | weathercock<2>_II | 0 | 5 | II_IMUX
+
+OUTPUT_INSTANCE | 0 | binary_code<0> | gray_bin_4bit_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | binary_code<0>_MC.Q | 168 | ? | 0 | 0 | gray_bin_4bit_COPY_0_COPY_0 | NULL | binary_code<0>_MC.Q | binary_code<0>_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | binary_code<0> | 169 | PO | 0 | 0 | gray_bin_4bit_COPY_0_COPY_0 | NULL | NULL | binary_code<0> | 0 | 6 | OI_OUT
+
+OUTPUT_INSTANCE | 0 | binary_code<1> | gray_bin_4bit_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | binary_code<1>_MC.Q | 170 | ? | 0 | 0 | gray_bin_4bit_COPY_0_COPY_0 | NULL | binary_code<1>_MC.Q | binary_code<1>_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | binary_code<1> | 171 | PO | 0 | 0 | gray_bin_4bit_COPY_0_COPY_0 | NULL | NULL | binary_code<1> | 0 | 6 | OI_OUT
+
+OUTPUT_INSTANCE | 0 | binary_code<2> | gray_bin_4bit_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | binary_code<2>_MC.Q | 172 | ? | 0 | 0 | gray_bin_4bit_COPY_0_COPY_0 | NULL | binary_code<2>_MC.Q | binary_code<2>_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | binary_code<2> | 173 | PO | 0 | 0 | gray_bin_4bit_COPY_0_COPY_0 | NULL | NULL | binary_code<2> | 0 | 6 | OI_OUT
+
+MACROCELL_INSTANCE | NULL | binary_code<3>_MC | gray_bin_4bit_COPY_0_COPY_0 | 0 | 1 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<3>_II/UIM | 160 | ? | 0 | 0 | gray_bin_4bit_COPY_0_COPY_0 | NULL | NULL | weathercock<3>_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | binary_code<3>_MC.Q | 178 | ? | 0 | 0 | gray_bin_4bit_COPY_0_COPY_0 | NULL | binary_code<3>_MC.Q | binary_code<3>_MC | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | binary_code<3>_MC.SI | binary_code<3>_MC | 0 | 1 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<3>_II/UIM | 160 | ? | 0 | 0 | gray_bin_4bit_COPY_0_COPY_0 | NULL | NULL | weathercock<3>_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | binary_code<3>_MC.D1 | 175 | ? | 0 | 0 | binary_code<3>_MC | NULL | NULL | binary_code<3>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 1 | IV_TRUE | weathercock<3>_II/UIM
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | binary_code<3>_MC.D2 | 176 | ? | 0 | 0 | binary_code<3>_MC | NULL | NULL | binary_code<3>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | binary_code<3>_MC.REG | binary_code<3>_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | binary_code<3>_MC.D | 174 | ? | 0 | 0 | binary_code<3>_MC | NULL | NULL | binary_code<3>_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | binary_code<3>_MC.Q | 177 | ? | 0 | 0 | binary_code<3>_MC | NULL | NULL | binary_code<3>_MC.REG | 0 | 8 | SRFF_Q
+
+OUTPUT_INSTANCE | 0 | binary_code<3> | gray_bin_4bit_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | binary_code<3>_MC.Q | 178 | ? | 0 | 0 | gray_bin_4bit_COPY_0_COPY_0 | NULL | binary_code<3>_MC.Q | binary_code<3>_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | binary_code<3> | 179 | PO | 0 | 0 | gray_bin_4bit_COPY_0_COPY_0 | NULL | NULL | binary_code<3> | 0 | 6 | OI_OUT
+
+FB_INSTANCE | FOOBAR1_ | gray_bin_4bit_COPY_0_COPY_0 | 0 | 0 | 0
+FBPIN | 1 | binary_code<0>_MC | 1 | NULL | 0 | binary_code<0> | 1 | 38 | 49152
+FBPIN | 2 | binary_code<3>_MC | 1 | NULL | 0 | binary_code<3> | 1 | 37 | 49152
+FBPIN | 3 | binary_code<2>_MC | 1 | NULL | 0 | binary_code<2> | 1 | 36 | 49152
+FBPIN | 9 | binary_code<1>_MC | 1 | NULL | 0 | binary_code<1> | 1 | 34 | 53248
+FBPIN | 10 | NULL | 0 | weathercock<0>_II | 1 | NULL | 0 | 33 | 53248
+FBPIN | 11 | NULL | 0 | weathercock<1>_II | 1 | NULL | 0 | 32 | 53248
+FBPIN | 12 | NULL | 0 | weathercock<2>_II | 1 | NULL | 0 | 31 | 53248
+FBPIN | 13 | NULL | 0 | weathercock<3>_II | 1 | NULL | 0 | 30 | 51200
+
+FB_INSTANCE | FOOBAR2_ | gray_bin_4bit_COPY_0_COPY_0 | 0 | 0 | 0
+
+FB_INSTANCE | FOOBAR3_ | gray_bin_4bit_COPY_0_COPY_0 | 0 | 0 | 0
+
+FB_INSTANCE | FOOBAR4_ | gray_bin_4bit_COPY_0_COPY_0 | 0 | 0 | 0
+
+FB_INSTANCE | INPUTPINS_FOOBAR5_ | gray_bin_4bit_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR1_ | FOOBAR1__ctinst | gray_bin_4bit_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR2_ | FOOBAR2__ctinst | gray_bin_4bit_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR3_ | FOOBAR3__ctinst | gray_bin_4bit_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR4_ | FOOBAR4__ctinst | gray_bin_4bit_COPY_0_COPY_0 | 0 | 0 | 0
+
+PLA | FOOBAR1_ | 7
+PLA_TERM | 0 | 
+SPPTERM | 2 | IV_FALSE | weathercock<0>_II/UIM | IV_TRUE | binary_code<1>_MC.UIM
+PLA_TERM | 1 | 
+SPPTERM | 2 | IV_TRUE | weathercock<0>_II/UIM | IV_FALSE | binary_code<1>_MC.UIM
+PLA_TERM | 2 | 
+SPPTERM | 2 | IV_FALSE | weathercock<1>_II/UIM | IV_TRUE | binary_code<2>_MC.UIM
+PLA_TERM | 3 | 
+SPPTERM | 2 | IV_TRUE | weathercock<1>_II/UIM | IV_FALSE | binary_code<2>_MC.UIM
+PLA_TERM | 4 | 
+SPPTERM | 2 | IV_FALSE | weathercock<3>_II/UIM | IV_TRUE | weathercock<2>_II/UIM
+PLA_TERM | 5 | 
+SPPTERM | 2 | IV_TRUE | weathercock<3>_II/UIM | IV_FALSE | weathercock<2>_II/UIM
+PLA_TERM | 13 | 
+SPPTERM | 1 | IV_TRUE | weathercock<3>_II/UIM
+
+BUSINFO | BINARY_CODE<3:0> | 4 | 0 | 1 | binary_code<0> | 3 | binary_code<1> | 2 | binary_code<2> | 1 | binary_code<3> | 0
+BUSINFO | WEATHERCOCK<3:0> | 4 | 0 | 0 | weathercock<0> | 3 | weathercock<1> | 2 | weathercock<2> | 1 | weathercock<3> | 0
+
+IOSTD | LVCMOS18
+weathercock<0> | LVCMOS18
+weathercock<1> | LVCMOS18
+weathercock<3> | LVCMOS18
+weathercock<2> | LVCMOS18
+binary_code<0> | LVCMOS18
+binary_code<1> | LVCMOS18
+binary_code<2> | LVCMOS18
+binary_code<3> | LVCMOS18
+
+
+FB_ORDER_OF_INPUTS | FOOBAR1_ | 0 | weathercock<2> | 31 | 1 | weathercock<3> | 30 | 6 | weathercock<1> | 32 | 7 | binary_code<2>_MC.UIM | NULL | 8 | binary_code<1>_MC.UIM | NULL
+FB_ORDER_OF_INPUTS | FOOBAR1_ | 9 | weathercock<0> | 33
+
+FB_IMUX_INDEX | FOOBAR1_ | 11 | 12 | -1 | -1 | -1 | -1 | 10 | 66 | 72 | 9 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1
+
+

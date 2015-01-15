@@ -1,0 +1,35 @@
+Running: /softs/Xilinx/14.7/ISE_DS/ISE/bin/lin/unwrapped/fuse -intstyle ise -incremental -o /fs02/share/users/alperen.aydin/home/TPElec/ELN1/SysMeteo/gray_bin_4bit_tb_isim_fit.exe -prj /fs02/share/users/alperen.aydin/home/TPElec/ELN1/SysMeteo/gray_bin_4bit_tb_fit.prj work.gray_bin_4bit_tb 
+ISim P.20131013 (signature 0xfbc00daa)
+Number of CPUs detected in this system: 2
+Turning on mult-threading, number of parallel sub-compilation jobs: 4 
+Determining compilation order of HDL files
+Parsing VHDL file "/fs02/share/users/alperen.aydin/home/TPElec/ELN1/SysMeteo/netgen/fit/gray_bin_4bit_timesim.vhd" into library work
+Parsing VHDL file "/fs02/share/users/alperen.aydin/home/TPElec/ELN1/SysMeteo/gray_bin_4bit_tb.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 58284 KB
+Fuse CPU Usage: 2200 ms
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package textio
+WARNING:Simulator:752 - Running 32 bit ISIM on 64 bit Linux
+Compiling package vital_timing
+Compiling package vcomponents
+Compiling package vital_primitives
+Compiling package vpackage
+Compiling architecture x_buf_v of entity X_BUF [\X_BUF(true,true,"UNPLACED",(0,0...]
+Compiling architecture x_xor2_v of entity X_XOR2 [\X_XOR2(true,true,"UNPLACED",(0,...]
+Compiling architecture x_zero_v of entity X_ZERO [\X_ZERO("UNPLACED")(1,8)\]
+Compiling architecture x_and2_v of entity X_AND2 [\X_AND2(true,true,"UNPLACED",(0,...]
+Compiling architecture x_or2_v of entity X_OR2 [\X_OR2(true,true,"UNPLACED",(0,0...]
+Compiling architecture x_inv_v of entity X_INV [\X_INV(true,true,"UNPLACED",(0,0...]
+Compiling architecture x_roc_v of entity X_ROC [\X_ROC("UNPLACED",100000,"*")(1,...]
+Compiling architecture structure of entity gray_bin_4bit [gray_bin_4bit_default]
+Compiling architecture behavior of entity gray_bin_4bit_tb
+Time Resolution for simulation is 1ps.
+Waiting for 11 sub-compilation(s) to finish...
+Compiled 24 VHDL Units
+Built simulation executable /fs02/share/users/alperen.aydin/home/TPElec/ELN1/SysMeteo/gray_bin_4bit_tb_isim_fit.exe
+Fuse Memory Usage: 117652 KB
+Fuse CPU Usage: 2640 ms
+GCC CPU Usage: 7760 ms

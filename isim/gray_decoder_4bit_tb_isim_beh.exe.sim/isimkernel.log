@@ -1,0 +1,28 @@
+Command line:
+   gray_decoder_4bit_tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  54068
+
+Mon Dec 15 16:50:03 2014
+
+
+ Elaboration Time: 0.08 sec
+
+ Current Memory Usage: 132.182 Meg
+
+ Total Signals          : 4
+ Total Nets             : 20
+ Total Signal Drivers   : 2
+ Total Blocks           : 3
+ Total Primitive Blocks : 2
+ Total Processes        : 2
+ Total Traceable Variables  : 8
+ Total Scalar Nets and Variables : 380
+
+ Total Simulation Time: 0.08 sec
+
+ Current Memory Usage: 141.619 Meg
+
+Mon Dec 15 16:50:20 2014
+

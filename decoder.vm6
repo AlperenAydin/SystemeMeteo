@@ -1,0 +1,980 @@
+NDS Database:  version P.20131013
+
+NDS_INFO | xbr | 2C64A44VQ | XC2C64A-7-VQ44
+
+DEVICE | 2C64A | 2C64A44VQ | 
+
+NETWORK | decoder | 0 | 0 | 1073758214 | 0
+
+MACROCELL_INSTANCE | Inv | code_display<0>_MC | decoder_COPY_0_COPY_0 | 256 | 5 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<0>_II/UIM | 1282 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<0>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<3>_II/UIM | 1284 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<3>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<2>_II/UIM | 1286 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<2>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<1>_II/UIM | 1288 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<1>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | code_select_II/UIM | 1290 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | code_select_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | code_display<0>_MC.Q | 1292 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | code_display<0>_MC.Q | code_display<0>_MC | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | code_display<0>_MC.SI | code_display<0>_MC | 0 | 5 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<0>_II/UIM | 1282 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<0>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<3>_II/UIM | 1284 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<3>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<2>_II/UIM | 1286 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<2>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<1>_II/UIM | 1288 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<1>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | code_select_II/UIM | 1290 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | code_select_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | code_display<0>_MC.D1 | 1279 | ? | 0 | 0 | code_display<0>_MC | NULL | NULL | code_display<0>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 1 | IV_FALSE | weathercock<0>_II/UIM
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | code_display<0>_MC.D2 | 1280 | ? | 0 | 0 | code_display<0>_MC | NULL | NULL | code_display<0>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 4 | IV_TRUE | weathercock<3>_II/UIM | IV_TRUE | weathercock<2>_II/UIM | IV_TRUE | weathercock<1>_II/UIM | IV_FALSE | code_select_II/UIM
+SPPTERM | 4 | IV_TRUE | weathercock<3>_II/UIM | IV_FALSE | weathercock<2>_II/UIM | IV_FALSE | weathercock<1>_II/UIM | IV_FALSE | code_select_II/UIM
+SPPTERM | 4 | IV_FALSE | weathercock<3>_II/UIM | IV_TRUE | weathercock<2>_II/UIM | IV_FALSE | weathercock<1>_II/UIM | IV_FALSE | code_select_II/UIM
+SPPTERM | 4 | IV_FALSE | weathercock<3>_II/UIM | IV_FALSE | weathercock<2>_II/UIM | IV_TRUE | weathercock<1>_II/UIM | IV_FALSE | code_select_II/UIM
+
+SRFF_INSTANCE | code_display<0>_MC.REG | code_display<0>_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | code_display<0>_MC.D | 1278 | ? | 0 | 0 | code_display<0>_MC | NULL | NULL | code_display<0>_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | code_display<0>_MC.Q | 1291 | ? | 0 | 0 | code_display<0>_MC | NULL | NULL | code_display<0>_MC.REG | 0 | 8 | SRFF_Q
+
+INPUT_INSTANCE | 0 | 0 | NULL | weathercock<0>_II | decoder_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | weathercock<0> | 1281 | PI | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | weathercock<0>_II/UIM | 1282 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<0>_II | 0 | 5 | II_IMUX
+
+INPUT_INSTANCE | 0 | 0 | NULL | weathercock<3>_II | decoder_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | weathercock<3> | 1283 | PI | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | weathercock<3>_II/UIM | 1284 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<3>_II | 0 | 5 | II_IMUX
+
+INPUT_INSTANCE | 0 | 0 | NULL | weathercock<2>_II | decoder_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | weathercock<2> | 1285 | PI | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | weathercock<2>_II/UIM | 1286 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<2>_II | 0 | 5 | II_IMUX
+
+INPUT_INSTANCE | 0 | 0 | NULL | weathercock<1>_II | decoder_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | weathercock<1> | 1287 | PI | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | weathercock<1>_II/UIM | 1288 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<1>_II | 0 | 5 | II_IMUX
+
+INPUT_INSTANCE | 0 | 0 | NULL | code_select_II | decoder_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | code_select | 1289 | PI | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | code_select_II/UIM | 1290 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | code_select_II | 0 | 5 | II_IMUX
+
+OUTPUT_INSTANCE | 0 | code_display<0> | decoder_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | code_display<0>_MC.Q | 1292 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | code_display<0>_MC.Q | code_display<0>_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | code_display<0> | 1293 | PO | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | code_display<0> | 0 | 6 | OI_OUT
+
+MACROCELL_INSTANCE | Inv | code_display<1>_MC | decoder_COPY_0_COPY_0 | 256 | 4 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<1>_II/UIM | 1288 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<1>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<3>_II/UIM | 1284 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<3>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<2>_II/UIM | 1286 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<2>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | code_select_II/UIM | 1290 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | code_select_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | code_display<1>_MC.Q | 1298 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | code_display<1>_MC.Q | code_display<1>_MC | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | code_display<1>_MC.SI | code_display<1>_MC | 0 | 4 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<1>_II/UIM | 1288 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<1>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<3>_II/UIM | 1284 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<3>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<2>_II/UIM | 1286 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<2>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | code_select_II/UIM | 1290 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | code_select_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | code_display<1>_MC.D1 | 1295 | ? | 0 | 0 | code_display<1>_MC | NULL | NULL | code_display<1>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 1 | IV_FALSE | weathercock<1>_II/UIM
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | code_display<1>_MC.D2 | 1296 | ? | 0 | 0 | code_display<1>_MC | NULL | NULL | code_display<1>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 3 | IV_TRUE | weathercock<3>_II/UIM | IV_FALSE | weathercock<2>_II/UIM | IV_FALSE | code_select_II/UIM
+SPPTERM | 3 | IV_FALSE | weathercock<3>_II/UIM | IV_TRUE | weathercock<2>_II/UIM | IV_FALSE | code_select_II/UIM
+
+SRFF_INSTANCE | code_display<1>_MC.REG | code_display<1>_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | code_display<1>_MC.D | 1294 | ? | 0 | 0 | code_display<1>_MC | NULL | NULL | code_display<1>_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | code_display<1>_MC.Q | 1297 | ? | 0 | 0 | code_display<1>_MC | NULL | NULL | code_display<1>_MC.REG | 0 | 8 | SRFF_Q
+
+OUTPUT_INSTANCE | 0 | code_display<1> | decoder_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | code_display<1>_MC.Q | 1298 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | code_display<1>_MC.Q | code_display<1>_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | code_display<1> | 1299 | PO | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | code_display<1> | 0 | 6 | OI_OUT
+
+MACROCELL_INSTANCE | Inv | code_display<2>_MC | decoder_COPY_0_COPY_0 | 256 | 3 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<2>_II/UIM | 1286 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<2>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<3>_II/UIM | 1284 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<3>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | code_select_II/UIM | 1290 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | code_select_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | code_display<2>_MC.Q | 1304 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | code_display<2>_MC.Q | code_display<2>_MC | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | code_display<2>_MC.SI | code_display<2>_MC | 0 | 3 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<2>_II/UIM | 1286 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<2>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<3>_II/UIM | 1284 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<3>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | code_select_II/UIM | 1290 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | code_select_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | code_display<2>_MC.D1 | 1301 | ? | 0 | 0 | code_display<2>_MC | NULL | NULL | code_display<2>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 1 | IV_FALSE | weathercock<2>_II/UIM
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | code_display<2>_MC.D2 | 1302 | ? | 0 | 0 | code_display<2>_MC | NULL | NULL | code_display<2>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_TRUE | weathercock<3>_II/UIM | IV_FALSE | code_select_II/UIM
+
+SRFF_INSTANCE | code_display<2>_MC.REG | code_display<2>_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | code_display<2>_MC.D | 1300 | ? | 0 | 0 | code_display<2>_MC | NULL | NULL | code_display<2>_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | code_display<2>_MC.Q | 1303 | ? | 0 | 0 | code_display<2>_MC | NULL | NULL | code_display<2>_MC.REG | 0 | 8 | SRFF_Q
+
+OUTPUT_INSTANCE | 0 | code_display<2> | decoder_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | code_display<2>_MC.Q | 1304 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | code_display<2>_MC.Q | code_display<2>_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | code_display<2> | 1305 | PO | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | code_display<2> | 0 | 6 | OI_OUT
+
+MACROCELL_INSTANCE | NULL | code_display<3>_MC | decoder_COPY_0_COPY_0 | 0 | 1 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<3>_II/UIM | 1284 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<3>_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | code_display<3>_MC.Q | 1310 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | code_display<3>_MC.Q | code_display<3>_MC | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | code_display<3>_MC.SI | code_display<3>_MC | 0 | 1 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<3>_II/UIM | 1284 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<3>_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | code_display<3>_MC.D1 | 1307 | ? | 0 | 0 | code_display<3>_MC | NULL | NULL | code_display<3>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 1 | IV_TRUE | weathercock<3>_II/UIM
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | code_display<3>_MC.D2 | 1308 | ? | 0 | 0 | code_display<3>_MC | NULL | NULL | code_display<3>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | code_display<3>_MC.REG | code_display<3>_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | code_display<3>_MC.D | 1306 | ? | 0 | 0 | code_display<3>_MC | NULL | NULL | code_display<3>_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | code_display<3>_MC.Q | 1309 | ? | 0 | 0 | code_display<3>_MC | NULL | NULL | code_display<3>_MC.REG | 0 | 8 | SRFF_Q
+
+OUTPUT_INSTANCE | 0 | code_display<3> | decoder_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | code_display<3>_MC.Q | 1310 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | code_display<3>_MC.Q | code_display<3>_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | code_display<3> | 1311 | PO | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | code_display<3> | 0 | 6 | OI_OUT
+
+MACROCELL_INSTANCE | Inv | wind_dir<0>_MC | decoder_COPY_0_COPY_0 | 256 | 4 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<0>_II/UIM | 1282 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<0>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<3>_II/UIM | 1284 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<3>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<2>_II/UIM | 1286 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<2>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<1>_II/UIM | 1288 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<1>_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | wind_dir<0>_MC.Q | 1316 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | wind_dir<0>_MC.Q | wind_dir<0>_MC | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | wind_dir<0>_MC.SI | wind_dir<0>_MC | 0 | 4 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<0>_II/UIM | 1282 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<0>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<3>_II/UIM | 1284 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<3>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<2>_II/UIM | 1286 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<2>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<1>_II/UIM | 1288 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<1>_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | wind_dir<0>_MC.D1 | 1313 | ? | 0 | 0 | wind_dir<0>_MC | NULL | NULL | wind_dir<0>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 4 | IV_TRUE | weathercock<0>_II/UIM | IV_FALSE | weathercock<3>_II/UIM | IV_TRUE | weathercock<2>_II/UIM | IV_TRUE | weathercock<1>_II/UIM
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | wind_dir<0>_MC.D2 | 1314 | ? | 0 | 0 | wind_dir<0>_MC | NULL | NULL | wind_dir<0>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | wind_dir<0>_MC.REG | wind_dir<0>_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | wind_dir<0>_MC.D | 1312 | ? | 0 | 0 | wind_dir<0>_MC | NULL | NULL | wind_dir<0>_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | wind_dir<0>_MC.Q | 1315 | ? | 0 | 0 | wind_dir<0>_MC | NULL | NULL | wind_dir<0>_MC.REG | 0 | 8 | SRFF_Q
+
+OUTPUT_INSTANCE | 0 | wind_dir<0> | decoder_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | wind_dir<0>_MC.Q | 1316 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | wind_dir<0>_MC.Q | wind_dir<0>_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | wind_dir<0> | 1317 | PO | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | wind_dir<0> | 0 | 6 | OI_OUT
+
+MACROCELL_INSTANCE | Inv | wind_dir<10>_MC | decoder_COPY_0_COPY_0 | 256 | 4 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<0>_II/UIM | 1282 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<0>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<3>_II/UIM | 1284 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<3>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<2>_II/UIM | 1286 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<2>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<1>_II/UIM | 1288 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<1>_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | wind_dir<10>_MC.Q | 1322 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | wind_dir<10>_MC.Q | wind_dir<10>_MC | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | wind_dir<10>_MC.SI | wind_dir<10>_MC | 0 | 4 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<0>_II/UIM | 1282 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<0>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<3>_II/UIM | 1284 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<3>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<2>_II/UIM | 1286 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<2>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<1>_II/UIM | 1288 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<1>_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | wind_dir<10>_MC.D1 | 1319 | ? | 0 | 0 | wind_dir<10>_MC | NULL | NULL | wind_dir<10>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 4 | IV_FALSE | weathercock<0>_II/UIM | IV_TRUE | weathercock<3>_II/UIM | IV_FALSE | weathercock<2>_II/UIM | IV_FALSE | weathercock<1>_II/UIM
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | wind_dir<10>_MC.D2 | 1320 | ? | 0 | 0 | wind_dir<10>_MC | NULL | NULL | wind_dir<10>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | wind_dir<10>_MC.REG | wind_dir<10>_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | wind_dir<10>_MC.D | 1318 | ? | 0 | 0 | wind_dir<10>_MC | NULL | NULL | wind_dir<10>_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | wind_dir<10>_MC.Q | 1321 | ? | 0 | 0 | wind_dir<10>_MC | NULL | NULL | wind_dir<10>_MC.REG | 0 | 8 | SRFF_Q
+
+OUTPUT_INSTANCE | 0 | wind_dir<10> | decoder_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | wind_dir<10>_MC.Q | 1322 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | wind_dir<10>_MC.Q | wind_dir<10>_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | wind_dir<10> | 1323 | PO | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | wind_dir<10> | 0 | 6 | OI_OUT
+
+MACROCELL_INSTANCE | Inv | wind_dir<11>_MC | decoder_COPY_0_COPY_0 | 256 | 4 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<0>_II/UIM | 1282 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<0>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<3>_II/UIM | 1284 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<3>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<2>_II/UIM | 1286 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<2>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<1>_II/UIM | 1288 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<1>_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | wind_dir<11>_MC.Q | 1328 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | wind_dir<11>_MC.Q | wind_dir<11>_MC | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | wind_dir<11>_MC.SI | wind_dir<11>_MC | 0 | 4 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<0>_II/UIM | 1282 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<0>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<3>_II/UIM | 1284 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<3>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<2>_II/UIM | 1286 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<2>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<1>_II/UIM | 1288 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<1>_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | wind_dir<11>_MC.D1 | 1325 | ? | 0 | 0 | wind_dir<11>_MC | NULL | NULL | wind_dir<11>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 4 | IV_TRUE | weathercock<0>_II/UIM | IV_TRUE | weathercock<3>_II/UIM | IV_FALSE | weathercock<2>_II/UIM | IV_FALSE | weathercock<1>_II/UIM
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | wind_dir<11>_MC.D2 | 1326 | ? | 0 | 0 | wind_dir<11>_MC | NULL | NULL | wind_dir<11>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | wind_dir<11>_MC.REG | wind_dir<11>_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | wind_dir<11>_MC.D | 1324 | ? | 0 | 0 | wind_dir<11>_MC | NULL | NULL | wind_dir<11>_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | wind_dir<11>_MC.Q | 1327 | ? | 0 | 0 | wind_dir<11>_MC | NULL | NULL | wind_dir<11>_MC.REG | 0 | 8 | SRFF_Q
+
+OUTPUT_INSTANCE | 0 | wind_dir<11> | decoder_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | wind_dir<11>_MC.Q | 1328 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | wind_dir<11>_MC.Q | wind_dir<11>_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | wind_dir<11> | 1329 | PO | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | wind_dir<11> | 0 | 6 | OI_OUT
+
+MACROCELL_INSTANCE | Inv | wind_dir<12>_MC | decoder_COPY_0_COPY_0 | 256 | 4 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<0>_II/UIM | 1282 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<0>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<3>_II/UIM | 1284 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<3>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<2>_II/UIM | 1286 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<2>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<1>_II/UIM | 1288 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<1>_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | wind_dir<12>_MC.Q | 1334 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | wind_dir<12>_MC.Q | wind_dir<12>_MC | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | wind_dir<12>_MC.SI | wind_dir<12>_MC | 0 | 4 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<0>_II/UIM | 1282 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<0>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<3>_II/UIM | 1284 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<3>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<2>_II/UIM | 1286 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<2>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<1>_II/UIM | 1288 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<1>_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | wind_dir<12>_MC.D1 | 1331 | ? | 0 | 0 | wind_dir<12>_MC | NULL | NULL | wind_dir<12>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 4 | IV_TRUE | weathercock<0>_II/UIM | IV_TRUE | weathercock<3>_II/UIM | IV_TRUE | weathercock<2>_II/UIM | IV_FALSE | weathercock<1>_II/UIM
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | wind_dir<12>_MC.D2 | 1332 | ? | 0 | 0 | wind_dir<12>_MC | NULL | NULL | wind_dir<12>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | wind_dir<12>_MC.REG | wind_dir<12>_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | wind_dir<12>_MC.D | 1330 | ? | 0 | 0 | wind_dir<12>_MC | NULL | NULL | wind_dir<12>_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | wind_dir<12>_MC.Q | 1333 | ? | 0 | 0 | wind_dir<12>_MC | NULL | NULL | wind_dir<12>_MC.REG | 0 | 8 | SRFF_Q
+
+OUTPUT_INSTANCE | 0 | wind_dir<12> | decoder_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | wind_dir<12>_MC.Q | 1334 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | wind_dir<12>_MC.Q | wind_dir<12>_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | wind_dir<12> | 1335 | PO | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | wind_dir<12> | 0 | 6 | OI_OUT
+
+MACROCELL_INSTANCE | Inv | wind_dir<13>_MC | decoder_COPY_0_COPY_0 | 256 | 4 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<0>_II/UIM | 1282 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<0>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<3>_II/UIM | 1284 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<3>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<2>_II/UIM | 1286 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<2>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<1>_II/UIM | 1288 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<1>_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | wind_dir<13>_MC.Q | 1340 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | wind_dir<13>_MC.Q | wind_dir<13>_MC | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | wind_dir<13>_MC.SI | wind_dir<13>_MC | 0 | 4 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<0>_II/UIM | 1282 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<0>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<3>_II/UIM | 1284 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<3>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<2>_II/UIM | 1286 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<2>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<1>_II/UIM | 1288 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<1>_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | wind_dir<13>_MC.D1 | 1337 | ? | 0 | 0 | wind_dir<13>_MC | NULL | NULL | wind_dir<13>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 4 | IV_FALSE | weathercock<0>_II/UIM | IV_TRUE | weathercock<3>_II/UIM | IV_TRUE | weathercock<2>_II/UIM | IV_FALSE | weathercock<1>_II/UIM
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | wind_dir<13>_MC.D2 | 1338 | ? | 0 | 0 | wind_dir<13>_MC | NULL | NULL | wind_dir<13>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | wind_dir<13>_MC.REG | wind_dir<13>_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | wind_dir<13>_MC.D | 1336 | ? | 0 | 0 | wind_dir<13>_MC | NULL | NULL | wind_dir<13>_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | wind_dir<13>_MC.Q | 1339 | ? | 0 | 0 | wind_dir<13>_MC | NULL | NULL | wind_dir<13>_MC.REG | 0 | 8 | SRFF_Q
+
+OUTPUT_INSTANCE | 0 | wind_dir<13> | decoder_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | wind_dir<13>_MC.Q | 1340 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | wind_dir<13>_MC.Q | wind_dir<13>_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | wind_dir<13> | 1341 | PO | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | wind_dir<13> | 0 | 6 | OI_OUT
+
+MACROCELL_INSTANCE | Inv | wind_dir<14>_MC | decoder_COPY_0_COPY_0 | 256 | 4 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<0>_II/UIM | 1282 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<0>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<3>_II/UIM | 1284 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<3>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<2>_II/UIM | 1286 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<2>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<1>_II/UIM | 1288 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<1>_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | wind_dir<14>_MC.Q | 1346 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | wind_dir<14>_MC.Q | wind_dir<14>_MC | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | wind_dir<14>_MC.SI | wind_dir<14>_MC | 0 | 4 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<0>_II/UIM | 1282 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<0>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<3>_II/UIM | 1284 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<3>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<2>_II/UIM | 1286 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<2>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<1>_II/UIM | 1288 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<1>_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | wind_dir<14>_MC.D1 | 1343 | ? | 0 | 0 | wind_dir<14>_MC | NULL | NULL | wind_dir<14>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 4 | IV_FALSE | weathercock<0>_II/UIM | IV_TRUE | weathercock<3>_II/UIM | IV_TRUE | weathercock<2>_II/UIM | IV_TRUE | weathercock<1>_II/UIM
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | wind_dir<14>_MC.D2 | 1344 | ? | 0 | 0 | wind_dir<14>_MC | NULL | NULL | wind_dir<14>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | wind_dir<14>_MC.REG | wind_dir<14>_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | wind_dir<14>_MC.D | 1342 | ? | 0 | 0 | wind_dir<14>_MC | NULL | NULL | wind_dir<14>_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | wind_dir<14>_MC.Q | 1345 | ? | 0 | 0 | wind_dir<14>_MC | NULL | NULL | wind_dir<14>_MC.REG | 0 | 8 | SRFF_Q
+
+OUTPUT_INSTANCE | 0 | wind_dir<14> | decoder_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | wind_dir<14>_MC.Q | 1346 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | wind_dir<14>_MC.Q | wind_dir<14>_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | wind_dir<14> | 1347 | PO | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | wind_dir<14> | 0 | 6 | OI_OUT
+
+MACROCELL_INSTANCE | Inv | wind_dir<15>_MC | decoder_COPY_0_COPY_0 | 256 | 4 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<0>_II/UIM | 1282 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<0>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<3>_II/UIM | 1284 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<3>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<2>_II/UIM | 1286 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<2>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<1>_II/UIM | 1288 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<1>_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | wind_dir<15>_MC.Q | 1352 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | wind_dir<15>_MC.Q | wind_dir<15>_MC | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | wind_dir<15>_MC.SI | wind_dir<15>_MC | 0 | 4 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<0>_II/UIM | 1282 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<0>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<3>_II/UIM | 1284 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<3>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<2>_II/UIM | 1286 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<2>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<1>_II/UIM | 1288 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<1>_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | wind_dir<15>_MC.D1 | 1349 | ? | 0 | 0 | wind_dir<15>_MC | NULL | NULL | wind_dir<15>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 4 | IV_TRUE | weathercock<0>_II/UIM | IV_TRUE | weathercock<3>_II/UIM | IV_TRUE | weathercock<2>_II/UIM | IV_TRUE | weathercock<1>_II/UIM
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | wind_dir<15>_MC.D2 | 1350 | ? | 0 | 0 | wind_dir<15>_MC | NULL | NULL | wind_dir<15>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | wind_dir<15>_MC.REG | wind_dir<15>_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | wind_dir<15>_MC.D | 1348 | ? | 0 | 0 | wind_dir<15>_MC | NULL | NULL | wind_dir<15>_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | wind_dir<15>_MC.Q | 1351 | ? | 0 | 0 | wind_dir<15>_MC | NULL | NULL | wind_dir<15>_MC.REG | 0 | 8 | SRFF_Q
+
+OUTPUT_INSTANCE | 0 | wind_dir<15> | decoder_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | wind_dir<15>_MC.Q | 1352 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | wind_dir<15>_MC.Q | wind_dir<15>_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | wind_dir<15> | 1353 | PO | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | wind_dir<15> | 0 | 6 | OI_OUT
+
+MACROCELL_INSTANCE | Inv | wind_dir<1>_MC | decoder_COPY_0_COPY_0 | 256 | 4 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<0>_II/UIM | 1282 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<0>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<3>_II/UIM | 1284 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<3>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<2>_II/UIM | 1286 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<2>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<1>_II/UIM | 1288 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<1>_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | wind_dir<1>_MC.Q | 1358 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | wind_dir<1>_MC.Q | wind_dir<1>_MC | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | wind_dir<1>_MC.SI | wind_dir<1>_MC | 0 | 4 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<0>_II/UIM | 1282 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<0>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<3>_II/UIM | 1284 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<3>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<2>_II/UIM | 1286 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<2>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<1>_II/UIM | 1288 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<1>_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | wind_dir<1>_MC.D1 | 1355 | ? | 0 | 0 | wind_dir<1>_MC | NULL | NULL | wind_dir<1>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 4 | IV_FALSE | weathercock<0>_II/UIM | IV_FALSE | weathercock<3>_II/UIM | IV_TRUE | weathercock<2>_II/UIM | IV_TRUE | weathercock<1>_II/UIM
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | wind_dir<1>_MC.D2 | 1356 | ? | 0 | 0 | wind_dir<1>_MC | NULL | NULL | wind_dir<1>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | wind_dir<1>_MC.REG | wind_dir<1>_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | wind_dir<1>_MC.D | 1354 | ? | 0 | 0 | wind_dir<1>_MC | NULL | NULL | wind_dir<1>_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | wind_dir<1>_MC.Q | 1357 | ? | 0 | 0 | wind_dir<1>_MC | NULL | NULL | wind_dir<1>_MC.REG | 0 | 8 | SRFF_Q
+
+OUTPUT_INSTANCE | 0 | wind_dir<1> | decoder_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | wind_dir<1>_MC.Q | 1358 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | wind_dir<1>_MC.Q | wind_dir<1>_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | wind_dir<1> | 1359 | PO | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | wind_dir<1> | 0 | 6 | OI_OUT
+
+MACROCELL_INSTANCE | Inv | wind_dir<2>_MC | decoder_COPY_0_COPY_0 | 256 | 4 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<0>_II/UIM | 1282 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<0>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<3>_II/UIM | 1284 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<3>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<2>_II/UIM | 1286 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<2>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<1>_II/UIM | 1288 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<1>_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | wind_dir<2>_MC.Q | 1364 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | wind_dir<2>_MC.Q | wind_dir<2>_MC | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | wind_dir<2>_MC.SI | wind_dir<2>_MC | 0 | 4 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<0>_II/UIM | 1282 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<0>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<3>_II/UIM | 1284 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<3>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<2>_II/UIM | 1286 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<2>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<1>_II/UIM | 1288 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<1>_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | wind_dir<2>_MC.D1 | 1361 | ? | 0 | 0 | wind_dir<2>_MC | NULL | NULL | wind_dir<2>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 4 | IV_FALSE | weathercock<0>_II/UIM | IV_FALSE | weathercock<3>_II/UIM | IV_TRUE | weathercock<2>_II/UIM | IV_FALSE | weathercock<1>_II/UIM
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | wind_dir<2>_MC.D2 | 1362 | ? | 0 | 0 | wind_dir<2>_MC | NULL | NULL | wind_dir<2>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | wind_dir<2>_MC.REG | wind_dir<2>_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | wind_dir<2>_MC.D | 1360 | ? | 0 | 0 | wind_dir<2>_MC | NULL | NULL | wind_dir<2>_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | wind_dir<2>_MC.Q | 1363 | ? | 0 | 0 | wind_dir<2>_MC | NULL | NULL | wind_dir<2>_MC.REG | 0 | 8 | SRFF_Q
+
+OUTPUT_INSTANCE | 0 | wind_dir<2> | decoder_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | wind_dir<2>_MC.Q | 1364 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | wind_dir<2>_MC.Q | wind_dir<2>_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | wind_dir<2> | 1365 | PO | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | wind_dir<2> | 0 | 6 | OI_OUT
+
+MACROCELL_INSTANCE | Inv | wind_dir<3>_MC | decoder_COPY_0_COPY_0 | 256 | 4 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<0>_II/UIM | 1282 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<0>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<3>_II/UIM | 1284 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<3>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<2>_II/UIM | 1286 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<2>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<1>_II/UIM | 1288 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<1>_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | wind_dir<3>_MC.Q | 1370 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | wind_dir<3>_MC.Q | wind_dir<3>_MC | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | wind_dir<3>_MC.SI | wind_dir<3>_MC | 0 | 4 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<0>_II/UIM | 1282 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<0>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<3>_II/UIM | 1284 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<3>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<2>_II/UIM | 1286 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<2>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<1>_II/UIM | 1288 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<1>_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | wind_dir<3>_MC.D1 | 1367 | ? | 0 | 0 | wind_dir<3>_MC | NULL | NULL | wind_dir<3>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 4 | IV_TRUE | weathercock<0>_II/UIM | IV_FALSE | weathercock<3>_II/UIM | IV_TRUE | weathercock<2>_II/UIM | IV_FALSE | weathercock<1>_II/UIM
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | wind_dir<3>_MC.D2 | 1368 | ? | 0 | 0 | wind_dir<3>_MC | NULL | NULL | wind_dir<3>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | wind_dir<3>_MC.REG | wind_dir<3>_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | wind_dir<3>_MC.D | 1366 | ? | 0 | 0 | wind_dir<3>_MC | NULL | NULL | wind_dir<3>_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | wind_dir<3>_MC.Q | 1369 | ? | 0 | 0 | wind_dir<3>_MC | NULL | NULL | wind_dir<3>_MC.REG | 0 | 8 | SRFF_Q
+
+OUTPUT_INSTANCE | 0 | wind_dir<3> | decoder_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | wind_dir<3>_MC.Q | 1370 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | wind_dir<3>_MC.Q | wind_dir<3>_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | wind_dir<3> | 1371 | PO | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | wind_dir<3> | 0 | 6 | OI_OUT
+
+MACROCELL_INSTANCE | Inv | wind_dir<4>_MC | decoder_COPY_0_COPY_0 | 256 | 4 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<0>_II/UIM | 1282 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<0>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<3>_II/UIM | 1284 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<3>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<2>_II/UIM | 1286 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<2>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<1>_II/UIM | 1288 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<1>_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | wind_dir<4>_MC.Q | 1376 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | wind_dir<4>_MC.Q | wind_dir<4>_MC | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | wind_dir<4>_MC.SI | wind_dir<4>_MC | 0 | 4 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<0>_II/UIM | 1282 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<0>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<3>_II/UIM | 1284 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<3>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<2>_II/UIM | 1286 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<2>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<1>_II/UIM | 1288 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<1>_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | wind_dir<4>_MC.D1 | 1373 | ? | 0 | 0 | wind_dir<4>_MC | NULL | NULL | wind_dir<4>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 4 | IV_TRUE | weathercock<0>_II/UIM | IV_FALSE | weathercock<3>_II/UIM | IV_FALSE | weathercock<2>_II/UIM | IV_FALSE | weathercock<1>_II/UIM
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | wind_dir<4>_MC.D2 | 1374 | ? | 0 | 0 | wind_dir<4>_MC | NULL | NULL | wind_dir<4>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | wind_dir<4>_MC.REG | wind_dir<4>_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | wind_dir<4>_MC.D | 1372 | ? | 0 | 0 | wind_dir<4>_MC | NULL | NULL | wind_dir<4>_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | wind_dir<4>_MC.Q | 1375 | ? | 0 | 0 | wind_dir<4>_MC | NULL | NULL | wind_dir<4>_MC.REG | 0 | 8 | SRFF_Q
+
+OUTPUT_INSTANCE | 0 | wind_dir<4> | decoder_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | wind_dir<4>_MC.Q | 1376 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | wind_dir<4>_MC.Q | wind_dir<4>_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | wind_dir<4> | 1377 | PO | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | wind_dir<4> | 0 | 6 | OI_OUT
+
+MACROCELL_INSTANCE | Inv | wind_dir<5>_MC | decoder_COPY_0_COPY_0 | 256 | 4 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<0>_II/UIM | 1282 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<0>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<3>_II/UIM | 1284 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<3>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<2>_II/UIM | 1286 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<2>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<1>_II/UIM | 1288 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<1>_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | wind_dir<5>_MC.Q | 1382 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | wind_dir<5>_MC.Q | wind_dir<5>_MC | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | wind_dir<5>_MC.SI | wind_dir<5>_MC | 0 | 4 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<0>_II/UIM | 1282 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<0>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<3>_II/UIM | 1284 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<3>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<2>_II/UIM | 1286 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<2>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<1>_II/UIM | 1288 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<1>_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | wind_dir<5>_MC.D1 | 1379 | ? | 0 | 0 | wind_dir<5>_MC | NULL | NULL | wind_dir<5>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 4 | IV_FALSE | weathercock<0>_II/UIM | IV_FALSE | weathercock<3>_II/UIM | IV_FALSE | weathercock<2>_II/UIM | IV_FALSE | weathercock<1>_II/UIM
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | wind_dir<5>_MC.D2 | 1380 | ? | 0 | 0 | wind_dir<5>_MC | NULL | NULL | wind_dir<5>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | wind_dir<5>_MC.REG | wind_dir<5>_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | wind_dir<5>_MC.D | 1378 | ? | 0 | 0 | wind_dir<5>_MC | NULL | NULL | wind_dir<5>_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | wind_dir<5>_MC.Q | 1381 | ? | 0 | 0 | wind_dir<5>_MC | NULL | NULL | wind_dir<5>_MC.REG | 0 | 8 | SRFF_Q
+
+OUTPUT_INSTANCE | 0 | wind_dir<5> | decoder_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | wind_dir<5>_MC.Q | 1382 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | wind_dir<5>_MC.Q | wind_dir<5>_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | wind_dir<5> | 1383 | PO | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | wind_dir<5> | 0 | 6 | OI_OUT
+
+MACROCELL_INSTANCE | Inv | wind_dir<6>_MC | decoder_COPY_0_COPY_0 | 256 | 4 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<0>_II/UIM | 1282 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<0>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<3>_II/UIM | 1284 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<3>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<2>_II/UIM | 1286 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<2>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<1>_II/UIM | 1288 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<1>_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | wind_dir<6>_MC.Q | 1388 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | wind_dir<6>_MC.Q | wind_dir<6>_MC | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | wind_dir<6>_MC.SI | wind_dir<6>_MC | 0 | 4 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<0>_II/UIM | 1282 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<0>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<3>_II/UIM | 1284 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<3>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<2>_II/UIM | 1286 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<2>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<1>_II/UIM | 1288 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<1>_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | wind_dir<6>_MC.D1 | 1385 | ? | 0 | 0 | wind_dir<6>_MC | NULL | NULL | wind_dir<6>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 4 | IV_FALSE | weathercock<0>_II/UIM | IV_FALSE | weathercock<3>_II/UIM | IV_FALSE | weathercock<2>_II/UIM | IV_TRUE | weathercock<1>_II/UIM
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | wind_dir<6>_MC.D2 | 1386 | ? | 0 | 0 | wind_dir<6>_MC | NULL | NULL | wind_dir<6>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | wind_dir<6>_MC.REG | wind_dir<6>_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | wind_dir<6>_MC.D | 1384 | ? | 0 | 0 | wind_dir<6>_MC | NULL | NULL | wind_dir<6>_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | wind_dir<6>_MC.Q | 1387 | ? | 0 | 0 | wind_dir<6>_MC | NULL | NULL | wind_dir<6>_MC.REG | 0 | 8 | SRFF_Q
+
+OUTPUT_INSTANCE | 0 | wind_dir<6> | decoder_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | wind_dir<6>_MC.Q | 1388 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | wind_dir<6>_MC.Q | wind_dir<6>_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | wind_dir<6> | 1389 | PO | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | wind_dir<6> | 0 | 6 | OI_OUT
+
+MACROCELL_INSTANCE | Inv | wind_dir<7>_MC | decoder_COPY_0_COPY_0 | 256 | 4 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<0>_II/UIM | 1282 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<0>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<3>_II/UIM | 1284 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<3>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<2>_II/UIM | 1286 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<2>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<1>_II/UIM | 1288 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<1>_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | wind_dir<7>_MC.Q | 1394 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | wind_dir<7>_MC.Q | wind_dir<7>_MC | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | wind_dir<7>_MC.SI | wind_dir<7>_MC | 0 | 4 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<0>_II/UIM | 1282 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<0>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<3>_II/UIM | 1284 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<3>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<2>_II/UIM | 1286 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<2>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<1>_II/UIM | 1288 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<1>_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | wind_dir<7>_MC.D1 | 1391 | ? | 0 | 0 | wind_dir<7>_MC | NULL | NULL | wind_dir<7>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 4 | IV_TRUE | weathercock<0>_II/UIM | IV_FALSE | weathercock<3>_II/UIM | IV_FALSE | weathercock<2>_II/UIM | IV_TRUE | weathercock<1>_II/UIM
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | wind_dir<7>_MC.D2 | 1392 | ? | 0 | 0 | wind_dir<7>_MC | NULL | NULL | wind_dir<7>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | wind_dir<7>_MC.REG | wind_dir<7>_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | wind_dir<7>_MC.D | 1390 | ? | 0 | 0 | wind_dir<7>_MC | NULL | NULL | wind_dir<7>_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | wind_dir<7>_MC.Q | 1393 | ? | 0 | 0 | wind_dir<7>_MC | NULL | NULL | wind_dir<7>_MC.REG | 0 | 8 | SRFF_Q
+
+OUTPUT_INSTANCE | 0 | wind_dir<7> | decoder_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | wind_dir<7>_MC.Q | 1394 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | wind_dir<7>_MC.Q | wind_dir<7>_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | wind_dir<7> | 1395 | PO | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | wind_dir<7> | 0 | 6 | OI_OUT
+
+MACROCELL_INSTANCE | Inv | wind_dir<8>_MC | decoder_COPY_0_COPY_0 | 256 | 4 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<0>_II/UIM | 1282 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<0>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<3>_II/UIM | 1284 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<3>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<2>_II/UIM | 1286 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<2>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<1>_II/UIM | 1288 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<1>_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | wind_dir<8>_MC.Q | 1400 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | wind_dir<8>_MC.Q | wind_dir<8>_MC | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | wind_dir<8>_MC.SI | wind_dir<8>_MC | 0 | 4 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<0>_II/UIM | 1282 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<0>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<3>_II/UIM | 1284 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<3>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<2>_II/UIM | 1286 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<2>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<1>_II/UIM | 1288 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<1>_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | wind_dir<8>_MC.D1 | 1397 | ? | 0 | 0 | wind_dir<8>_MC | NULL | NULL | wind_dir<8>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 4 | IV_TRUE | weathercock<0>_II/UIM | IV_TRUE | weathercock<3>_II/UIM | IV_FALSE | weathercock<2>_II/UIM | IV_TRUE | weathercock<1>_II/UIM
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | wind_dir<8>_MC.D2 | 1398 | ? | 0 | 0 | wind_dir<8>_MC | NULL | NULL | wind_dir<8>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | wind_dir<8>_MC.REG | wind_dir<8>_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | wind_dir<8>_MC.D | 1396 | ? | 0 | 0 | wind_dir<8>_MC | NULL | NULL | wind_dir<8>_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | wind_dir<8>_MC.Q | 1399 | ? | 0 | 0 | wind_dir<8>_MC | NULL | NULL | wind_dir<8>_MC.REG | 0 | 8 | SRFF_Q
+
+OUTPUT_INSTANCE | 0 | wind_dir<8> | decoder_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | wind_dir<8>_MC.Q | 1400 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | wind_dir<8>_MC.Q | wind_dir<8>_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | wind_dir<8> | 1401 | PO | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | wind_dir<8> | 0 | 6 | OI_OUT
+
+MACROCELL_INSTANCE | Inv | wind_dir<9>_MC | decoder_COPY_0_COPY_0 | 256 | 4 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<0>_II/UIM | 1282 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<0>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<3>_II/UIM | 1284 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<3>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<2>_II/UIM | 1286 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<2>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<1>_II/UIM | 1288 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<1>_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | wind_dir<9>_MC.Q | 1406 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | wind_dir<9>_MC.Q | wind_dir<9>_MC | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | wind_dir<9>_MC.SI | wind_dir<9>_MC | 0 | 4 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<0>_II/UIM | 1282 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<0>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<3>_II/UIM | 1284 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<3>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<2>_II/UIM | 1286 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<2>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | weathercock<1>_II/UIM | 1288 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | weathercock<1>_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | wind_dir<9>_MC.D1 | 1403 | ? | 0 | 0 | wind_dir<9>_MC | NULL | NULL | wind_dir<9>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 4 | IV_FALSE | weathercock<0>_II/UIM | IV_TRUE | weathercock<3>_II/UIM | IV_FALSE | weathercock<2>_II/UIM | IV_TRUE | weathercock<1>_II/UIM
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | wind_dir<9>_MC.D2 | 1404 | ? | 0 | 0 | wind_dir<9>_MC | NULL | NULL | wind_dir<9>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | wind_dir<9>_MC.REG | wind_dir<9>_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | wind_dir<9>_MC.D | 1402 | ? | 0 | 0 | wind_dir<9>_MC | NULL | NULL | wind_dir<9>_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | wind_dir<9>_MC.Q | 1405 | ? | 0 | 0 | wind_dir<9>_MC | NULL | NULL | wind_dir<9>_MC.REG | 0 | 8 | SRFF_Q
+
+OUTPUT_INSTANCE | 0 | wind_dir<9> | decoder_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | wind_dir<9>_MC.Q | 1406 | ? | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | wind_dir<9>_MC.Q | wind_dir<9>_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | wind_dir<9> | 1407 | PO | 0 | 0 | decoder_COPY_0_COPY_0 | NULL | NULL | wind_dir<9> | 0 | 6 | OI_OUT
+
+FB_INSTANCE | FOOBAR1_ | decoder_COPY_0_COPY_0 | 0 | 0 | 0
+FBPIN | 1 | code_display<0>_MC | 1 | NULL | 0 | code_display<0> | 1 | 38 | 49152
+FBPIN | 2 | code_display<1>_MC | 1 | NULL | 0 | code_display<1> | 1 | 37 | 49152
+FBPIN | 3 | wind_dir<0>_MC | 1 | NULL | 0 | wind_dir<0> | 1 | 36 | 49152
+FBPIN | 9 | wind_dir<10>_MC | 1 | NULL | 0 | wind_dir<10> | 1 | 34 | 53248
+FBPIN | 10 | wind_dir<11>_MC | 1 | NULL | 0 | wind_dir<11> | 1 | 33 | 53248
+FBPIN | 11 | wind_dir<12>_MC | 1 | NULL | 0 | wind_dir<12> | 1 | 32 | 53248
+FBPIN | 12 | wind_dir<13>_MC | 1 | NULL | 0 | wind_dir<13> | 1 | 31 | 53248
+FBPIN | 13 | wind_dir<14>_MC | 1 | NULL | 0 | wind_dir<14> | 1 | 30 | 51200
+
+FB_INSTANCE | FOOBAR2_ | decoder_COPY_0_COPY_0 | 0 | 0 | 0
+FBPIN | 1 | wind_dir<15>_MC | 1 | NULL | 0 | wind_dir<15> | 1 | 39 | 49152
+FBPIN | 2 | wind_dir<1>_MC | 1 | NULL | 0 | wind_dir<1> | 1 | 40 | 49152
+FBPIN | 5 | wind_dir<2>_MC | 1 | NULL | 0 | wind_dir<2> | 1 | 41 | 49152
+FBPIN | 6 | wind_dir<3>_MC | 1 | NULL | 0 | wind_dir<3> | 1 | 42 | 49152
+FBPIN | 7 | wind_dir<4>_MC | 1 | NULL | 0 | wind_dir<4> | 1 | 43 | 57344
+FBPIN | 8 | wind_dir<5>_MC | 1 | NULL | 0 | wind_dir<5> | 1 | 44 | 57344
+FBPIN | 10 | wind_dir<6>_MC | 1 | NULL | 0 | wind_dir<6> | 1 | 1 | 57344
+FBPIN | 12 | wind_dir<7>_MC | 1 | NULL | 0 | wind_dir<7> | 1 | 2 | 49152
+FBPIN | 13 | wind_dir<8>_MC | 1 | NULL | 0 | wind_dir<8> | 1 | 3 | 49152
+
+FB_INSTANCE | FOOBAR3_ | decoder_COPY_0_COPY_0 | 0 | 0 | 0
+FBPIN | 1 | wind_dir<9>_MC | 1 | NULL | 0 | wind_dir<9> | 1 | 29 | 49152
+FBPIN | 2 | code_display<2>_MC | 1 | NULL | 0 | code_display<2> | 1 | 28 | 49152
+FBPIN | 3 | code_display<3>_MC | 1 | NULL | 0 | code_display<3> | 1 | 27 | 49152
+FBPIN | 6 | NULL | 0 | code_select_II | 1 | NULL | 0 | 23 | 49152
+FBPIN | 10 | NULL | 0 | weathercock<0>_II | 1 | NULL | 0 | 22 | 49152
+FBPIN | 11 | NULL | 0 | weathercock<1>_II | 1 | NULL | 0 | 21 | 49152
+FBPIN | 12 | NULL | 0 | weathercock<2>_II | 1 | NULL | 0 | 20 | 49152
+FBPIN | 14 | NULL | 0 | weathercock<3>_II | 1 | NULL | 0 | 19 | 49152
+
+FB_INSTANCE | FOOBAR4_ | decoder_COPY_0_COPY_0 | 0 | 0 | 0
+
+FB_INSTANCE | INPUTPINS_FOOBAR5_ | decoder_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR1_ | FOOBAR1__ctinst | decoder_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR2_ | FOOBAR2__ctinst | decoder_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR3_ | FOOBAR3__ctinst | decoder_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR4_ | FOOBAR4__ctinst | decoder_COPY_0_COPY_0 | 0 | 0 | 0
+
+PLA | FOOBAR1_ | 14
+PLA_TERM | 0 | 
+SPPTERM | 4 | IV_TRUE | weathercock<3>_II/UIM | IV_TRUE | weathercock<2>_II/UIM | IV_TRUE | weathercock<1>_II/UIM | IV_FALSE | code_select_II/UIM
+PLA_TERM | 1 | 
+SPPTERM | 4 | IV_FALSE | weathercock<3>_II/UIM | IV_FALSE | weathercock<2>_II/UIM | IV_TRUE | weathercock<1>_II/UIM | IV_FALSE | code_select_II/UIM
+PLA_TERM | 2 | 
+SPPTERM | 4 | IV_FALSE | weathercock<3>_II/UIM | IV_TRUE | weathercock<2>_II/UIM | IV_FALSE | weathercock<1>_II/UIM | IV_FALSE | code_select_II/UIM
+PLA_TERM | 3 | 
+SPPTERM | 4 | IV_TRUE | weathercock<3>_II/UIM | IV_FALSE | weathercock<2>_II/UIM | IV_FALSE | weathercock<1>_II/UIM | IV_FALSE | code_select_II/UIM
+PLA_TERM | 4 | 
+SPPTERM | 3 | IV_FALSE | weathercock<3>_II/UIM | IV_TRUE | weathercock<2>_II/UIM | IV_FALSE | code_select_II/UIM
+PLA_TERM | 5 | 
+SPPTERM | 3 | IV_TRUE | weathercock<3>_II/UIM | IV_FALSE | weathercock<2>_II/UIM | IV_FALSE | code_select_II/UIM
+PLA_TERM | 10 | 
+SPPTERM | 1 | IV_FALSE | weathercock<0>_II/UIM
+PLA_TERM | 13 | 
+SPPTERM | 1 | IV_FALSE | weathercock<1>_II/UIM
+PLA_TERM | 16 | 
+SPPTERM | 4 | IV_TRUE | weathercock<0>_II/UIM | IV_FALSE | weathercock<3>_II/UIM | IV_TRUE | weathercock<2>_II/UIM | IV_TRUE | weathercock<1>_II/UIM
+PLA_TERM | 34 | 
+SPPTERM | 4 | IV_FALSE | weathercock<0>_II/UIM | IV_TRUE | weathercock<3>_II/UIM | IV_FALSE | weathercock<2>_II/UIM | IV_FALSE | weathercock<1>_II/UIM
+PLA_TERM | 37 | 
+SPPTERM | 4 | IV_TRUE | weathercock<0>_II/UIM | IV_TRUE | weathercock<3>_II/UIM | IV_FALSE | weathercock<2>_II/UIM | IV_FALSE | weathercock<1>_II/UIM
+PLA_TERM | 40 | 
+SPPTERM | 4 | IV_TRUE | weathercock<0>_II/UIM | IV_TRUE | weathercock<3>_II/UIM | IV_TRUE | weathercock<2>_II/UIM | IV_FALSE | weathercock<1>_II/UIM
+PLA_TERM | 43 | 
+SPPTERM | 4 | IV_FALSE | weathercock<0>_II/UIM | IV_TRUE | weathercock<3>_II/UIM | IV_TRUE | weathercock<2>_II/UIM | IV_FALSE | weathercock<1>_II/UIM
+PLA_TERM | 46 | 
+SPPTERM | 4 | IV_FALSE | weathercock<0>_II/UIM | IV_TRUE | weathercock<3>_II/UIM | IV_TRUE | weathercock<2>_II/UIM | IV_TRUE | weathercock<1>_II/UIM
+
+PLA | FOOBAR2_ | 9
+PLA_TERM | 10 | 
+SPPTERM | 4 | IV_TRUE | weathercock<0>_II/UIM | IV_TRUE | weathercock<3>_II/UIM | IV_TRUE | weathercock<2>_II/UIM | IV_TRUE | weathercock<1>_II/UIM
+PLA_TERM | 13 | 
+SPPTERM | 4 | IV_FALSE | weathercock<0>_II/UIM | IV_FALSE | weathercock<3>_II/UIM | IV_TRUE | weathercock<2>_II/UIM | IV_TRUE | weathercock<1>_II/UIM
+PLA_TERM | 22 | 
+SPPTERM | 4 | IV_FALSE | weathercock<0>_II/UIM | IV_FALSE | weathercock<3>_II/UIM | IV_TRUE | weathercock<2>_II/UIM | IV_FALSE | weathercock<1>_II/UIM
+PLA_TERM | 25 | 
+SPPTERM | 4 | IV_TRUE | weathercock<0>_II/UIM | IV_FALSE | weathercock<3>_II/UIM | IV_TRUE | weathercock<2>_II/UIM | IV_FALSE | weathercock<1>_II/UIM
+PLA_TERM | 28 | 
+SPPTERM | 4 | IV_TRUE | weathercock<0>_II/UIM | IV_FALSE | weathercock<3>_II/UIM | IV_FALSE | weathercock<2>_II/UIM | IV_FALSE | weathercock<1>_II/UIM
+PLA_TERM | 31 | 
+SPPTERM | 4 | IV_FALSE | weathercock<0>_II/UIM | IV_FALSE | weathercock<3>_II/UIM | IV_FALSE | weathercock<2>_II/UIM | IV_FALSE | weathercock<1>_II/UIM
+PLA_TERM | 37 | 
+SPPTERM | 4 | IV_FALSE | weathercock<0>_II/UIM | IV_FALSE | weathercock<3>_II/UIM | IV_FALSE | weathercock<2>_II/UIM | IV_TRUE | weathercock<1>_II/UIM
+PLA_TERM | 43 | 
+SPPTERM | 4 | IV_TRUE | weathercock<0>_II/UIM | IV_FALSE | weathercock<3>_II/UIM | IV_FALSE | weathercock<2>_II/UIM | IV_TRUE | weathercock<1>_II/UIM
+PLA_TERM | 46 | 
+SPPTERM | 4 | IV_TRUE | weathercock<0>_II/UIM | IV_TRUE | weathercock<3>_II/UIM | IV_FALSE | weathercock<2>_II/UIM | IV_TRUE | weathercock<1>_II/UIM
+
+PLA | FOOBAR3_ | 4
+PLA_TERM | 0 | 
+SPPTERM | 2 | IV_TRUE | weathercock<3>_II/UIM | IV_FALSE | code_select_II/UIM
+PLA_TERM | 10 | 
+SPPTERM | 4 | IV_FALSE | weathercock<0>_II/UIM | IV_TRUE | weathercock<3>_II/UIM | IV_FALSE | weathercock<2>_II/UIM | IV_TRUE | weathercock<1>_II/UIM
+PLA_TERM | 13 | 
+SPPTERM | 1 | IV_FALSE | weathercock<2>_II/UIM
+PLA_TERM | 16 | 
+SPPTERM | 1 | IV_TRUE | weathercock<3>_II/UIM
+
+BUSINFO | CODE_DISPLAY<3:0> | 4 | 0 | 1 | code_display<0> | 3 | code_display<1> | 2 | code_display<2> | 1 | code_display<3> | 0
+BUSINFO | WEATHERCOCK<3:0> | 4 | 0 | 0 | weathercock<0> | 3 | weathercock<1> | 2 | weathercock<2> | 1 | weathercock<3> | 0
+BUSINFO | WIND_DIR<15:0> | 16 | 0 | 1 | wind_dir<0> | 15 | wind_dir<10> | 5 | wind_dir<11> | 4 | wind_dir<12> | 3 | wind_dir<13> | 2 | wind_dir<14> | 1 | wind_dir<15> | 0 | wind_dir<1> | 14 | wind_dir<2> | 13 | wind_dir<3> | 12 | wind_dir<4> | 11 | wind_dir<5> | 10 | wind_dir<6> | 9 | wind_dir<7> | 8 | wind_dir<8> | 7 | wind_dir<9> | 6
+
+IOSTD | LVCMOS18
+weathercock<0> | LVCMOS18
+weathercock<3> | LVCMOS18
+weathercock<2> | LVCMOS18
+weathercock<1> | LVCMOS18
+code_select | LVCMOS18
+code_display<0> | LVCMOS18
+code_display<1> | LVCMOS18
+code_display<2> | LVCMOS18
+code_display<3> | LVCMOS18
+wind_dir<0> | LVCMOS18
+wind_dir<10> | LVCMOS18
+wind_dir<11> | LVCMOS18
+wind_dir<12> | LVCMOS18
+wind_dir<13> | LVCMOS18
+wind_dir<14> | LVCMOS18
+wind_dir<15> | LVCMOS18
+wind_dir<1> | LVCMOS18
+wind_dir<2> | LVCMOS18
+wind_dir<3> | LVCMOS18
+wind_dir<4> | LVCMOS18
+wind_dir<5> | LVCMOS18
+wind_dir<6> | LVCMOS18
+wind_dir<7> | LVCMOS18
+wind_dir<8> | LVCMOS18
+wind_dir<9> | LVCMOS18
+
+
+FB_ORDER_OF_INPUTS | FOOBAR1_ | 3 | weathercock<0> | 22 | 4 | weathercock<3> | 19 | 5 | weathercock<1> | 21 | 8 | weathercock<2> | 20 | 21 | code_select | 23
+
+FB_IMUX_INDEX | FOOBAR1_ | -1 | -1 | -1 | 41 | 45 | 42 | -1 | -1 | 43 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | 37 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1
+
+
+FB_ORDER_OF_INPUTS | FOOBAR2_ | 3 | weathercock<0> | 22 | 4 | weathercock<3> | 19 | 5 | weathercock<1> | 21 | 8 | weathercock<2> | 20
+
+FB_IMUX_INDEX | FOOBAR2_ | -1 | -1 | -1 | 41 | 45 | 42 | -1 | -1 | 43 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1
+
+
+FB_ORDER_OF_INPUTS | FOOBAR3_ | 3 | weathercock<0> | 22 | 4 | weathercock<3> | 19 | 5 | weathercock<1> | 21 | 8 | weathercock<2> | 20 | 21 | code_select | 23
+
+FB_IMUX_INDEX | FOOBAR3_ | -1 | -1 | -1 | 41 | 45 | 42 | -1 | -1 | 43 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | 37 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1
+
+

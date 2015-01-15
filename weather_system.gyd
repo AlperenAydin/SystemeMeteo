@@ -1,0 +1,56 @@
+Pin Freeze File:  version P.20131013
+
+2C64A44VQ XC2C64A-7-VQ44
+anemometer S:PIN38
+clock S:PIN43
+code_select S:PIN5
+mode_select S:PIN21
+weathercock<0> S:PIN20
+weathercock<1> S:PIN19
+weathercock<2> S:PIN18
+weathercock<3> S:PIN6
+code_wind_speed<0> S:PIN23
+code_wind_speed<1> S:PIN28
+code_wind_speed<2> S:PIN29
+code_wind_speed<3> S:PIN39
+wind_dir_speed<0> S:PIN33
+wind_dir_speed<1> S:PIN27
+wind_dir_speed<2> S:PIN32
+wind_dir_speed<3> S:PIN40
+wind_dir_speed<4> S:PIN37
+wind_dir_speed<5> S:PIN44
+wind_dir_speed<6> S:PIN22
+wind_dir_speed<7> S:PIN2
+wind_dir_speed<8> S:PIN34
+wind_dir_speed<9> S:PIN3
+wind_dir_speed<10> S:PIN31
+wind_dir_speed<11> S:PIN41
+wind_dir_speed<12> S:PIN36
+wind_dir_speed<13> S:PIN1
+wind_dir_speed<14> S:PIN30
+wind_dir_speed<15> S:PIN42
+
+
+;The remaining section of the .gyd file is for documentation purposes only.
+;It shows where your internal equations were placed in the last successful fit.
+
+PARTITION FB1_1 U1/U_risingedge_detector/anemometer_reg wind_dir_speed<4> wind_dir_speed<12> U1/U_counter_5bit/count_int<4>
+		 U1/U_counter_5bit/count_int<3> U1/U_counter_5bit/count_int<2> U1/U_counter_5bit/count_int<1> U1/speed_code<1>
+		 wind_dir_speed<8> wind_dir_speed<0> wind_dir_speed<2> wind_dir_speed<10>
+		 wind_dir_speed<14> U1/speed_code<0> U1/U_counter_5bit/counter_rst_delay U1/U_freq_divider/count_int<0>
+		
+PARTITION FB2_1 code_wind_speed<3> wind_dir_speed<3> U1/U_freq_divider/count_int<7> U1/U_freq_divider/count_int<6>
+		 wind_dir_speed<11> wind_dir_speed<15> U1/U_freq_divider/count_int<8> wind_dir_speed<5>
+		 U1/U_freq_divider/count_int<5> wind_dir_speed<13> U1/U_freq_divider/count_int<4> wind_dir_speed<7>
+		 wind_dir_speed<9> U1/U_freq_divider/count_int<3> U1/U_freq_divider/count_int<2> U1/U_freq_divider/count_int<1>
+		
+PARTITION FB3_1 code_wind_speed<2> code_wind_speed<1> wind_dir_speed<1> U1/U_freq_divider/count_int<10>
+		 U1/U_freq_divider/count_int<9> code_wind_speed<0> U1/U_counter_5bit/count_int<0> U1/speed_code<4>
+		 U1/speed_code<3> wind_dir_speed<6> U1/U_freq_divider/count_int<14> U1/U_freq_divider/count_int<13>
+		 U1/speed_code<2> U1/U_freq_divider/count_int<12> U1/U_freq_divider/count_int<11> U1/counter_ena
+		
+PARTITION FB4_4 U1/counter_rst U1/U_freq_divider/count_int<21> U1/U_freq_divider/count_int<20>
+PARTITION FB4_8 U1/U_freq_divider/count_int<19> U1/U_freq_divider/count_int<18> U1/U_freq_divider/count_int<17>
+PARTITION FB4_12 U1/U_freq_divider/count_int<16>
+PARTITION FB4_16 U1/U_freq_divider/count_int<15>
+

@@ -1,0 +1,12 @@
+Command line:
+   gray_bin_4bit_tb_isim_fit.exe
+     -simmode  gui
+     -sdfmax  /uut/=netgen/fit/gray_bin_4bit_timesim.sdf
+     -sdfroot  /uut
+     -simrunnum  0
+     -socket  37651
+
+Thu Jan 15 14:42:52 2015
+
+
+ Elaboration Time: 0.1 sec

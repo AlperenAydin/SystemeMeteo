@@ -1,0 +1,28 @@
+Command line:
+   trancoder_speed_tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  1
+     -socket  42185
+
+Mon Dec 15 17:07:03 2014
+
+
+ Elaboration Time: 0.06 sec
+
+ Current Memory Usage: 132.182 Meg
+
+ Total Signals          : 4
+ Total Nets             : 25
+ Total Signal Drivers   : 2
+ Total Blocks           : 3
+ Total Primitive Blocks : 2
+ Total Processes        : 2
+ Total Traceable Variables  : 8
+ Total Scalar Nets and Variables : 385
+
+ Total Simulation Time: 0.08 sec
+
+ Current Memory Usage: 141.619 Meg
+
+Mon Dec 15 17:07:42 2014
+

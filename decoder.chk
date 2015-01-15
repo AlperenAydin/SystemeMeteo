@@ -1,0 +1,65 @@
+
+----------------------------------------
+|  P a r t i t i o n    S u c c e e d  |
+----------------------------------------
+0 Group(s)
+
+----------------- B l o c k 0 ------------------
+PLApt(14/56), Fanin(5/38), Clk(0/3), Bct(0/4), Pin(8/8), Mcell(8/16)
+PLApts[14/47] 29 30 31 32 27 28 () () () () 14 () () 5 () () 7 () () () () () () () () () () () () () () () 
+              () () 21 () () 12 () () 10 () () 19 () () 15
+Fanins[ 5] code_select.p weathercock<0>.p weathercock<1>.p weathercock<2>.p weathercock<3>.p
+clk[0] 
+CTC: 
+CTR: 
+CTS: 
+CTE: 
+vref: [0]
+Signal[ 8] [code_display<0>(45),code_display<0>(38)] [code_display<1>(46),code_display<1>(37)]  
+           [wind_dir<0>(47),wind_dir<0>(36)] [wind_dir<10>(53),wind_dir<10>(34)]  
+           [wind_dir<11>(54),wind_dir<11>(33)] [wind_dir<12>(55),wind_dir<12>(32)]  
+           [wind_dir<13>(56),wind_dir<13>(31)] [wind_dir<14>(57),wind_dir<14>(30)] 
+Signal[ 8] [ 0: code_display<0>(45) code_display<0>(38)  ][ 1: code_display<1>(46) code_display<1>(37)  ] 
+           [ 2: wind_dir<0>(47) wind_dir<0>(36)  ][ 3:  ][ 4:  ][ 5:  ][ 6:  ][ 7:  ][ 8: wind_dir<10>(53)  
+           wind_dir<10>(34)  ][ 9: wind_dir<11>(54) wind_dir<11>(33)  ][ 10: wind_dir<12>(55)  
+           wind_dir<12>(32)  ][ 11: wind_dir<13>(56) wind_dir<13>(31)  ][ 12: wind_dir<14>(57)  
+           wind_dir<14>(30)  ][ 13:  ][ 14:  ][ 15:  ]
+----------------- B l o c k 1 ------------------
+PLApt(9/56), Fanin(4/38), Clk(0/3), Bct(0/4), Pin(9/9), Mcell(9/16)
+PLApts[9/47] () () () () () () () () () () 6 () () 16 () () () () () () () () 20 () () 11 () () 13 () () 22 
+             () () () () () 18 () () () () () 9 () () 8
+Fanins[ 4] weathercock<0>.p weathercock<1>.p weathercock<2>.p weathercock<3>.p
+clk[0] 
+CTC: 
+CTR: 
+CTS: 
+CTE: 
+vref: [0]
+Signal[ 9] [wind_dir<15>(61),wind_dir<15>(39)] [wind_dir<1>(62),wind_dir<1>(40)]  
+           [wind_dir<2>(65),wind_dir<2>(41)] [wind_dir<3>(66),wind_dir<3>(42)]  
+           [wind_dir<4>(67),wind_dir<4>(43)] [wind_dir<5>(68),wind_dir<5>(44)]  
+           [wind_dir<6>(70),wind_dir<6>(1)] [wind_dir<7>(72),wind_dir<7>(2)]  
+           [wind_dir<8>(73),wind_dir<8>(3)] 
+Signal[ 9] [ 0: wind_dir<15>(61) wind_dir<15>(39)  ][ 1: wind_dir<1>(62) wind_dir<1>(40)  ][ 2:  ][ 3:  ] 
+           [ 4: wind_dir<2>(65) wind_dir<2>(41)  ][ 5: wind_dir<3>(66) wind_dir<3>(42)  ][ 6:  
+           wind_dir<4>(67) wind_dir<4>(43)  ][ 7: wind_dir<5>(68) wind_dir<5>(44)  ][ 8:  ][ 9:  
+           wind_dir<6>(70) wind_dir<6>(1)  ][ 10:  ][ 11: wind_dir<7>(72) wind_dir<7>(2)  ][ 12:  
+           wind_dir<8>(73) wind_dir<8>(3)  ][ 13:  ][ 14:  ][ 15:  ]
+----------------- B l o c k 2 ------------------
+PLApt(4/56), Fanin(5/38), Clk(0/3), Bct(0/4), Pin(8/9), Mcell(3/16)
+PLApts[4/17] 26 () () () () () () () () () 17 () () 2 () () 0
+Fanins[ 5] code_select.p weathercock<0>.p weathercock<1>.p weathercock<2>.p weathercock<3>.p
+clk[0] 
+CTC: 
+CTR: 
+CTS: 
+CTE: 
+vref: [0]
+Signal[ 8] [code_display<2>(78),code_display<2>(28)] [code_display<3>(79),code_display<3>(27)]  
+           [wind_dir<9>(77),wind_dir<9>(29)] [code_select(23)] [weathercock<0>(22)] [weathercock<1>(21)]  
+           [weathercock<2>(20)] [weathercock<3>(19)] 
+Signal[ 8] [ 0: wind_dir<9>(77) wind_dir<9>(29)  ][ 1: code_display<2>(78) code_display<2>(28)  ][ 2:  
+           code_display<3>(79) code_display<3>(27)  ][ 3:  ][ 4:  ][ 5: code_select(23)  ][ 6:  ][ 7:  ][ 8:  
+            ][ 9: weathercock<0>(22)  ][ 10: weathercock<1>(21)  ][ 11: weathercock<2>(20)  ][ 12:  ][ 13:  
+           weathercock<3>(19)  ][ 14: (18)  ][ 15:  ]
+----------------- B l o c k 3 ------------------

@@ -1,0 +1,5 @@
+xst -intstyle ise -ifn "/share/users/alperen.aydin/home/TPElec/ELN1/SysMeteo/gray_bin_4bit.xst" -ofn "/share/users/alperen.aydin/home/TPElec/ELN1/SysMeteo/gray_bin_4bit.syr" 
+ngdbuild -intstyle ise -dd _ngo -i -p xc2c64a-VQ44-7 gray_bin_4bit.ngc gray_bin_4bit.ngd  
+cpldfit -intstyle ise -p xc2c64a-7-VQ44 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 gray_bin_4bit.ngd 
+tsim -intstyle ise gray_bin_4bit gray_bin_4bit.nga 
+netgen -intstyle ise -rpw 100 -ar Structure -tm gray_bin_4bit -w -dir netgen/fit -ofmt vhdl -sim gray_bin_4bit.nga gray_bin_4bit_timesim.vhd 

@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<generated_project xmlns="http://www.xilinx.com/XMLSchema" xmlns:xil_pn="http://www.xilinx.com/XMLSchema">
+
+  <!--                                                          -->
+
+  <!--             For tool use only. Do not edit.              -->
+
+  <!--                                                          -->
+
+  <!-- ProjectNavigator created generated project file.         -->
+
+  <!-- For use in tracking generated file and other information -->
+
+  <!-- allowing preservation of process status.                 -->
+
+  <!--                                                          -->
+
+  <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved. -->
+
+  <version xmlns="http://www.xilinx.com/XMLSchema">11.1</version>
+
+  <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="SysMeteo.xise"/>
+
+  <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name=".lso"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="_ngo"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="decoder.bld"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_CHK" xil_pn:name="decoder.chk"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="decoder.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_CXT" xil_pn:name="decoder.cxt"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_GYD" xil_pn:name="decoder.gyd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_JEDEC" xil_pn:name="decoder.jed"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="decoder.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MFD" xil_pn:name="decoder.mfd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGA" xil_pn:name="decoder.nga"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="decoder.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGD" xil_pn:name="decoder.ngd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="decoder.ngr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PNX" xil_pn:name="decoder.pnx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="decoder.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="decoder.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="decoder.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_VM6" xil_pn:name="decoder.vm6"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="decoder.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="decoder_summary.html"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="decoder_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="gray_bin_4bit.bld"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_CHK" xil_pn:name="gray_bin_4bit.chk"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="gray_bin_4bit.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_CXT" xil_pn:name="gray_bin_4bit.cxt"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_GYD" xil_pn:name="gray_bin_4bit.gyd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="gray_bin_4bit.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MFD" xil_pn:name="gray_bin_4bit.mfd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGA" xil_pn:name="gray_bin_4bit.nga"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="gray_bin_4bit.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGD" xil_pn:name="gray_bin_4bit.ngd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="gray_bin_4bit.ngr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PNX" xil_pn:name="gray_bin_4bit.pnx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="gray_bin_4bit.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="gray_bin_4bit.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="gray_bin_4bit.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_VM6" xil_pn:name="gray_bin_4bit.vm6"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="gray_bin_4bit.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="gray_bin_4bit_summary.html"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="gray_bin_4bit_tb_fit.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="gray_bin_4bit_tb_isim_beh.exe"/>
+    <file xil_pn:branch="PostRouteSimulation" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="gray_bin_4bit_tb_isim_fit.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="gray_bin_4bit_tb_isim_fit.wdb"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="gray_bin_4bit_xst.xrpt"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="gray_decoder_4bit_tb_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
+    <file xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd">
+      <branch xil_pn:name="BehavioralSim"/>
+      <branch xil_pn:name="PostRouteSimulation"/>
+    </file>
+    <file xil_pn:branch="PostRouteSimulation" xil_pn:fileType="FILE_LOG" xil_pn:name="isim.log"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="mux_2x1x20bit.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="mux_2x1x20bit.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="mux_2x1x20bit.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="mux_2x1x4bit_tb_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="mux_2x1x4bit_tb_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="mux_2x1x4bit_tb_isim_beh.wdb"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="mux_2x1x4bit_tb_stx_beh.prj"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="netgen"/>
+    <file xil_pn:branch="PostRouteSimulation" xil_pn:fileType="FILE_NETGEN_REPORT" xil_pn:name="netgen/fit/gray_bin_4bit_timesim.nlf"/>
+    <file xil_pn:branch="PostRouteSimulation" xil_pn:fileType="FILE_SDF" xil_pn:name="netgen/fit/gray_bin_4bit_timesim.sdf"/>
+    <file xil_pn:branch="PostRouteSimulation" xil_pn:fileType="FILE_VHDL" xil_pn:name="netgen/fit/gray_bin_4bit_timesim.vhd"/>
+    <file xil_pn:branch="PostRouteSimulation" xil_pn:fileType="FILE_NETGEN_REPORT" xil_pn:name="netgen/fit/weather_system_timesim.nlf"/>
+    <file xil_pn:branch="PostRouteSimulation" xil_pn:fileType="FILE_SDF" xil_pn:name="netgen/fit/weather_system_timesim.sdf"/>
+    <file xil_pn:branch="PostRouteSimulation" xil_pn:fileType="FILE_VHDL" xil_pn:name="netgen/fit/weather_system_timesim.vhd"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="trancoder_speed_tb_isim_beh.exe"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="weather_system.bld"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_CHK" xil_pn:name="weather_system.chk"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="weather_system.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_CXT" xil_pn:name="weather_system.cxt"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_GYD" xil_pn:name="weather_system.gyd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_JEDEC" xil_pn:name="weather_system.jed"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="weather_system.log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="weather_system.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MFD" xil_pn:name="weather_system.mfd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGA" xil_pn:name="weather_system.nga"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="weather_system.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGD" xil_pn:name="weather_system.ngd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="weather_system.ngr"/>
+    <file xil_pn:fileType="FILE_PAD_MISC" xil_pn:name="weather_system.pad"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PNX" xil_pn:name="weather_system.pnx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="weather_system.prj"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="weather_system.rpt"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="weather_system.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="weather_system.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_VM6" xil_pn:name="weather_system.vm6"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="weather_system.xml"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="weather_system.xst"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="weather_system_build.xml"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="weather_system_envsettings.html"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="weather_system_html"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="weather_system_ngdbuild.xrpt"/>
+    <file xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="weather_system_pad.csv"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="weather_system_summary.html"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="weather_system_vhdl.prj"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="weather_system_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
+    <file xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini">
+      <branch xil_pn:name="BehavioralSim"/>
+      <branch xil_pn:name="PostRouteSimulation"/>
+    </file>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xlnx_auto_0_xdb"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
+  </files>
+
+  <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1418656732" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1418656732">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1418660678" xil_pn:in_ck="-4007240214922938001" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1418660678">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="counter_5bit.vhd"/>
+      <outfile xil_pn:name="decoder.vhd"/>
+      <outfile xil_pn:name="freq_divider.vhd"/>
+      <outfile xil_pn:name="gray_bin_4bit.vhd"/>
+      <outfile xil_pn:name="gray_bin_4bit_tb.vhd"/>
+      <outfile xil_pn:name="gray_decoder_4bit.vhd"/>
+      <outfile xil_pn:name="gray_decoder_4bit_tb.vhd"/>
+      <outfile xil_pn:name="mux_2x1x20bit.vhd"/>
+      <outfile xil_pn:name="mux_2x1x4bit.vhd"/>
+      <outfile xil_pn:name="mux_2x1x4bit_tb.vhd"/>
+      <outfile xil_pn:name="risingedge_detector.vhd"/>
+      <outfile xil_pn:name="speed_counter.vhd"/>
+      <outfile xil_pn:name="trancoder_speed_tb.vhd"/>
+      <outfile xil_pn:name="transcoder_speed.vhd"/>
+      <outfile xil_pn:name="weather_system.vhd"/>
+    </transform>
+    <transform xil_pn:end_ts="1418660128" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="8345605521687210917" xil_pn:start_ts="1418660128">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1418660678" xil_pn:in_ck="-4007240214922938001" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1418660678">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="counter_5bit.vhd"/>
+      <outfile xil_pn:name="decoder.vhd"/>
+      <outfile xil_pn:name="freq_divider.vhd"/>
+      <outfile xil_pn:name="gray_bin_4bit.vhd"/>
+      <outfile xil_pn:name="gray_bin_4bit_tb.vhd"/>
+      <outfile xil_pn:name="gray_decoder_4bit.vhd"/>
+      <outfile xil_pn:name="gray_decoder_4bit_tb.vhd"/>
+      <outfile xil_pn:name="mux_2x1x20bit.vhd"/>
+      <outfile xil_pn:name="mux_2x1x4bit.vhd"/>
+      <outfile xil_pn:name="mux_2x1x4bit_tb.vhd"/>
+      <outfile xil_pn:name="risingedge_detector.vhd"/>
+      <outfile xil_pn:name="speed_counter.vhd"/>
+      <outfile xil_pn:name="trancoder_speed_tb.vhd"/>
+      <outfile xil_pn:name="transcoder_speed.vhd"/>
+      <outfile xil_pn:name="weather_system.vhd"/>
+    </transform>
+    <transform xil_pn:end_ts="1418660681" xil_pn:in_ck="-4007240214922938001" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-1312125683467119023" xil_pn:start_ts="1418660678">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="fuse.log"/>
+      <outfile xil_pn:name="isim"/>
+      <outfile xil_pn:name="mux_2x1x4bit_tb_beh.prj"/>
+      <outfile xil_pn:name="mux_2x1x4bit_tb_isim_beh.exe"/>
+      <outfile xil_pn:name="xilinxsim.ini"/>
+    </transform>
+    <transform xil_pn:end_ts="1418660682" xil_pn:in_ck="3817255375734753464" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-4288544460575148194" xil_pn:start_ts="1418660681">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="isim.cmd"/>
+      <outfile xil_pn:name="mux_2x1x4bit_tb_isim_beh.wdb"/>
+    </transform>
+    <transform xil_pn:end_ts="1421329282" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1421329282">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1421329282" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="6393902310435157970" xil_pn:start_ts="1421329282">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1421329304" xil_pn:in_ck="3192775201616470035" xil_pn:name="TRANEXT_xstsynthesize_xbr" xil_pn:prop_ck="1952149347683685044" xil_pn:start_ts="1421329282">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name=".lso"/>
+      <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
+      <outfile xil_pn:name="decoder.ngr"/>
+      <outfile xil_pn:name="gray_bin_4bit.ngr"/>
+      <outfile xil_pn:name="weather_system.lso"/>
+      <outfile xil_pn:name="weather_system.ngc"/>
+      <outfile xil_pn:name="weather_system.ngr"/>
+      <outfile xil_pn:name="weather_system.prj"/>
+      <outfile xil_pn:name="weather_system.stx"/>
+      <outfile xil_pn:name="weather_system.syr"/>
+      <outfile xil_pn:name="weather_system.xst"/>
+      <outfile xil_pn:name="weather_system_xst.xrpt"/>
+      <outfile xil_pn:name="webtalk_pn.xml"/>
+      <outfile xil_pn:name="xst"/>
+    </transform>
+    <transform xil_pn:end_ts="1418660963" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="5110044433382994476" xil_pn:start_ts="1418660963">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1421329314" xil_pn:in_ck="4703079384052716921" xil_pn:name="TRAN_ngdbuild" xil_pn:prop_ck="2260988109850707743" xil_pn:start_ts="1421329304">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_ngo"/>
+      <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+      <outfile xil_pn:name="weather_system.bld"/>
+      <outfile xil_pn:name="weather_system.ngd"/>
+      <outfile xil_pn:name="weather_system_ngdbuild.xrpt"/>
+    </transform>
+    <transform xil_pn:end_ts="1421329327" xil_pn:in_ck="2747610287960558620" xil_pn:name="TRANEXT_vm6File_xbr" xil_pn:prop_ck="8008253102193796149" xil_pn:start_ts="1421329314">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="weather_system.chk"/>
+      <outfile xil_pn:name="weather_system.cxt"/>
+      <outfile xil_pn:name="weather_system.gyd"/>
+      <outfile xil_pn:name="weather_system.log"/>
+      <outfile xil_pn:name="weather_system.mfd"/>
+      <outfile xil_pn:name="weather_system.nga"/>
+      <outfile xil_pn:name="weather_system.pad"/>
+      <outfile xil_pn:name="weather_system.pnx"/>
+      <outfile xil_pn:name="weather_system.rpt"/>
+      <outfile xil_pn:name="weather_system.vm6"/>
+      <outfile xil_pn:name="weather_system.xml"/>
+      <outfile xil_pn:name="weather_system_build.xml"/>
+      <outfile xil_pn:name="weather_system_html"/>
+      <outfile xil_pn:name="weather_system_pad.csv"/>
+    </transform>
+    <transform xil_pn:end_ts="1421329330" xil_pn:in_ck="-9037772259661654020" xil_pn:name="TRANEXT_crtProg_xbr" xil_pn:prop_ck="5245363024343" xil_pn:start_ts="1421329327">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="weather_system.jed"/>
+    </transform>
+    <transform xil_pn:end_ts="1418656121" xil_pn:in_ck="447842573873944315" xil_pn:name="TRAN_timRpt" xil_pn:prop_ck="111903974446" xil_pn:start_ts="1418656118">
+      <status xil_pn:value="AbortedRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputChanged"/>
+    </transform>
+    <transform xil_pn:end_ts="1421329349" xil_pn:in_ck="8614017576237033523" xil_pn:name="TRAN_postFitSimModel" xil_pn:prop_ck="5154213532832978083" xil_pn:start_ts="1421329343">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="netgen"/>
+      <outfile xil_pn:name="netgen/fit/weather_system_timesim.nlf"/>
+      <outfile xil_pn:name="netgen/fit/weather_system_timesim.sdf"/>
+      <outfile xil_pn:name="netgen/fit/weather_system_timesim.vhd"/>
+    </transform>
+    <transform xil_pn:end_ts="1421329349" xil_pn:in_ck="-4186146466183206024" xil_pn:name="TRAN_copyPost-FitAbstractToPreSimulation" xil_pn:start_ts="1421329349">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="gray_bin_4bit_tb.vhd"/>
+      <outfile xil_pn:name="gray_decoder_4bit_tb.vhd"/>
+      <outfile xil_pn:name="mux_2x1x4bit_tb.vhd"/>
+      <outfile xil_pn:name="netgen/fit/gray_bin_4bit_timesim.sdf"/>
+      <outfile xil_pn:name="netgen/fit/gray_bin_4bit_timesim.vhd"/>
+      <outfile xil_pn:name="netgen/fit/weather_system_timesim.sdf"/>
+      <outfile xil_pn:name="netgen/fit/weather_system_timesim.vhd"/>
+      <outfile xil_pn:name="trancoder_speed_tb.vhd"/>
+    </transform>
+    <transform xil_pn:end_ts="1421329360" xil_pn:in_ck="-2587340508938694113" xil_pn:name="TRAN_ISimulatePostFitModelRunFuse" xil_pn:prop_ck="-4612795108470701459" xil_pn:start_ts="1421329349">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <outfile xil_pn:name="fuse.log"/>
+      <outfile xil_pn:name="gray_bin_4bit_tb_fit.prj"/>
+      <outfile xil_pn:name="gray_bin_4bit_tb_isim_fit.exe"/>
+      <outfile xil_pn:name="isim"/>
+      <outfile xil_pn:name="isim.log"/>
+      <outfile xil_pn:name="xilinxsim.ini"/>
+    </transform>
+    <transform xil_pn:end_ts="1421329361" xil_pn:in_ck="4351552519876382165" xil_pn:name="TRAN_ISimulatePostFitModel" xil_pn:prop_ck="-8933798214591338556" xil_pn:start_ts="1421329360">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <outfile xil_pn:name="gray_bin_4bit_tb_isim_fit.wdb"/>
+      <outfile xil_pn:name="isim.cmd"/>
+      <outfile xil_pn:name="isim.log"/>
+    </transform>
+  </transforms>
+
+</generated_project>
