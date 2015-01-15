@@ -1,7 +1,7 @@
  
 cpldfit:  version P.20131013                        Xilinx Inc.
                                   Fitter Report
-Design Name: weather_system                      Date:  1-15-2015,  2:42PM
+Design Name: weather_system                      Date:  1-15-2015,  4:59PM
 Device Used: XC2C64A-7-VQ44
 Fitting Status: Successful
 
@@ -9,18 +9,18 @@ Fitting Status: Successful
 
 Macrocells     Product Terms    Function Block   Registers      Pins           
 Used/Tot       Used/Tot         Inps Used/Tot    Used/Tot       Used/Tot       
-56 /64  ( 87%) 104 /224  ( 46%) 91  /160  ( 57%) 36 /64  ( 56%) 28 /33  ( 85%)
+56 /64  ( 87%) 99  /224  ( 44%) 101 /160  ( 63%) 36 /64  ( 56%) 28 /33  ( 85%)
 
 ** Function Block Resources **
 
 Function Mcells   FB Inps  Pterms   IO       CTC      CTR      CTS      CTE     
 Block    Used/Tot Used/Tot Used/Tot Used/Tot Used/Tot Used/Tot Used/Tot Used/Tot
-FB1      16/16*    17/40    28/56     7/ 8    0/1      0/1      0/1      0/1
-FB2      16/16*    18/40    32/56     8/ 9    0/1      0/1      0/1      0/1
-FB3      16/16*    34/40    36/56     5/ 9    0/1      0/1      0/1      0/1
-FB4       8/16     22/40     8/56     0/ 7    0/1      0/1      0/1      0/1
+FB1      16/16*    18/40    30/56     7/ 8    0/1      0/1      0/1      0/1
+FB2      16/16*    20/40    34/56     8/ 9    0/1      0/1      0/1      0/1
+FB3      16/16*    31/40    21/56     2/ 9    0/1      0/1      0/1      0/1
+FB4       8/16     32/40    14/56     3/ 7    0/1      0/1      0/1      0/1
          -----    -------  -------   -----    ---      ---      ---      ---
-Total    56/64     91/160  104/224   20/33    0/4      0/4      0/4      0/4 
+Total    56/64    101/160   99/224   20/33    0/4      0/4      0/4      0/4 
 
 CTC - Control Term Clock
 CTR - Control Term Reset
@@ -41,10 +41,10 @@ Signal 'clock' mapped onto global clock net GCK0.
 
 Signal Type    Required     Mapped  |  Pin Type            Used    Total 
 ------------------------------------|------------------------------------
-Input         :    7           7    |  I/O              :    20     25
+Input         :    7           7    |  I/O              :    21     25
 Output        :   20          20    |  GCK/IO           :     3      3
 Bidirectional :    0           0    |  GTS/IO           :     4      4
-GCK           :    1           1    |  GSR/IO           :     1      1
+GCK           :    1           1    |  GSR/IO           :     0      1
 GTS           :    0           0    |  
 GSR           :    0           0    |  
                  ----        ----
@@ -55,86 +55,91 @@ End of Mapped Resource Summary
 
 WARNING:Cpld - Unable to retrieve the path to the iSE Project Repository. Will
    use the default filename of 'weather_system.ise'.
+INFO:Cpld - Inferring BUFG constraint for signal 'clock' based upon the LOC
+   constraint 'P43'. It is recommended that you declare this BUFG explicitedly
+   in your design. Note that for certain device families the output of a BUFG
+   constraint can not drive a gated clock, and the BUFG constraint will be
+   ignored.
 *************************  Summary of Mapped Logic  ************************
 
 ** 20 Outputs **
 
 Signal                                   Total Total Bank Loc     Pin   Pin       Pin     I/O      I/O       Slew Reg     Reg Init
 Name                                     Pts   Inps               No.   Type      Use     STD      Style     Rate Use     State
-wind_dir_speed<4>                        2     6     2    FB1_2   37    I/O       O       LVCMOS18           FAST         
-wind_dir_speed<12>                       3     7     2    FB1_3   36    I/O       O       LVCMOS18           FAST         
-wind_dir_speed<8>                        3     8     2    FB1_9   34    GTS/I/O   O       LVCMOS18           FAST         
-wind_dir_speed<0>                        3     8     2    FB1_10  33    GTS/I/O   O       LVCMOS18           FAST         
-wind_dir_speed<2>                        3     9     2    FB1_11  32    GTS/I/O   O       LVCMOS18           FAST         
-wind_dir_speed<10>                       4     9     2    FB1_12  31    GTS/I/O   O       LVCMOS18           FAST         
-wind_dir_speed<14>                       4     9     2    FB1_13  30    GSR/I/O   O       LVCMOS18           FAST         
-code_wind_speed<3>                       2     7     1    FB2_1   39    I/O       O       LVCMOS18           FAST         
-wind_dir_speed<3>                        3     10    1    FB2_2   40    I/O       O       LVCMOS18           FAST         
-wind_dir_speed<11>                       4     10    1    FB2_5   41    I/O       O       LVCMOS18           FAST         
-wind_dir_speed<15>                       4     10    1    FB2_6   42    I/O       O       LVCMOS18           FAST         
-wind_dir_speed<5>                        3     10    1    FB2_8   44    GCK/I/O   O       LVCMOS18           FAST         
-wind_dir_speed<13>                       4     10    1    FB2_10  1     GCK/I/O   O       LVCMOS18           FAST         
-wind_dir_speed<7>                        4     10    1    FB2_12  2     I/O       O       LVCMOS18           FAST         
-wind_dir_speed<9>                        4     10    1    FB2_13  3     I/O       O       LVCMOS18           FAST         
-code_wind_speed<2>                       3     8     2    FB3_1   29    I/O       O       LVCMOS18           FAST         
-code_wind_speed<1>                       5     10    2    FB3_2   28    I/O       O       LVCMOS18           FAST         
-wind_dir_speed<1>                        4     10    2    FB3_3   27    I/O       O       LVCMOS18           FAST         
-code_wind_speed<0>                       6     9     2    FB3_6   23    I/O       O       LVCMOS18           FAST         
-wind_dir_speed<6>                        3     9     2    FB3_10  22    I/O       O       LVCMOS18           FAST         
+wind_dir_speed<8>                        3     8     2    FB1_1   38    I/O       O       LVCMOS33           FAST         
+wind_dir_speed<7>                        4     10    2    FB1_2   37    I/O       O       LVCMOS33           FAST         
+wind_dir_speed<6>                        3     9     2    FB1_3   36    I/O       O       LVCMOS33           FAST         
+wind_dir_speed<5>                        3     10    2    FB1_9   34    GTS/I/O   O       LVCMOS33           FAST         
+wind_dir_speed<4>                        2     6     2    FB1_10  33    GTS/I/O   O       LVCMOS33           FAST         
+wind_dir_speed<3>                        3     10    2    FB1_11  32    GTS/I/O   O       LVCMOS33           FAST         
+wind_dir_speed<2>                        3     9     2    FB1_12  31    GTS/I/O   O       LVCMOS33           FAST         
+wind_dir_speed<9>                        4     10    1    FB2_1   39    I/O       O       LVCMOS33           FAST         
+wind_dir_speed<10>                       4     9     1    FB2_2   40    I/O       O       LVCMOS33           FAST         
+wind_dir_speed<11>                       4     10    1    FB2_5   41    I/O       O       LVCMOS33           FAST         
+wind_dir_speed<12>                       3     7     1    FB2_6   42    I/O       O       LVCMOS33           FAST         
+wind_dir_speed<13>                       4     10    1    FB2_8   44    GCK/I/O   O       LVCMOS33           FAST         
+wind_dir_speed<14>                       4     9     1    FB2_10  1     GCK/I/O   O       LVCMOS33           FAST         
+wind_dir_speed<15>                       4     10    1    FB2_12  2     I/O       O       LVCMOS33           FAST         
+code_wind_speed<0>                       6     9     1    FB2_13  3     I/O       O       LVCMOS33           FAST         
+wind_dir_speed<1>                        4     10    2    FB3_1   29    I/O       O       LVCMOS33           FAST         
+wind_dir_speed<0>                        3     8     2    FB3_3   27    I/O       O       LVCMOS33           FAST         
+code_wind_speed<1>                       5     10    1    FB4_1   5     I/O       O       LVCMOS33           FAST         
+code_wind_speed<2>                       3     8     1    FB4_2   6     I/O       O       LVCMOS33           FAST         
+code_wind_speed<3>                       2     7     1    FB4_7   8     I/O       O       LVCMOS33           FAST         
 
 ** 36 Buried Nodes **
 
 Signal                                   Total Total Loc     Reg     Reg Init
 Name                                     Pts   Inps          Use     State
-U1/U_risingedge_detector/anemometer_reg  0     0     FB1_1   DFF     RESET
 U1/U_counter_5bit/count_int<4>           2     7     FB1_4   TFF     RESET
 U1/U_counter_5bit/count_int<3>           2     6     FB1_5   TFF     RESET
 U1/U_counter_5bit/count_int<2>           2     5     FB1_6   TFF     RESET
 U1/U_counter_5bit/count_int<1>           2     4     FB1_7   TFF     RESET
 U1/speed_code<1>                         2     2     FB1_8   DEFF    RESET
+U1/U_counter_5bit/count_int<0>           2     3     FB1_13  DFF     RESET
 U1/speed_code<0>                         2     2     FB1_14  DEFF    RESET
 U1/U_counter_5bit/counter_rst_delay      1     1     FB1_15  DFF     RESET
 U1/U_freq_divider/count_int<0>           0     0     FB1_16  TFF     RESET
-U1/U_freq_divider/count_int<7>           1     7     FB2_3   TFF     RESET
-U1/U_freq_divider/count_int<6>           1     6     FB2_4   TFF     RESET
-U1/U_freq_divider/count_int<8>           1     8     FB2_7   TFF     RESET
-U1/U_freq_divider/count_int<5>           1     5     FB2_9   TFF     RESET
-U1/U_freq_divider/count_int<4>           1     4     FB2_11  TFF     RESET
-U1/U_freq_divider/count_int<3>           1     3     FB2_14  TFF     RESET
-U1/U_freq_divider/count_int<2>           1     2     FB2_15  TFF     RESET
-U1/U_freq_divider/count_int<1>           1     1     FB2_16  TFF     RESET
-U1/U_freq_divider/count_int<10>          1     10    FB3_4   TFF     RESET
-U1/U_freq_divider/count_int<9>           1     9     FB3_5   TFF     RESET
-U1/U_counter_5bit/count_int<0>           2     3     FB3_7   DFF     RESET
-U1/speed_code<4>                         2     2     FB3_8   DEFF    RESET
-U1/speed_code<3>                         2     2     FB3_9   DEFF    RESET
+U1/U_freq_divider/count_int<6>           1     6     FB2_3   TFF     RESET
+U1/U_freq_divider/count_int<5>           1     5     FB2_4   TFF     RESET
+U1/U_freq_divider/count_int<7>           1     7     FB2_7   TFF     RESET
+U1/U_freq_divider/count_int<4>           1     4     FB2_9   TFF     RESET
+U1/U_freq_divider/count_int<3>           1     3     FB2_11  TFF     RESET
+U1/U_freq_divider/count_int<2>           1     2     FB2_14  TFF     RESET
+U1/U_freq_divider/count_int<1>           1     1     FB2_15  TFF     RESET
+U1/counter_ena                           2     3     FB2_16  DFF     RESET
+U1/U_freq_divider/count_int<17>          1     17    FB3_2   TFF     RESET
+U1/U_freq_divider/count_int<11>          1     11    FB3_4   TFF     RESET
+U1/U_freq_divider/count_int<10>          1     10    FB3_5   TFF     RESET
+U1/U_freq_divider/count_int<16>          1     16    FB3_6   TFF     RESET
+U1/U_freq_divider/count_int<9>           1     9     FB3_7   TFF     RESET
+U1/U_freq_divider/count_int<8>           1     8     FB3_8   TFF     RESET
+U1/speed_code<4>                         2     2     FB3_9   DEFF    RESET
+U1/U_freq_divider/count_int<15>          1     15    FB3_10  TFF     RESET
 U1/U_freq_divider/count_int<14>          1     14    FB3_11  TFF     RESET
 U1/U_freq_divider/count_int<13>          1     13    FB3_12  TFF     RESET
-U1/speed_code<2>                         2     2     FB3_13  DEFF    RESET
+U1/speed_code<3>                         2     2     FB3_13  DEFF    RESET
 U1/U_freq_divider/count_int<12>          1     12    FB3_14  TFF     RESET
-U1/U_freq_divider/count_int<11>          1     11    FB3_15  TFF     RESET
-U1/counter_ena                           2     3     FB3_16  DFF     RESET
-U1/counter_rst                           1     22    FB4_4   DFF     RESET
-U1/U_freq_divider/count_int<21>          1     21    FB4_5   TFF     RESET
-U1/U_freq_divider/count_int<20>          1     20    FB4_6   TFF     RESET
-U1/U_freq_divider/count_int<19>          1     19    FB4_8   TFF     RESET
-U1/U_freq_divider/count_int<18>          1     18    FB4_9   TFF     RESET
-U1/U_freq_divider/count_int<17>          1     17    FB4_10  TFF     RESET
-U1/U_freq_divider/count_int<16>          1     16    FB4_12  TFF     RESET
-U1/U_freq_divider/count_int<15>          1     15    FB4_16  TFF     RESET
+U1/U_risingedge_detector/anemometer_reg  0     0     FB3_15  DFF     RESET
+U1/speed_code<2>                         2     2     FB3_16  DEFF    RESET
+U1/counter_rst                           1     22    FB4_8   DFF     RESET
+U1/U_freq_divider/count_int<21>          1     21    FB4_9   TFF     RESET
+U1/U_freq_divider/count_int<20>          1     20    FB4_10  TFF     RESET
+U1/U_freq_divider/count_int<19>          1     19    FB4_12  TFF     RESET
+U1/U_freq_divider/count_int<18>          1     18    FB4_16  TFF     RESET
 
 ** 8 Inputs **
 
 Signal                                   Bank Loc     Pin   Pin       Pin     I/O      I/O
 Name                                                  No.   Type      Use     STD      Style
-anemometer                               2    FB1_1   38    I/O       I       LVCMOS18 KPR
-clock                                    1    FB2_7   43    GCK/I/O   GCK     LVCMOS18 KPR
-mode_select                              2    FB3_11  21    I/O       I       LVCMOS18 KPR
-weathercock<0>                           2    FB3_12  20    I/O       I       LVCMOS18 KPR
-weathercock<1>                           2    FB3_14  19    I/O       I       LVCMOS18 KPR
-weathercock<2>                           2    FB3_15  18    I/O       I       LVCMOS18 KPR
-code_select                              1    FB4_1   5     I/O       I       LVCMOS18 KPR
-weathercock<3>                           1    FB4_2   6     I/O       I       LVCMOS18 KPR
+clock                                    1    FB2_7   43    GCK/I/O   GCK     LVCMOS33 KPR
+mode_select                              2    FB3_10  22    I/O       I       LVCMOS33 KPR
+code_select                              2    FB3_12  20    I/O       I       LVCMOS33 KPR
+anemometer                               2    FB3_15  18    I/O       I       LVCMOS33 KPR
+weathercock<0>                           1    FB4_11  12    I/O       I       LVCMOS33 KPR
+weathercock<1>                           1    FB4_13  13    I/O       I       LVCMOS33 KPR
+weathercock<2>                           1    FB4_14  14    I/O       I       LVCMOS33 KPR
+weathercock<3>                           1    FB4_15  16    I/O       I       LVCMOS33 KPR
 
 Legend:
 Pin No.   - ~     - User Assigned
@@ -162,15 +167,14 @@ Pin Type/Use - I  - Input             GCK - Global clock
 Pin No.      - ~  - User Assigned
 *********************************** FB1  ***********************************
 This function block is part of I/O Bank number:               2
-Number of function block inputs used/remaining:               17/23
+Number of function block inputs used/remaining:               18/22
 Number of function block control terms used/remaining:        0/4
-Number of PLA product terms used/remaining:                   28/28
+Number of PLA product terms used/remaining:                   30/26
 Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
 Name                          Pt            No.  Type    Use   
-U1/U_risingedge_detector/anemometer_reg
-                              0     FB1_1   38   I/O     I                 
-wind_dir_speed<4>             2     FB1_2   37   I/O     O                 
-wind_dir_speed<12>            3     FB1_3   36   I/O     O                 
+wind_dir_speed<8>             3     FB1_1   38   I/O     O                 
+wind_dir_speed<7>             4     FB1_2   37   I/O     O                 
+wind_dir_speed<6>             3     FB1_3   36   I/O     O                 
 U1/U_counter_5bit/count_int<4>
                               2     FB1_4        (b)     (b)               
 U1/U_counter_5bit/count_int<3>
@@ -180,11 +184,12 @@ U1/U_counter_5bit/count_int<2>
 U1/U_counter_5bit/count_int<1>
                               2     FB1_7        (b)     (b)               
 U1/speed_code<1>              2     FB1_8        (b)     (b)               
-wind_dir_speed<8>             3     FB1_9   34   GTS/I/O O                 
-wind_dir_speed<0>             3     FB1_10  33   GTS/I/O O                 
-wind_dir_speed<2>             3     FB1_11  32   GTS/I/O O                 
-wind_dir_speed<10>            4     FB1_12  31   GTS/I/O O                 
-wind_dir_speed<14>            4     FB1_13  30   GSR/I/O O                 
+wind_dir_speed<5>             3     FB1_9   34   GTS/I/O O                 
+wind_dir_speed<4>             2     FB1_10  33   GTS/I/O O                 
+wind_dir_speed<3>             3     FB1_11  32   GTS/I/O O                 
+wind_dir_speed<2>             3     FB1_12  31   GTS/I/O O                 
+U1/U_counter_5bit/count_int<0>
+                              2     FB1_13  30   GSR/I/O (b)               
 U1/speed_code<0>              2     FB1_14       (b)     (b)               
 U1/U_counter_5bit/counter_rst_delay
                               1     FB1_15       (b)     (b)               
@@ -192,19 +197,21 @@ U1/U_freq_divider/count_int<0>
                               0     FB1_16       (b)     (b)               
 
 Signals Used by Logic in Function Block
-  1: U1/U_counter_5bit/count_int<0>        7: U1/counter_ena    13: mode_select 
-  2: U1/U_counter_5bit/count_int<1>        8: U1/counter_rst    14: weathercock<0> 
-  3: U1/U_counter_5bit/count_int<2>        9: U1/speed_code<1>  15: weathercock<1> 
-  4: U1/U_counter_5bit/count_int<3>       10: U1/speed_code<2>  16: weathercock<2> 
-  5: U1/U_counter_5bit/count_int<4>       11: U1/speed_code<3>  17: weathercock<3> 
-  6: U1/U_counter_5bit/counter_rst_delay  12: U1/speed_code<4> 
+  1: U1/U_counter_5bit/count_int<0>        7: U1/counter_ena    13: U1/speed_code<4> 
+  2: U1/U_counter_5bit/count_int<1>        8: U1/counter_rst    14: mode_select 
+  3: U1/U_counter_5bit/count_int<2>        9: U1/speed_code<0>  15: weathercock<0> 
+  4: U1/U_counter_5bit/count_int<3>       10: U1/speed_code<1>  16: weathercock<1> 
+  5: U1/U_counter_5bit/count_int<4>       11: U1/speed_code<2>  17: weathercock<2> 
+  6: U1/U_counter_5bit/counter_rst_delay  12: U1/speed_code<3>  18: weathercock<3> 
 
 Signal                     1         2         3         4 FB      
 Name             0----+----0----+----0----+----0----+----0 Inputs  
-wind_dir_speed<4> 
-                  ...........XXXXXX....................... 6       
-wind_dir_speed<12> 
-                  ..........XXXXXXX....................... 7       
+wind_dir_speed<8> 
+                  ..........XXXXXXXX...................... 8       
+wind_dir_speed<7> 
+                  ........XXXXXXXXXX...................... 10      
+wind_dir_speed<6> 
+                  .........XXXXXXXXX...................... 9       
 U1/U_counter_5bit/count_int<4> 
                   XXXXXXX................................. 7       
 U1/U_counter_5bit/count_int<3> 
@@ -214,16 +221,16 @@ U1/U_counter_5bit/count_int<2>
 U1/U_counter_5bit/count_int<1> 
                   XX...XX................................. 4       
 U1/speed_code<1>  .X.....X................................ 2       
-wind_dir_speed<8> 
-                  .........XXXXXXXX....................... 8       
-wind_dir_speed<0> 
-                  .........XXXXXXXX....................... 8       
+wind_dir_speed<5> 
+                  ........XXXXXXXXXX...................... 10      
+wind_dir_speed<4> 
+                  ............XXXXXX...................... 6       
+wind_dir_speed<3> 
+                  ........XXXXXXXXXX...................... 10      
 wind_dir_speed<2> 
-                  ........XXXXXXXXX....................... 9       
-wind_dir_speed<10> 
-                  ........XXXXXXXXX....................... 9       
-wind_dir_speed<14> 
-                  ........XXXXXXXXX....................... 9       
+                  .........XXXXXXXXX...................... 9       
+U1/U_counter_5bit/count_int<0> 
+                  X....XX................................. 3       
 U1/speed_code<0>  X......X................................ 2       
 U1/U_counter_5bit/counter_rst_delay 
                   .......X................................ 1       
@@ -233,200 +240,207 @@ U1/U_freq_divider/count_int<0>
                            0         0         0         0
 *********************************** FB2  ***********************************
 This function block is part of I/O Bank number:               1
-Number of function block inputs used/remaining:               18/22
+Number of function block inputs used/remaining:               20/20
 Number of function block control terms used/remaining:        0/4
-Number of PLA product terms used/remaining:                   32/24
+Number of PLA product terms used/remaining:                   34/22
 Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
 Name                          Pt            No.  Type    Use   
-code_wind_speed<3>            2     FB2_1   39   I/O     O                 
-wind_dir_speed<3>             3     FB2_2   40   I/O     O                 
-U1/U_freq_divider/count_int<7>
-                              1     FB2_3        (b)     (b)               
+wind_dir_speed<9>             4     FB2_1   39   I/O     O                 
+wind_dir_speed<10>            4     FB2_2   40   I/O     O                 
 U1/U_freq_divider/count_int<6>
+                              1     FB2_3        (b)     (b)               
+U1/U_freq_divider/count_int<5>
                               1     FB2_4        (b)     (b)               
 wind_dir_speed<11>            4     FB2_5   41   I/O     O                 
-wind_dir_speed<15>            4     FB2_6   42   I/O     O                 
-U1/U_freq_divider/count_int<8>
+wind_dir_speed<12>            3     FB2_6   42   I/O     O                 
+U1/U_freq_divider/count_int<7>
                               1     FB2_7   43   GCK/I/O GCK               
-wind_dir_speed<5>             3     FB2_8   44   GCK/I/O O                 
-U1/U_freq_divider/count_int<5>
-                              1     FB2_9        (b)     (b)               
-wind_dir_speed<13>            4     FB2_10  1    GCK/I/O O                 
+wind_dir_speed<13>            4     FB2_8   44   GCK/I/O O                 
 U1/U_freq_divider/count_int<4>
-                              1     FB2_11       (b)     (b)               
-wind_dir_speed<7>             4     FB2_12  2    I/O     O                 
-wind_dir_speed<9>             4     FB2_13  3    I/O     O                 
+                              1     FB2_9        (b)     (b)               
+wind_dir_speed<14>            4     FB2_10  1    GCK/I/O O                 
 U1/U_freq_divider/count_int<3>
-                              1     FB2_14       (b)     (b)               
+                              1     FB2_11       (b)     (b)               
+wind_dir_speed<15>            4     FB2_12  2    I/O     O                 
+code_wind_speed<0>            6     FB2_13  3    I/O     O                 
 U1/U_freq_divider/count_int<2>
-                              1     FB2_15       (b)     (b)               
+                              1     FB2_14       (b)     (b)               
 U1/U_freq_divider/count_int<1>
-                              1     FB2_16       (b)     (b)               
+                              1     FB2_15       (b)     (b)               
+U1/counter_ena                2     FB2_16       (b)     (b)               
 
 Signals Used by Logic in Function Block
-  1: U1/U_freq_divider/count_int<0>   7: U1/U_freq_divider/count_int<6>  13: U1/speed_code<4> 
-  2: U1/U_freq_divider/count_int<1>   8: U1/U_freq_divider/count_int<7>  14: mode_select 
-  3: U1/U_freq_divider/count_int<2>   9: U1/speed_code<0>                15: weathercock<0> 
-  4: U1/U_freq_divider/count_int<3>  10: U1/speed_code<1>                16: weathercock<1> 
-  5: U1/U_freq_divider/count_int<4>  11: U1/speed_code<2>                17: weathercock<2> 
-  6: U1/U_freq_divider/count_int<5>  12: U1/speed_code<3>                18: weathercock<3> 
+  1: U1/U_freq_divider/count_int<0>   8: U1/U_risingedge_detector/anemometer_reg  15: code_select 
+  2: U1/U_freq_divider/count_int<1>   9: U1/speed_code<0>                         16: mode_select 
+  3: U1/U_freq_divider/count_int<2>  10: U1/speed_code<1>                         17: weathercock<0> 
+  4: U1/U_freq_divider/count_int<3>  11: U1/speed_code<2>                         18: weathercock<1> 
+  5: U1/U_freq_divider/count_int<4>  12: U1/speed_code<3>                         19: weathercock<2> 
+  6: U1/U_freq_divider/count_int<5>  13: U1/speed_code<4>                         20: weathercock<3> 
+  7: U1/U_freq_divider/count_int<6>  14: anemometer                              
 
 Signal                     1         2         3         4 FB      
 Name             0----+----0----+----0----+----0----+----0 Inputs  
-code_wind_speed<3> 
-                  ........XXXXXX...X...................... 7       
-wind_dir_speed<3> 
-                  ........XXXXXXXXXX...................... 10      
-U1/U_freq_divider/count_int<7> 
-                  XXXXXXX................................. 7       
+wind_dir_speed<9> 
+                  ........XXXXX..XXXXX.................... 10      
+wind_dir_speed<10> 
+                  .........XXXX..XXXXX.................... 9       
 U1/U_freq_divider/count_int<6> 
                   XXXXXX.................................. 6       
-wind_dir_speed<11> 
-                  ........XXXXXXXXXX...................... 10      
-wind_dir_speed<15> 
-                  ........XXXXXXXXXX...................... 10      
-U1/U_freq_divider/count_int<8> 
-                  XXXXXXXX................................ 8       
-wind_dir_speed<5> 
-                  ........XXXXXXXXXX...................... 10      
 U1/U_freq_divider/count_int<5> 
                   XXXXX................................... 5       
+wind_dir_speed<11> 
+                  ........XXXXX..XXXXX.................... 10      
+wind_dir_speed<12> 
+                  ...........XX..XXXXX.................... 7       
+U1/U_freq_divider/count_int<7> 
+                  XXXXXXX................................. 7       
 wind_dir_speed<13> 
-                  ........XXXXXXXXXX...................... 10      
+                  ........XXXXX..XXXXX.................... 10      
 U1/U_freq_divider/count_int<4> 
                   XXXX.................................... 4       
-wind_dir_speed<7> 
-                  ........XXXXXXXXXX...................... 10      
-wind_dir_speed<9> 
-                  ........XXXXXXXXXX...................... 10      
+wind_dir_speed<14> 
+                  .........XXXX..XXXXX.................... 9       
 U1/U_freq_divider/count_int<3> 
                   XXX..................................... 3       
+wind_dir_speed<15> 
+                  ........XXXXX..XXXXX.................... 10      
+code_wind_speed<0> 
+                  ..........XXX.XXXXXX.................... 9       
 U1/U_freq_divider/count_int<2> 
                   XX...................................... 2       
 U1/U_freq_divider/count_int<1> 
                   X....................................... 1       
+U1/counter_ena    .......X.....XX......................... 3       
                  0----+----1----+----2----+----3----+----4
                            0         0         0         0
 *********************************** FB3  ***********************************
 This function block is part of I/O Bank number:               2
-Number of function block inputs used/remaining:               34/6
+Number of function block inputs used/remaining:               31/9
 Number of function block control terms used/remaining:        0/4
-Number of PLA product terms used/remaining:                   36/20
+Number of PLA product terms used/remaining:                   21/35
 Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
 Name                          Pt            No.  Type    Use   
-code_wind_speed<2>            3     FB3_1   29   I/O     O                 
-code_wind_speed<1>            5     FB3_2   28   I/O     O                 
-wind_dir_speed<1>             4     FB3_3   27   I/O     O                 
-U1/U_freq_divider/count_int<10>
+wind_dir_speed<1>             4     FB3_1   29   I/O     O                 
+U1/U_freq_divider/count_int<17>
+                              1     FB3_2   28   I/O     (b)               
+wind_dir_speed<0>             3     FB3_3   27   I/O     O                 
+U1/U_freq_divider/count_int<11>
                               1     FB3_4        (b)     (b)               
-U1/U_freq_divider/count_int<9>
+U1/U_freq_divider/count_int<10>
                               1     FB3_5        (b)     (b)               
-code_wind_speed<0>            6     FB3_6   23   I/O     O                 
-U1/U_counter_5bit/count_int<0>
-                              2     FB3_7        (b)     (b)               
-U1/speed_code<4>              2     FB3_8        (b)     (b)               
-U1/speed_code<3>              2     FB3_9        (b)     (b)               
-wind_dir_speed<6>             3     FB3_10  22   I/O     O                 
+U1/U_freq_divider/count_int<16>
+                              1     FB3_6   23   I/O     (b)               
+U1/U_freq_divider/count_int<9>
+                              1     FB3_7        (b)     (b)               
+U1/U_freq_divider/count_int<8>
+                              1     FB3_8        (b)     (b)               
+U1/speed_code<4>              2     FB3_9        (b)     (b)               
+U1/U_freq_divider/count_int<15>
+                              1     FB3_10  22   I/O     I                 
 U1/U_freq_divider/count_int<14>
-                              1     FB3_11  21   I/O     I                 
+                              1     FB3_11  21   I/O     (b)               
 U1/U_freq_divider/count_int<13>
                               1     FB3_12  20   I/O     I                 
-U1/speed_code<2>              2     FB3_13       (b)     (b)               
+U1/speed_code<3>              2     FB3_13       (b)     (b)               
 U1/U_freq_divider/count_int<12>
-                              1     FB3_14  19   I/O     I                 
-U1/U_freq_divider/count_int<11>
-                              1     FB3_15  18   I/O     I                 
-U1/counter_ena                2     FB3_16       (b)     (b)               
+                              1     FB3_14  19   I/O     (b)               
+U1/U_risingedge_detector/anemometer_reg
+                              0     FB3_15  18   I/O     I                 
+U1/speed_code<2>              2     FB3_16       (b)     (b)               
 
 Signals Used by Logic in Function Block
-  1: U1/U_counter_5bit/count_int<0>       13: U1/U_freq_divider/count_int<3>           24: U1/speed_code<1> 
-  2: U1/U_counter_5bit/count_int<2>       14: U1/U_freq_divider/count_int<4>           25: U1/speed_code<2> 
-  3: U1/U_counter_5bit/count_int<3>       15: U1/U_freq_divider/count_int<5>           26: U1/speed_code<3> 
-  4: U1/U_counter_5bit/count_int<4>       16: U1/U_freq_divider/count_int<6>           27: U1/speed_code<4> 
-  5: U1/U_counter_5bit/counter_rst_delay  17: U1/U_freq_divider/count_int<7>           28: anemometer 
-  6: U1/U_freq_divider/count_int<0>       18: U1/U_freq_divider/count_int<8>           29: code_select 
-  7: U1/U_freq_divider/count_int<10>      19: U1/U_freq_divider/count_int<9>           30: mode_select 
-  8: U1/U_freq_divider/count_int<11>      20: U1/U_risingedge_detector/anemometer_reg  31: weathercock<0> 
-  9: U1/U_freq_divider/count_int<12>      21: U1/counter_ena                           32: weathercock<1> 
- 10: U1/U_freq_divider/count_int<13>      22: U1/counter_rst                           33: weathercock<2> 
- 11: U1/U_freq_divider/count_int<1>       23: U1/speed_code<0>                         34: weathercock<3> 
- 12: U1/U_freq_divider/count_int<2>      
+  1: U1/U_counter_5bit/count_int<2>   12: U1/U_freq_divider/count_int<1>  22: U1/speed_code<0> 
+  2: U1/U_counter_5bit/count_int<3>   13: U1/U_freq_divider/count_int<2>  23: U1/speed_code<1> 
+  3: U1/U_counter_5bit/count_int<4>   14: U1/U_freq_divider/count_int<3>  24: U1/speed_code<2> 
+  4: U1/U_freq_divider/count_int<0>   15: U1/U_freq_divider/count_int<4>  25: U1/speed_code<3> 
+  5: U1/U_freq_divider/count_int<10>  16: U1/U_freq_divider/count_int<5>  26: U1/speed_code<4> 
+  6: U1/U_freq_divider/count_int<11>  17: U1/U_freq_divider/count_int<6>  27: mode_select 
+  7: U1/U_freq_divider/count_int<12>  18: U1/U_freq_divider/count_int<7>  28: weathercock<0> 
+  8: U1/U_freq_divider/count_int<13>  19: U1/U_freq_divider/count_int<8>  29: weathercock<1> 
+  9: U1/U_freq_divider/count_int<14>  20: U1/U_freq_divider/count_int<9>  30: weathercock<2> 
+ 10: U1/U_freq_divider/count_int<15>  21: U1/counter_rst                  31: weathercock<3> 
+ 11: U1/U_freq_divider/count_int<16> 
 
 Signal                     1         2         3         4 FB      
 Name             0----+----0----+----0----+----0----+----0 Inputs  
-code_wind_speed<2> 
-                  .......................XXXX.XX..XX...... 8       
-code_wind_speed<1> 
-                  ......................XXXXX.XX.XXX...... 10      
 wind_dir_speed<1> 
-                  ......................XXXXX..XXXXX...... 10      
-U1/U_freq_divider/count_int<10> 
-                  .....X....XXXXXXXXX..................... 10      
-U1/U_freq_divider/count_int<9> 
-                  .....X....XXXXXXXX...................... 9       
-code_wind_speed<0> 
-                  ........................XXX.XXXXXX...... 9       
-U1/U_counter_5bit/count_int<0> 
-                  X...X...............X................... 3       
-U1/speed_code<4>  ...X.................X.................. 2       
-U1/speed_code<3>  ..X..................X.................. 2       
-wind_dir_speed<6> 
-                  .......................XXXX..XXXXX...... 9       
-U1/U_freq_divider/count_int<14> 
-                  .....XXXXXXXXXXXXXX..................... 14      
-U1/U_freq_divider/count_int<13> 
-                  .....XXXX.XXXXXXXXX..................... 13      
-U1/speed_code<2>  .X...................X.................. 2       
-U1/U_freq_divider/count_int<12> 
-                  .....XXX..XXXXXXXXX..................... 12      
+                  .....................XXXXXXXXXX......... 10      
+U1/U_freq_divider/count_int<17> 
+                  ...XXXXXXXXXXXXXXXXX.................... 17      
+wind_dir_speed<0> 
+                  .......................XXXXXXXX......... 8       
 U1/U_freq_divider/count_int<11> 
-                  .....XX...XXXXXXXXX..................... 11      
-U1/counter_ena    ...................X.......XX........... 3       
+                  ...XX......XXXXXXXXX.................... 11      
+U1/U_freq_divider/count_int<10> 
+                  ...X.......XXXXXXXXX.................... 10      
+U1/U_freq_divider/count_int<16> 
+                  ...XXXXXXX.XXXXXXXXX.................... 16      
+U1/U_freq_divider/count_int<9> 
+                  ...X.......XXXXXXXX..................... 9       
+U1/U_freq_divider/count_int<8> 
+                  ...X.......XXXXXXX...................... 8       
+U1/speed_code<4>  ..X.................X................... 2       
+U1/U_freq_divider/count_int<15> 
+                  ...XXXXXX..XXXXXXXXX.................... 15      
+U1/U_freq_divider/count_int<14> 
+                  ...XXXXX...XXXXXXXXX.................... 14      
+U1/U_freq_divider/count_int<13> 
+                  ...XXXX....XXXXXXXXX.................... 13      
+U1/speed_code<3>  .X..................X................... 2       
+U1/U_freq_divider/count_int<12> 
+                  ...XXX.....XXXXXXXXX.................... 12      
+U1/speed_code<2>  X...................X................... 2       
                  0----+----1----+----2----+----3----+----4
                            0         0         0         0
 *********************************** FB4  ***********************************
 This function block is part of I/O Bank number:               1
-Number of function block inputs used/remaining:               22/18
+Number of function block inputs used/remaining:               32/8
 Number of function block control terms used/remaining:        0/4
-Number of PLA product terms used/remaining:                   8/48
+Number of PLA product terms used/remaining:                   14/42
 Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
 Name                          Pt            No.  Type    Use   
-(unused)                      0     FB4_1   5    I/O     I     
-(unused)                      0     FB4_2   6    I/O     I     
+code_wind_speed<1>            5     FB4_1   5    I/O     O                 
+code_wind_speed<2>            3     FB4_2   6    I/O     O                 
 (unused)                      0     FB4_3        (b)           
-U1/counter_rst                1     FB4_4        (b)     (b)               
+(unused)                      0     FB4_4        (b)           
+(unused)                      0     FB4_5        (b)           
+(unused)                      0     FB4_6        (b)           
+code_wind_speed<3>            2     FB4_7   8    I/O     O                 
+U1/counter_rst                1     FB4_8        (b)     (b)               
 U1/U_freq_divider/count_int<21>
-                              1     FB4_5        (b)     (b)               
-U1/U_freq_divider/count_int<20>
-                              1     FB4_6        (b)     (b)               
-(unused)                      0     FB4_7   8    I/O           
-U1/U_freq_divider/count_int<19>
-                              1     FB4_8        (b)     (b)               
-U1/U_freq_divider/count_int<18>
                               1     FB4_9        (b)     (b)               
-U1/U_freq_divider/count_int<17>
+U1/U_freq_divider/count_int<20>
                               1     FB4_10       (b)     (b)               
-(unused)                      0     FB4_11  12   I/O           
-U1/U_freq_divider/count_int<16>
+(unused)                      0     FB4_11  12   I/O     I     
+U1/U_freq_divider/count_int<19>
                               1     FB4_12       (b)     (b)               
-(unused)                      0     FB4_13  13   I/O           
-(unused)                      0     FB4_14  14   I/O           
-(unused)                      0     FB4_15  16   I/O           
-U1/U_freq_divider/count_int<15>
+(unused)                      0     FB4_13  13   I/O     I     
+(unused)                      0     FB4_14  14   I/O     I     
+(unused)                      0     FB4_15  16   I/O     I     
+U1/U_freq_divider/count_int<18>
                               1     FB4_16       (b)     (b)               
 
 Signals Used by Logic in Function Block
-  1: U1/U_freq_divider/count_int<0>    9: U1/U_freq_divider/count_int<17>  16: U1/U_freq_divider/count_int<3> 
-  2: U1/U_freq_divider/count_int<10>  10: U1/U_freq_divider/count_int<18>  17: U1/U_freq_divider/count_int<4> 
-  3: U1/U_freq_divider/count_int<11>  11: U1/U_freq_divider/count_int<19>  18: U1/U_freq_divider/count_int<5> 
-  4: U1/U_freq_divider/count_int<12>  12: U1/U_freq_divider/count_int<1>   19: U1/U_freq_divider/count_int<6> 
-  5: U1/U_freq_divider/count_int<13>  13: U1/U_freq_divider/count_int<20>  20: U1/U_freq_divider/count_int<7> 
-  6: U1/U_freq_divider/count_int<14>  14: U1/U_freq_divider/count_int<21>  21: U1/U_freq_divider/count_int<8> 
-  7: U1/U_freq_divider/count_int<15>  15: U1/U_freq_divider/count_int<2>   22: U1/U_freq_divider/count_int<9> 
-  8: U1/U_freq_divider/count_int<16> 
+  1: U1/U_freq_divider/count_int<0>   12: U1/U_freq_divider/count_int<1>   23: U1/speed_code<0> 
+  2: U1/U_freq_divider/count_int<10>  13: U1/U_freq_divider/count_int<20>  24: U1/speed_code<1> 
+  3: U1/U_freq_divider/count_int<11>  14: U1/U_freq_divider/count_int<21>  25: U1/speed_code<2> 
+  4: U1/U_freq_divider/count_int<12>  15: U1/U_freq_divider/count_int<2>   26: U1/speed_code<3> 
+  5: U1/U_freq_divider/count_int<13>  16: U1/U_freq_divider/count_int<3>   27: U1/speed_code<4> 
+  6: U1/U_freq_divider/count_int<14>  17: U1/U_freq_divider/count_int<4>   28: code_select 
+  7: U1/U_freq_divider/count_int<15>  18: U1/U_freq_divider/count_int<5>   29: mode_select 
+  8: U1/U_freq_divider/count_int<16>  19: U1/U_freq_divider/count_int<6>   30: weathercock<1> 
+  9: U1/U_freq_divider/count_int<17>  20: U1/U_freq_divider/count_int<7>   31: weathercock<2> 
+ 10: U1/U_freq_divider/count_int<18>  21: U1/U_freq_divider/count_int<8>   32: weathercock<3> 
+ 11: U1/U_freq_divider/count_int<19>  22: U1/U_freq_divider/count_int<9>  
 
 Signal                     1         2         3         4 FB      
 Name             0----+----0----+----0----+----0----+----0 Inputs  
+code_wind_speed<1> 
+                  ......................XXXXXXXXXX........ 10      
+code_wind_speed<2> 
+                  .......................XXXXXX.XX........ 8       
+code_wind_speed<3> 
+                  ......................XXXXX.X..X........ 7       
 U1/counter_rst    XXXXXXXXXXXXXXXXXXXXXX.................. 22      
 U1/U_freq_divider/count_int<21> 
                   XXXXXXXXXXXXX.XXXXXXXX.................. 21      
@@ -436,12 +450,6 @@ U1/U_freq_divider/count_int<19>
                   XXXXXXXXXX.X..XXXXXXXX.................. 19      
 U1/U_freq_divider/count_int<18> 
                   XXXXXXXXX..X..XXXXXXXX.................. 18      
-U1/U_freq_divider/count_int<17> 
-                  XXXXXXXX...X..XXXXXXXX.................. 17      
-U1/U_freq_divider/count_int<16> 
-                  XXXXXXX....X..XXXXXXXX.................. 16      
-U1/U_freq_divider/count_int<15> 
-                  XXXXXX.....X..XXXXXXXX.................. 15      
                  0----+----1----+----2----+----3----+----4
                            0         0         0         0
 *******************************  Equations  ********************************
@@ -882,28 +890,28 @@ Device : XC2C64A-7-VQ44
 
 Pin Signal                         Pin Signal                        
 No. Name                           No. Name                          
-  1 wind_dir_speed<13>               23 code_wind_speed<0>            
-  2 wind_dir_speed<7>                24 TDO                           
-  3 wind_dir_speed<9>                25 GND                           
-  4 GND                              26 VCCIO-1.8                     
-  5 code_select                      27 wind_dir_speed<1>             
-  6 weathercock<3>                   28 code_wind_speed<1>            
-  7 VCCIO-1.8                        29 code_wind_speed<2>            
-  8 KPR                              30 wind_dir_speed<14>            
-  9 TDI                              31 wind_dir_speed<10>            
- 10 TMS                              32 wind_dir_speed<2>             
- 11 TCK                              33 wind_dir_speed<0>             
- 12 KPR                              34 wind_dir_speed<8>             
- 13 KPR                              35 VCCAUX                        
- 14 KPR                              36 wind_dir_speed<12>            
- 15 VCC                              37 wind_dir_speed<4>             
- 16 KPR                              38 anemometer                    
- 17 GND                              39 code_wind_speed<3>            
- 18 weathercock<2>                   40 wind_dir_speed<3>             
- 19 weathercock<1>                   41 wind_dir_speed<11>            
- 20 weathercock<0>                   42 wind_dir_speed<15>            
- 21 mode_select                      43 clock                         
- 22 wind_dir_speed<6>                44 wind_dir_speed<5>             
+  1 wind_dir_speed<14>               23 KPR                           
+  2 wind_dir_speed<15>               24 TDO                           
+  3 code_wind_speed<0>               25 GND                           
+  4 GND                              26 VCCIO-3.3                     
+  5 code_wind_speed<1>               27 wind_dir_speed<0>             
+  6 code_wind_speed<2>               28 KPR                           
+  7 VCCIO-3.3                        29 wind_dir_speed<1>             
+  8 code_wind_speed<3>               30 KPR                           
+  9 TDI                              31 wind_dir_speed<2>             
+ 10 TMS                              32 wind_dir_speed<3>             
+ 11 TCK                              33 wind_dir_speed<4>             
+ 12 weathercock<0>                   34 wind_dir_speed<5>             
+ 13 weathercock<1>                   35 VCCAUX                        
+ 14 weathercock<2>                   36 wind_dir_speed<6>             
+ 15 VCC                              37 wind_dir_speed<7>             
+ 16 weathercock<3>                   38 wind_dir_speed<8>             
+ 17 GND                              39 wind_dir_speed<9>             
+ 18 anemometer                       40 wind_dir_speed<10>            
+ 19 KPR                              41 wind_dir_speed<11>            
+ 20 code_select                      42 wind_dir_speed<12>            
+ 21 KPR                              43 clock                         
+ 22 mode_select                      44 wind_dir_speed<13>            
 
 
 Legend :  NC  = Not Connected, unbonded pin

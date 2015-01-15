@@ -1,10 +1,10 @@
 MDF Database:  version 1.0
 MDF_INFO | weather_system | XC2C64A-7-VQ44
-MACROCELL | 2 | 5 | code_wind_speed<0>_MC
+MACROCELL | 1 | 12 | code_wind_speed<0>_MC
 ATTRIBUTES | 1074004738 | 0
 INPUTS | 9 | weathercock<0>  | mode_select  | U1/speed_code<4>  | U1/speed_code<3>  | U1/speed_code<2>  | weathercock<3>  | weathercock<2>  | weathercock<1>  | code_select
-INPUTMC | 3 | 2 | 7 | 2 | 8 | 2 | 12
-INPUTP | 6 | 59 | 60 | 32 | 55 | 56 | 31
+INPUTMC | 3 | 2 | 8 | 2 | 12 | 2 | 15
+INPUTP | 6 | 46 | 61 | 51 | 49 | 48 | 59
 EQ | 11 | 
    code_wind_speed<0> = weathercock<0> & !mode_select
 	$ mode_select & !U1/speed_code<4> & 
@@ -18,11 +18,11 @@ EQ | 11 |
 	# !mode_select & !weathercock<3> & !weathercock<2> & 
 	weathercock<1> & !code_select;	// (6 pt, 9 inp)
 
-MACROCELL | 2 | 7 | U1/speed_code<4>_MC
+MACROCELL | 2 | 8 | U1/speed_code<4>_MC
 ATTRIBUTES | 2155905856 | 0
-OUTPUTMC | 20 | 2 | 5 | 2 | 1 | 2 | 0 | 1 | 0 | 0 | 9 | 0 | 11 | 1 | 4 | 0 | 2 | 1 | 9 | 0 | 12 | 1 | 5 | 2 | 2 | 0 | 10 | 1 | 1 | 0 | 1 | 1 | 7 | 2 | 9 | 1 | 11 | 0 | 8 | 1 | 12
+OUTPUTMC | 20 | 1 | 12 | 3 | 0 | 3 | 1 | 3 | 6 | 2 | 2 | 1 | 1 | 1 | 4 | 1 | 5 | 1 | 7 | 1 | 9 | 1 | 11 | 2 | 0 | 0 | 11 | 0 | 10 | 0 | 9 | 0 | 8 | 0 | 2 | 0 | 1 | 0 | 0 | 1 | 0
 INPUTS | 2 | U1/U_counter_5bit/count_int<4>  | U1/counter_rst
-INPUTMC | 2 | 0 | 3 | 3 | 3
+INPUTMC | 2 | 0 | 3 | 3 | 7
 EQ | 3 | 
    U1/speed_code<4> := U1/U_counter_5bit/count_int<4>;	// (1 pt, 1 inp)
    U1/speed_code<4>.CLK  =  clock;	// GCK	(0 pt, 0 inp)
@@ -31,9 +31,9 @@ GLOBALS | 1 | 2 | clock
 
 MACROCELL | 0 | 3 | U1/U_counter_5bit/count_int<4>_MC
 ATTRIBUTES | 2151711488 | 0
-OUTPUTMC | 2 | 0 | 3 | 2 | 7
+OUTPUTMC | 2 | 0 | 3 | 2 | 8
 INPUTS | 7 | U1/U_counter_5bit/count_int<4>  | U1/U_counter_5bit/counter_rst_delay  | U1/U_counter_5bit/count_int<0>  | U1/counter_ena  | U1/U_counter_5bit/count_int<1>  | U1/U_counter_5bit/count_int<2>  | U1/U_counter_5bit/count_int<3>
-INPUTMC | 7 | 0 | 3 | 0 | 14 | 2 | 6 | 2 | 15 | 0 | 6 | 0 | 5 | 0 | 4
+INPUTMC | 7 | 0 | 3 | 0 | 14 | 0 | 12 | 1 | 15 | 0 | 6 | 0 | 5 | 0 | 4
 EQ | 6 | 
    U1/U_counter_5bit/count_int<4>.T := U1/U_counter_5bit/count_int<4> & 
 	U1/U_counter_5bit/counter_rst_delay
@@ -45,19 +45,19 @@ GLOBALS | 1 | 2 | clock
 
 MACROCELL | 0 | 14 | U1/U_counter_5bit/counter_rst_delay_MC
 ATTRIBUTES | 2155905792 | 0
-OUTPUTMC | 5 | 2 | 6 | 0 | 6 | 0 | 5 | 0 | 4 | 0 | 3
+OUTPUTMC | 5 | 0 | 12 | 0 | 6 | 0 | 5 | 0 | 4 | 0 | 3
 INPUTS | 1 | U1/counter_rst
-INPUTMC | 1 | 3 | 3
+INPUTMC | 1 | 3 | 7
 EQ | 2 | 
    U1/U_counter_5bit/counter_rst_delay := U1/counter_rst;	// (1 pt, 1 inp)
    U1/U_counter_5bit/counter_rst_delay.CLK  =  clock;	// GCK	(0 pt, 0 inp)
 GLOBALS | 1 | 2 | clock
 
-MACROCELL | 3 | 3 | U1/counter_rst_MC
+MACROCELL | 3 | 7 | U1/counter_rst_MC
 ATTRIBUTES | 2155905792 | 0
-OUTPUTMC | 6 | 0 | 14 | 2 | 7 | 2 | 8 | 2 | 12 | 0 | 13 | 0 | 7
+OUTPUTMC | 6 | 0 | 14 | 2 | 8 | 2 | 12 | 2 | 15 | 0 | 13 | 0 | 7
 INPUTS | 22 | U1/U_freq_divider/count_int<0>  | U1/U_freq_divider/count_int<10>  | U1/U_freq_divider/count_int<1>  | U1/U_freq_divider/count_int<2>  | U1/U_freq_divider/count_int<3>  | U1/U_freq_divider/count_int<4>  | U1/U_freq_divider/count_int<5>  | U1/U_freq_divider/count_int<6>  | U1/U_freq_divider/count_int<7>  | U1/U_freq_divider/count_int<8>  | U1/U_freq_divider/count_int<9>  | U1/U_freq_divider/count_int<11>  | U1/U_freq_divider/count_int<12>  | U1/U_freq_divider/count_int<13>  | U1/U_freq_divider/count_int<14>  | U1/U_freq_divider/count_int<15>  | U1/U_freq_divider/count_int<16>  | U1/U_freq_divider/count_int<17>  | U1/U_freq_divider/count_int<18>  | U1/U_freq_divider/count_int<19>  | U1/U_freq_divider/count_int<20>  | U1/U_freq_divider/count_int<21>
-INPUTMC | 22 | 0 | 15 | 2 | 3 | 1 | 15 | 1 | 14 | 1 | 13 | 1 | 10 | 1 | 8 | 1 | 3 | 1 | 2 | 1 | 6 | 2 | 4 | 2 | 14 | 2 | 13 | 2 | 11 | 2 | 10 | 3 | 15 | 3 | 11 | 3 | 9 | 3 | 8 | 3 | 7 | 3 | 5 | 3 | 4
+INPUTMC | 22 | 0 | 15 | 2 | 4 | 1 | 14 | 1 | 13 | 1 | 10 | 1 | 8 | 1 | 3 | 1 | 2 | 1 | 6 | 2 | 7 | 2 | 6 | 2 | 3 | 2 | 13 | 2 | 11 | 2 | 10 | 2 | 9 | 2 | 5 | 2 | 1 | 3 | 15 | 3 | 11 | 3 | 9 | 3 | 8
 EQ | 13 | 
    U1/counter_rst := !U1/U_freq_divider/count_int<0> & 
 	!U1/U_freq_divider/count_int<10> & !U1/U_freq_divider/count_int<1> & 
@@ -76,18 +76,18 @@ GLOBALS | 1 | 2 | clock
 
 MACROCELL | 0 | 15 | U1/U_freq_divider/count_int<0>_MC
 ATTRIBUTES | 2151711488 | 0
-OUTPUTMC | 22 | 1 | 15 | 1 | 14 | 1 | 13 | 1 | 10 | 1 | 8 | 1 | 3 | 1 | 2 | 1 | 6 | 2 | 4 | 2 | 3 | 2 | 14 | 2 | 13 | 2 | 11 | 2 | 10 | 3 | 15 | 3 | 11 | 3 | 9 | 3 | 8 | 3 | 7 | 3 | 5 | 3 | 4 | 3 | 3
+OUTPUTMC | 22 | 1 | 14 | 1 | 13 | 1 | 10 | 1 | 8 | 1 | 3 | 1 | 2 | 1 | 6 | 2 | 7 | 2 | 6 | 2 | 4 | 2 | 3 | 2 | 13 | 2 | 11 | 2 | 10 | 2 | 9 | 2 | 5 | 2 | 1 | 3 | 15 | 3 | 11 | 3 | 9 | 3 | 8 | 3 | 7
 INPUTS | 0
 EQ | 2 | 
    !U1/U_freq_divider/count_int<0>.T := Gnd;	// (0 pt, 0 inp)
    U1/U_freq_divider/count_int<0>.CLK  =  clock;	// GCK	(0 pt, 0 inp)
 GLOBALS | 1 | 2 | clock
 
-MACROCELL | 2 | 3 | U1/U_freq_divider/count_int<10>_MC
+MACROCELL | 2 | 4 | U1/U_freq_divider/count_int<10>_MC
 ATTRIBUTES | 2151711488 | 0
-OUTPUTMC | 12 | 2 | 14 | 2 | 13 | 2 | 11 | 2 | 10 | 3 | 15 | 3 | 11 | 3 | 9 | 3 | 8 | 3 | 7 | 3 | 5 | 3 | 4 | 3 | 3
+OUTPUTMC | 12 | 2 | 3 | 2 | 13 | 2 | 11 | 2 | 10 | 2 | 9 | 2 | 5 | 2 | 1 | 3 | 15 | 3 | 11 | 3 | 9 | 3 | 8 | 3 | 7
 INPUTS | 10 | U1/U_freq_divider/count_int<0>  | U1/U_freq_divider/count_int<1>  | U1/U_freq_divider/count_int<2>  | U1/U_freq_divider/count_int<3>  | U1/U_freq_divider/count_int<4>  | U1/U_freq_divider/count_int<5>  | U1/U_freq_divider/count_int<6>  | U1/U_freq_divider/count_int<7>  | U1/U_freq_divider/count_int<8>  | U1/U_freq_divider/count_int<9>
-INPUTMC | 10 | 0 | 15 | 1 | 15 | 1 | 14 | 1 | 13 | 1 | 10 | 1 | 8 | 1 | 3 | 1 | 2 | 1 | 6 | 2 | 4
+INPUTMC | 10 | 0 | 15 | 1 | 14 | 1 | 13 | 1 | 10 | 1 | 8 | 1 | 3 | 1 | 2 | 1 | 6 | 2 | 7 | 2 | 6
 EQ | 7 | 
    U1/U_freq_divider/count_int<10>.T := U1/U_freq_divider/count_int<0> & 
 	U1/U_freq_divider/count_int<1> & U1/U_freq_divider/count_int<2> & 
@@ -98,9 +98,9 @@ EQ | 7 |
    U1/U_freq_divider/count_int<10>.CLK  =  clock;	// GCK	(0 pt, 0 inp)
 GLOBALS | 1 | 2 | clock
 
-MACROCELL | 1 | 15 | U1/U_freq_divider/count_int<1>_MC
+MACROCELL | 1 | 14 | U1/U_freq_divider/count_int<1>_MC
 ATTRIBUTES | 2151711488 | 0
-OUTPUTMC | 21 | 1 | 14 | 1 | 13 | 1 | 10 | 1 | 8 | 1 | 3 | 1 | 2 | 1 | 6 | 2 | 4 | 2 | 3 | 2 | 14 | 2 | 13 | 2 | 11 | 2 | 10 | 3 | 15 | 3 | 11 | 3 | 9 | 3 | 8 | 3 | 7 | 3 | 5 | 3 | 4 | 3 | 3
+OUTPUTMC | 21 | 1 | 13 | 1 | 10 | 1 | 8 | 1 | 3 | 1 | 2 | 1 | 6 | 2 | 7 | 2 | 6 | 2 | 4 | 2 | 3 | 2 | 13 | 2 | 11 | 2 | 10 | 2 | 9 | 2 | 5 | 2 | 1 | 3 | 15 | 3 | 11 | 3 | 9 | 3 | 8 | 3 | 7
 INPUTS | 1 | U1/U_freq_divider/count_int<0>
 INPUTMC | 1 | 0 | 15
 EQ | 2 | 
@@ -108,33 +108,33 @@ EQ | 2 |
    U1/U_freq_divider/count_int<1>.CLK  =  clock;	// GCK	(0 pt, 0 inp)
 GLOBALS | 1 | 2 | clock
 
-MACROCELL | 1 | 14 | U1/U_freq_divider/count_int<2>_MC
+MACROCELL | 1 | 13 | U1/U_freq_divider/count_int<2>_MC
 ATTRIBUTES | 2151711488 | 0
-OUTPUTMC | 20 | 1 | 13 | 1 | 10 | 1 | 8 | 1 | 3 | 1 | 2 | 1 | 6 | 2 | 4 | 2 | 3 | 2 | 14 | 2 | 13 | 2 | 11 | 2 | 10 | 3 | 15 | 3 | 11 | 3 | 9 | 3 | 8 | 3 | 7 | 3 | 5 | 3 | 4 | 3 | 3
+OUTPUTMC | 20 | 1 | 10 | 1 | 8 | 1 | 3 | 1 | 2 | 1 | 6 | 2 | 7 | 2 | 6 | 2 | 4 | 2 | 3 | 2 | 13 | 2 | 11 | 2 | 10 | 2 | 9 | 2 | 5 | 2 | 1 | 3 | 15 | 3 | 11 | 3 | 9 | 3 | 8 | 3 | 7
 INPUTS | 2 | U1/U_freq_divider/count_int<0>  | U1/U_freq_divider/count_int<1>
-INPUTMC | 2 | 0 | 15 | 1 | 15
+INPUTMC | 2 | 0 | 15 | 1 | 14
 EQ | 3 | 
    U1/U_freq_divider/count_int<2>.T := U1/U_freq_divider/count_int<0> & 
 	U1/U_freq_divider/count_int<1>;	// (1 pt, 2 inp)
    U1/U_freq_divider/count_int<2>.CLK  =  clock;	// GCK	(0 pt, 0 inp)
 GLOBALS | 1 | 2 | clock
 
-MACROCELL | 1 | 13 | U1/U_freq_divider/count_int<3>_MC
+MACROCELL | 1 | 10 | U1/U_freq_divider/count_int<3>_MC
 ATTRIBUTES | 2151711488 | 0
-OUTPUTMC | 19 | 1 | 10 | 1 | 8 | 1 | 3 | 1 | 2 | 1 | 6 | 2 | 4 | 2 | 3 | 2 | 14 | 2 | 13 | 2 | 11 | 2 | 10 | 3 | 15 | 3 | 11 | 3 | 9 | 3 | 8 | 3 | 7 | 3 | 5 | 3 | 4 | 3 | 3
+OUTPUTMC | 19 | 1 | 8 | 1 | 3 | 1 | 2 | 1 | 6 | 2 | 7 | 2 | 6 | 2 | 4 | 2 | 3 | 2 | 13 | 2 | 11 | 2 | 10 | 2 | 9 | 2 | 5 | 2 | 1 | 3 | 15 | 3 | 11 | 3 | 9 | 3 | 8 | 3 | 7
 INPUTS | 3 | U1/U_freq_divider/count_int<0>  | U1/U_freq_divider/count_int<1>  | U1/U_freq_divider/count_int<2>
-INPUTMC | 3 | 0 | 15 | 1 | 15 | 1 | 14
+INPUTMC | 3 | 0 | 15 | 1 | 14 | 1 | 13
 EQ | 3 | 
    U1/U_freq_divider/count_int<3>.T := U1/U_freq_divider/count_int<0> & 
 	U1/U_freq_divider/count_int<1> & U1/U_freq_divider/count_int<2>;	// (1 pt, 3 inp)
    U1/U_freq_divider/count_int<3>.CLK  =  clock;	// GCK	(0 pt, 0 inp)
 GLOBALS | 1 | 2 | clock
 
-MACROCELL | 1 | 10 | U1/U_freq_divider/count_int<4>_MC
+MACROCELL | 1 | 8 | U1/U_freq_divider/count_int<4>_MC
 ATTRIBUTES | 2151711488 | 0
-OUTPUTMC | 18 | 1 | 8 | 1 | 3 | 1 | 2 | 1 | 6 | 2 | 4 | 2 | 3 | 2 | 14 | 2 | 13 | 2 | 11 | 2 | 10 | 3 | 15 | 3 | 11 | 3 | 9 | 3 | 8 | 3 | 7 | 3 | 5 | 3 | 4 | 3 | 3
+OUTPUTMC | 18 | 1 | 3 | 1 | 2 | 1 | 6 | 2 | 7 | 2 | 6 | 2 | 4 | 2 | 3 | 2 | 13 | 2 | 11 | 2 | 10 | 2 | 9 | 2 | 5 | 2 | 1 | 3 | 15 | 3 | 11 | 3 | 9 | 3 | 8 | 3 | 7
 INPUTS | 4 | U1/U_freq_divider/count_int<0>  | U1/U_freq_divider/count_int<1>  | U1/U_freq_divider/count_int<2>  | U1/U_freq_divider/count_int<3>
-INPUTMC | 4 | 0 | 15 | 1 | 15 | 1 | 14 | 1 | 13
+INPUTMC | 4 | 0 | 15 | 1 | 14 | 1 | 13 | 1 | 10
 EQ | 4 | 
    U1/U_freq_divider/count_int<4>.T := U1/U_freq_divider/count_int<0> & 
 	U1/U_freq_divider/count_int<1> & U1/U_freq_divider/count_int<2> & 
@@ -142,11 +142,11 @@ EQ | 4 |
    U1/U_freq_divider/count_int<4>.CLK  =  clock;	// GCK	(0 pt, 0 inp)
 GLOBALS | 1 | 2 | clock
 
-MACROCELL | 1 | 8 | U1/U_freq_divider/count_int<5>_MC
+MACROCELL | 1 | 3 | U1/U_freq_divider/count_int<5>_MC
 ATTRIBUTES | 2151711488 | 0
-OUTPUTMC | 17 | 1 | 3 | 1 | 2 | 1 | 6 | 2 | 4 | 2 | 3 | 2 | 14 | 2 | 13 | 2 | 11 | 2 | 10 | 3 | 15 | 3 | 11 | 3 | 9 | 3 | 8 | 3 | 7 | 3 | 5 | 3 | 4 | 3 | 3
+OUTPUTMC | 17 | 1 | 2 | 1 | 6 | 2 | 7 | 2 | 6 | 2 | 4 | 2 | 3 | 2 | 13 | 2 | 11 | 2 | 10 | 2 | 9 | 2 | 5 | 2 | 1 | 3 | 15 | 3 | 11 | 3 | 9 | 3 | 8 | 3 | 7
 INPUTS | 5 | U1/U_freq_divider/count_int<0>  | U1/U_freq_divider/count_int<1>  | U1/U_freq_divider/count_int<2>  | U1/U_freq_divider/count_int<3>  | U1/U_freq_divider/count_int<4>
-INPUTMC | 5 | 0 | 15 | 1 | 15 | 1 | 14 | 1 | 13 | 1 | 10
+INPUTMC | 5 | 0 | 15 | 1 | 14 | 1 | 13 | 1 | 10 | 1 | 8
 EQ | 4 | 
    U1/U_freq_divider/count_int<5>.T := U1/U_freq_divider/count_int<0> & 
 	U1/U_freq_divider/count_int<1> & U1/U_freq_divider/count_int<2> & 
@@ -154,11 +154,11 @@ EQ | 4 |
    U1/U_freq_divider/count_int<5>.CLK  =  clock;	// GCK	(0 pt, 0 inp)
 GLOBALS | 1 | 2 | clock
 
-MACROCELL | 1 | 3 | U1/U_freq_divider/count_int<6>_MC
+MACROCELL | 1 | 2 | U1/U_freq_divider/count_int<6>_MC
 ATTRIBUTES | 2151711488 | 0
-OUTPUTMC | 16 | 1 | 2 | 1 | 6 | 2 | 4 | 2 | 3 | 2 | 14 | 2 | 13 | 2 | 11 | 2 | 10 | 3 | 15 | 3 | 11 | 3 | 9 | 3 | 8 | 3 | 7 | 3 | 5 | 3 | 4 | 3 | 3
+OUTPUTMC | 16 | 1 | 6 | 2 | 7 | 2 | 6 | 2 | 4 | 2 | 3 | 2 | 13 | 2 | 11 | 2 | 10 | 2 | 9 | 2 | 5 | 2 | 1 | 3 | 15 | 3 | 11 | 3 | 9 | 3 | 8 | 3 | 7
 INPUTS | 6 | U1/U_freq_divider/count_int<0>  | U1/U_freq_divider/count_int<1>  | U1/U_freq_divider/count_int<2>  | U1/U_freq_divider/count_int<3>  | U1/U_freq_divider/count_int<4>  | U1/U_freq_divider/count_int<5>
-INPUTMC | 6 | 0 | 15 | 1 | 15 | 1 | 14 | 1 | 13 | 1 | 10 | 1 | 8
+INPUTMC | 6 | 0 | 15 | 1 | 14 | 1 | 13 | 1 | 10 | 1 | 8 | 1 | 3
 EQ | 5 | 
    U1/U_freq_divider/count_int<6>.T := U1/U_freq_divider/count_int<0> & 
 	U1/U_freq_divider/count_int<1> & U1/U_freq_divider/count_int<2> & 
@@ -167,11 +167,11 @@ EQ | 5 |
    U1/U_freq_divider/count_int<6>.CLK  =  clock;	// GCK	(0 pt, 0 inp)
 GLOBALS | 1 | 2 | clock
 
-MACROCELL | 1 | 2 | U1/U_freq_divider/count_int<7>_MC
+MACROCELL | 1 | 6 | U1/U_freq_divider/count_int<7>_MC
 ATTRIBUTES | 2151711488 | 0
-OUTPUTMC | 15 | 1 | 6 | 2 | 4 | 2 | 3 | 2 | 14 | 2 | 13 | 2 | 11 | 2 | 10 | 3 | 15 | 3 | 11 | 3 | 9 | 3 | 8 | 3 | 7 | 3 | 5 | 3 | 4 | 3 | 3
+OUTPUTMC | 15 | 2 | 7 | 2 | 6 | 2 | 4 | 2 | 3 | 2 | 13 | 2 | 11 | 2 | 10 | 2 | 9 | 2 | 5 | 2 | 1 | 3 | 15 | 3 | 11 | 3 | 9 | 3 | 8 | 3 | 7
 INPUTS | 7 | U1/U_freq_divider/count_int<0>  | U1/U_freq_divider/count_int<1>  | U1/U_freq_divider/count_int<2>  | U1/U_freq_divider/count_int<3>  | U1/U_freq_divider/count_int<4>  | U1/U_freq_divider/count_int<5>  | U1/U_freq_divider/count_int<6>
-INPUTMC | 7 | 0 | 15 | 1 | 15 | 1 | 14 | 1 | 13 | 1 | 10 | 1 | 8 | 1 | 3
+INPUTMC | 7 | 0 | 15 | 1 | 14 | 1 | 13 | 1 | 10 | 1 | 8 | 1 | 3 | 1 | 2
 EQ | 5 | 
    U1/U_freq_divider/count_int<7>.T := U1/U_freq_divider/count_int<0> & 
 	U1/U_freq_divider/count_int<1> & U1/U_freq_divider/count_int<2> & 
@@ -180,11 +180,11 @@ EQ | 5 |
    U1/U_freq_divider/count_int<7>.CLK  =  clock;	// GCK	(0 pt, 0 inp)
 GLOBALS | 1 | 2 | clock
 
-MACROCELL | 1 | 6 | U1/U_freq_divider/count_int<8>_MC
+MACROCELL | 2 | 7 | U1/U_freq_divider/count_int<8>_MC
 ATTRIBUTES | 2151711488 | 0
-OUTPUTMC | 14 | 2 | 4 | 2 | 3 | 2 | 14 | 2 | 13 | 2 | 11 | 2 | 10 | 3 | 15 | 3 | 11 | 3 | 9 | 3 | 8 | 3 | 7 | 3 | 5 | 3 | 4 | 3 | 3
+OUTPUTMC | 14 | 2 | 6 | 2 | 4 | 2 | 3 | 2 | 13 | 2 | 11 | 2 | 10 | 2 | 9 | 2 | 5 | 2 | 1 | 3 | 15 | 3 | 11 | 3 | 9 | 3 | 8 | 3 | 7
 INPUTS | 8 | U1/U_freq_divider/count_int<0>  | U1/U_freq_divider/count_int<1>  | U1/U_freq_divider/count_int<2>  | U1/U_freq_divider/count_int<3>  | U1/U_freq_divider/count_int<4>  | U1/U_freq_divider/count_int<5>  | U1/U_freq_divider/count_int<6>  | U1/U_freq_divider/count_int<7>
-INPUTMC | 8 | 0 | 15 | 1 | 15 | 1 | 14 | 1 | 13 | 1 | 10 | 1 | 8 | 1 | 3 | 1 | 2
+INPUTMC | 8 | 0 | 15 | 1 | 14 | 1 | 13 | 1 | 10 | 1 | 8 | 1 | 3 | 1 | 2 | 1 | 6
 EQ | 6 | 
    U1/U_freq_divider/count_int<8>.T := U1/U_freq_divider/count_int<0> & 
 	U1/U_freq_divider/count_int<1> & U1/U_freq_divider/count_int<2> & 
@@ -194,11 +194,11 @@ EQ | 6 |
    U1/U_freq_divider/count_int<8>.CLK  =  clock;	// GCK	(0 pt, 0 inp)
 GLOBALS | 1 | 2 | clock
 
-MACROCELL | 2 | 4 | U1/U_freq_divider/count_int<9>_MC
+MACROCELL | 2 | 6 | U1/U_freq_divider/count_int<9>_MC
 ATTRIBUTES | 2151711488 | 0
-OUTPUTMC | 13 | 2 | 3 | 2 | 14 | 2 | 13 | 2 | 11 | 2 | 10 | 3 | 15 | 3 | 11 | 3 | 9 | 3 | 8 | 3 | 7 | 3 | 5 | 3 | 4 | 3 | 3
+OUTPUTMC | 13 | 2 | 4 | 2 | 3 | 2 | 13 | 2 | 11 | 2 | 10 | 2 | 9 | 2 | 5 | 2 | 1 | 3 | 15 | 3 | 11 | 3 | 9 | 3 | 8 | 3 | 7
 INPUTS | 9 | U1/U_freq_divider/count_int<0>  | U1/U_freq_divider/count_int<1>  | U1/U_freq_divider/count_int<2>  | U1/U_freq_divider/count_int<3>  | U1/U_freq_divider/count_int<4>  | U1/U_freq_divider/count_int<5>  | U1/U_freq_divider/count_int<6>  | U1/U_freq_divider/count_int<7>  | U1/U_freq_divider/count_int<8>
-INPUTMC | 9 | 0 | 15 | 1 | 15 | 1 | 14 | 1 | 13 | 1 | 10 | 1 | 8 | 1 | 3 | 1 | 2 | 1 | 6
+INPUTMC | 9 | 0 | 15 | 1 | 14 | 1 | 13 | 1 | 10 | 1 | 8 | 1 | 3 | 1 | 2 | 1 | 6 | 2 | 7
 EQ | 6 | 
    U1/U_freq_divider/count_int<9>.T := U1/U_freq_divider/count_int<0> & 
 	U1/U_freq_divider/count_int<1> & U1/U_freq_divider/count_int<2> & 
@@ -208,11 +208,11 @@ EQ | 6 |
    U1/U_freq_divider/count_int<9>.CLK  =  clock;	// GCK	(0 pt, 0 inp)
 GLOBALS | 1 | 2 | clock
 
-MACROCELL | 2 | 14 | U1/U_freq_divider/count_int<11>_MC
+MACROCELL | 2 | 3 | U1/U_freq_divider/count_int<11>_MC
 ATTRIBUTES | 2151711488 | 0
-OUTPUTMC | 11 | 2 | 13 | 2 | 11 | 2 | 10 | 3 | 15 | 3 | 11 | 3 | 9 | 3 | 8 | 3 | 7 | 3 | 5 | 3 | 4 | 3 | 3
+OUTPUTMC | 11 | 2 | 13 | 2 | 11 | 2 | 10 | 2 | 9 | 2 | 5 | 2 | 1 | 3 | 15 | 3 | 11 | 3 | 9 | 3 | 8 | 3 | 7
 INPUTS | 11 | U1/U_freq_divider/count_int<0>  | U1/U_freq_divider/count_int<10>  | U1/U_freq_divider/count_int<1>  | U1/U_freq_divider/count_int<2>  | U1/U_freq_divider/count_int<3>  | U1/U_freq_divider/count_int<4>  | U1/U_freq_divider/count_int<5>  | U1/U_freq_divider/count_int<6>  | U1/U_freq_divider/count_int<7>  | U1/U_freq_divider/count_int<8>  | U1/U_freq_divider/count_int<9>
-INPUTMC | 11 | 0 | 15 | 2 | 3 | 1 | 15 | 1 | 14 | 1 | 13 | 1 | 10 | 1 | 8 | 1 | 3 | 1 | 2 | 1 | 6 | 2 | 4
+INPUTMC | 11 | 0 | 15 | 2 | 4 | 1 | 14 | 1 | 13 | 1 | 10 | 1 | 8 | 1 | 3 | 1 | 2 | 1 | 6 | 2 | 7 | 2 | 6
 EQ | 7 | 
    U1/U_freq_divider/count_int<11>.T := U1/U_freq_divider/count_int<0> & 
 	U1/U_freq_divider/count_int<10> & U1/U_freq_divider/count_int<1> & 
@@ -225,9 +225,9 @@ GLOBALS | 1 | 2 | clock
 
 MACROCELL | 2 | 13 | U1/U_freq_divider/count_int<12>_MC
 ATTRIBUTES | 2151711488 | 0
-OUTPUTMC | 10 | 2 | 11 | 2 | 10 | 3 | 15 | 3 | 11 | 3 | 9 | 3 | 8 | 3 | 7 | 3 | 5 | 3 | 4 | 3 | 3
+OUTPUTMC | 10 | 2 | 11 | 2 | 10 | 2 | 9 | 2 | 5 | 2 | 1 | 3 | 15 | 3 | 11 | 3 | 9 | 3 | 8 | 3 | 7
 INPUTS | 12 | U1/U_freq_divider/count_int<0>  | U1/U_freq_divider/count_int<10>  | U1/U_freq_divider/count_int<1>  | U1/U_freq_divider/count_int<2>  | U1/U_freq_divider/count_int<3>  | U1/U_freq_divider/count_int<4>  | U1/U_freq_divider/count_int<5>  | U1/U_freq_divider/count_int<6>  | U1/U_freq_divider/count_int<7>  | U1/U_freq_divider/count_int<8>  | U1/U_freq_divider/count_int<9>  | U1/U_freq_divider/count_int<11>
-INPUTMC | 12 | 0 | 15 | 2 | 3 | 1 | 15 | 1 | 14 | 1 | 13 | 1 | 10 | 1 | 8 | 1 | 3 | 1 | 2 | 1 | 6 | 2 | 4 | 2 | 14
+INPUTMC | 12 | 0 | 15 | 2 | 4 | 1 | 14 | 1 | 13 | 1 | 10 | 1 | 8 | 1 | 3 | 1 | 2 | 1 | 6 | 2 | 7 | 2 | 6 | 2 | 3
 EQ | 8 | 
    U1/U_freq_divider/count_int<12>.T := U1/U_freq_divider/count_int<0> & 
 	U1/U_freq_divider/count_int<10> & U1/U_freq_divider/count_int<1> & 
@@ -241,9 +241,9 @@ GLOBALS | 1 | 2 | clock
 
 MACROCELL | 2 | 11 | U1/U_freq_divider/count_int<13>_MC
 ATTRIBUTES | 2151711488 | 0
-OUTPUTMC | 9 | 2 | 10 | 3 | 15 | 3 | 11 | 3 | 9 | 3 | 8 | 3 | 7 | 3 | 5 | 3 | 4 | 3 | 3
+OUTPUTMC | 9 | 2 | 10 | 2 | 9 | 2 | 5 | 2 | 1 | 3 | 15 | 3 | 11 | 3 | 9 | 3 | 8 | 3 | 7
 INPUTS | 13 | U1/U_freq_divider/count_int<0>  | U1/U_freq_divider/count_int<10>  | U1/U_freq_divider/count_int<1>  | U1/U_freq_divider/count_int<2>  | U1/U_freq_divider/count_int<3>  | U1/U_freq_divider/count_int<4>  | U1/U_freq_divider/count_int<5>  | U1/U_freq_divider/count_int<6>  | U1/U_freq_divider/count_int<7>  | U1/U_freq_divider/count_int<8>  | U1/U_freq_divider/count_int<9>  | U1/U_freq_divider/count_int<11>  | U1/U_freq_divider/count_int<12>
-INPUTMC | 13 | 0 | 15 | 2 | 3 | 1 | 15 | 1 | 14 | 1 | 13 | 1 | 10 | 1 | 8 | 1 | 3 | 1 | 2 | 1 | 6 | 2 | 4 | 2 | 14 | 2 | 13
+INPUTMC | 13 | 0 | 15 | 2 | 4 | 1 | 14 | 1 | 13 | 1 | 10 | 1 | 8 | 1 | 3 | 1 | 2 | 1 | 6 | 2 | 7 | 2 | 6 | 2 | 3 | 2 | 13
 EQ | 8 | 
    U1/U_freq_divider/count_int<13>.T := U1/U_freq_divider/count_int<0> & 
 	U1/U_freq_divider/count_int<10> & U1/U_freq_divider/count_int<1> & 
@@ -257,9 +257,9 @@ GLOBALS | 1 | 2 | clock
 
 MACROCELL | 2 | 10 | U1/U_freq_divider/count_int<14>_MC
 ATTRIBUTES | 2151711488 | 0
-OUTPUTMC | 8 | 3 | 15 | 3 | 11 | 3 | 9 | 3 | 8 | 3 | 7 | 3 | 5 | 3 | 4 | 3 | 3
+OUTPUTMC | 8 | 2 | 9 | 2 | 5 | 2 | 1 | 3 | 15 | 3 | 11 | 3 | 9 | 3 | 8 | 3 | 7
 INPUTS | 14 | U1/U_freq_divider/count_int<0>  | U1/U_freq_divider/count_int<10>  | U1/U_freq_divider/count_int<1>  | U1/U_freq_divider/count_int<2>  | U1/U_freq_divider/count_int<3>  | U1/U_freq_divider/count_int<4>  | U1/U_freq_divider/count_int<5>  | U1/U_freq_divider/count_int<6>  | U1/U_freq_divider/count_int<7>  | U1/U_freq_divider/count_int<8>  | U1/U_freq_divider/count_int<9>  | U1/U_freq_divider/count_int<11>  | U1/U_freq_divider/count_int<12>  | U1/U_freq_divider/count_int<13>
-INPUTMC | 14 | 0 | 15 | 2 | 3 | 1 | 15 | 1 | 14 | 1 | 13 | 1 | 10 | 1 | 8 | 1 | 3 | 1 | 2 | 1 | 6 | 2 | 4 | 2 | 14 | 2 | 13 | 2 | 11
+INPUTMC | 14 | 0 | 15 | 2 | 4 | 1 | 14 | 1 | 13 | 1 | 10 | 1 | 8 | 1 | 3 | 1 | 2 | 1 | 6 | 2 | 7 | 2 | 6 | 2 | 3 | 2 | 13 | 2 | 11
 EQ | 9 | 
    U1/U_freq_divider/count_int<14>.T := U1/U_freq_divider/count_int<0> & 
 	U1/U_freq_divider/count_int<10> & U1/U_freq_divider/count_int<1> & 
@@ -272,11 +272,11 @@ EQ | 9 |
    U1/U_freq_divider/count_int<14>.CLK  =  clock;	// GCK	(0 pt, 0 inp)
 GLOBALS | 1 | 2 | clock
 
-MACROCELL | 3 | 15 | U1/U_freq_divider/count_int<15>_MC
+MACROCELL | 2 | 9 | U1/U_freq_divider/count_int<15>_MC
 ATTRIBUTES | 2151711488 | 0
-OUTPUTMC | 7 | 3 | 11 | 3 | 9 | 3 | 8 | 3 | 7 | 3 | 5 | 3 | 4 | 3 | 3
+OUTPUTMC | 7 | 2 | 5 | 2 | 1 | 3 | 15 | 3 | 11 | 3 | 9 | 3 | 8 | 3 | 7
 INPUTS | 15 | U1/U_freq_divider/count_int<0>  | U1/U_freq_divider/count_int<10>  | U1/U_freq_divider/count_int<1>  | U1/U_freq_divider/count_int<2>  | U1/U_freq_divider/count_int<3>  | U1/U_freq_divider/count_int<4>  | U1/U_freq_divider/count_int<5>  | U1/U_freq_divider/count_int<6>  | U1/U_freq_divider/count_int<7>  | U1/U_freq_divider/count_int<8>  | U1/U_freq_divider/count_int<9>  | U1/U_freq_divider/count_int<11>  | U1/U_freq_divider/count_int<12>  | U1/U_freq_divider/count_int<13>  | U1/U_freq_divider/count_int<14>
-INPUTMC | 15 | 0 | 15 | 2 | 3 | 1 | 15 | 1 | 14 | 1 | 13 | 1 | 10 | 1 | 8 | 1 | 3 | 1 | 2 | 1 | 6 | 2 | 4 | 2 | 14 | 2 | 13 | 2 | 11 | 2 | 10
+INPUTMC | 15 | 0 | 15 | 2 | 4 | 1 | 14 | 1 | 13 | 1 | 10 | 1 | 8 | 1 | 3 | 1 | 2 | 1 | 6 | 2 | 7 | 2 | 6 | 2 | 3 | 2 | 13 | 2 | 11 | 2 | 10
 EQ | 9 | 
    U1/U_freq_divider/count_int<15>.T := U1/U_freq_divider/count_int<0> & 
 	U1/U_freq_divider/count_int<10> & U1/U_freq_divider/count_int<1> & 
@@ -289,11 +289,11 @@ EQ | 9 |
    U1/U_freq_divider/count_int<15>.CLK  =  clock;	// GCK	(0 pt, 0 inp)
 GLOBALS | 1 | 2 | clock
 
-MACROCELL | 3 | 11 | U1/U_freq_divider/count_int<16>_MC
+MACROCELL | 2 | 5 | U1/U_freq_divider/count_int<16>_MC
 ATTRIBUTES | 2151711488 | 0
-OUTPUTMC | 6 | 3 | 9 | 3 | 8 | 3 | 7 | 3 | 5 | 3 | 4 | 3 | 3
+OUTPUTMC | 6 | 2 | 1 | 3 | 15 | 3 | 11 | 3 | 9 | 3 | 8 | 3 | 7
 INPUTS | 16 | U1/U_freq_divider/count_int<0>  | U1/U_freq_divider/count_int<10>  | U1/U_freq_divider/count_int<1>  | U1/U_freq_divider/count_int<2>  | U1/U_freq_divider/count_int<3>  | U1/U_freq_divider/count_int<4>  | U1/U_freq_divider/count_int<5>  | U1/U_freq_divider/count_int<6>  | U1/U_freq_divider/count_int<7>  | U1/U_freq_divider/count_int<8>  | U1/U_freq_divider/count_int<9>  | U1/U_freq_divider/count_int<11>  | U1/U_freq_divider/count_int<12>  | U1/U_freq_divider/count_int<13>  | U1/U_freq_divider/count_int<14>  | U1/U_freq_divider/count_int<15>
-INPUTMC | 16 | 0 | 15 | 2 | 3 | 1 | 15 | 1 | 14 | 1 | 13 | 1 | 10 | 1 | 8 | 1 | 3 | 1 | 2 | 1 | 6 | 2 | 4 | 2 | 14 | 2 | 13 | 2 | 11 | 2 | 10 | 3 | 15
+INPUTMC | 16 | 0 | 15 | 2 | 4 | 1 | 14 | 1 | 13 | 1 | 10 | 1 | 8 | 1 | 3 | 1 | 2 | 1 | 6 | 2 | 7 | 2 | 6 | 2 | 3 | 2 | 13 | 2 | 11 | 2 | 10 | 2 | 9
 EQ | 10 | 
    U1/U_freq_divider/count_int<16>.T := U1/U_freq_divider/count_int<0> & 
 	U1/U_freq_divider/count_int<10> & U1/U_freq_divider/count_int<1> & 
@@ -307,11 +307,11 @@ EQ | 10 |
    U1/U_freq_divider/count_int<16>.CLK  =  clock;	// GCK	(0 pt, 0 inp)
 GLOBALS | 1 | 2 | clock
 
-MACROCELL | 3 | 9 | U1/U_freq_divider/count_int<17>_MC
+MACROCELL | 2 | 1 | U1/U_freq_divider/count_int<17>_MC
 ATTRIBUTES | 2151711488 | 0
-OUTPUTMC | 5 | 3 | 8 | 3 | 7 | 3 | 5 | 3 | 4 | 3 | 3
+OUTPUTMC | 5 | 3 | 15 | 3 | 11 | 3 | 9 | 3 | 8 | 3 | 7
 INPUTS | 17 | U1/U_freq_divider/count_int<0>  | U1/U_freq_divider/count_int<10>  | U1/U_freq_divider/count_int<1>  | U1/U_freq_divider/count_int<2>  | U1/U_freq_divider/count_int<3>  | U1/U_freq_divider/count_int<4>  | U1/U_freq_divider/count_int<5>  | U1/U_freq_divider/count_int<6>  | U1/U_freq_divider/count_int<7>  | U1/U_freq_divider/count_int<8>  | U1/U_freq_divider/count_int<9>  | U1/U_freq_divider/count_int<11>  | U1/U_freq_divider/count_int<12>  | U1/U_freq_divider/count_int<13>  | U1/U_freq_divider/count_int<14>  | U1/U_freq_divider/count_int<15>  | U1/U_freq_divider/count_int<16>
-INPUTMC | 17 | 0 | 15 | 2 | 3 | 1 | 15 | 1 | 14 | 1 | 13 | 1 | 10 | 1 | 8 | 1 | 3 | 1 | 2 | 1 | 6 | 2 | 4 | 2 | 14 | 2 | 13 | 2 | 11 | 2 | 10 | 3 | 15 | 3 | 11
+INPUTMC | 17 | 0 | 15 | 2 | 4 | 1 | 14 | 1 | 13 | 1 | 10 | 1 | 8 | 1 | 3 | 1 | 2 | 1 | 6 | 2 | 7 | 2 | 6 | 2 | 3 | 2 | 13 | 2 | 11 | 2 | 10 | 2 | 9 | 2 | 5
 EQ | 10 | 
    U1/U_freq_divider/count_int<17>.T := U1/U_freq_divider/count_int<0> & 
 	U1/U_freq_divider/count_int<10> & U1/U_freq_divider/count_int<1> & 
@@ -325,11 +325,11 @@ EQ | 10 |
    U1/U_freq_divider/count_int<17>.CLK  =  clock;	// GCK	(0 pt, 0 inp)
 GLOBALS | 1 | 2 | clock
 
-MACROCELL | 3 | 8 | U1/U_freq_divider/count_int<18>_MC
+MACROCELL | 3 | 15 | U1/U_freq_divider/count_int<18>_MC
 ATTRIBUTES | 2151711488 | 0
-OUTPUTMC | 4 | 3 | 7 | 3 | 5 | 3 | 4 | 3 | 3
+OUTPUTMC | 4 | 3 | 11 | 3 | 9 | 3 | 8 | 3 | 7
 INPUTS | 18 | U1/U_freq_divider/count_int<0>  | U1/U_freq_divider/count_int<10>  | U1/U_freq_divider/count_int<1>  | U1/U_freq_divider/count_int<2>  | U1/U_freq_divider/count_int<3>  | U1/U_freq_divider/count_int<4>  | U1/U_freq_divider/count_int<5>  | U1/U_freq_divider/count_int<6>  | U1/U_freq_divider/count_int<7>  | U1/U_freq_divider/count_int<8>  | U1/U_freq_divider/count_int<9>  | U1/U_freq_divider/count_int<11>  | U1/U_freq_divider/count_int<12>  | U1/U_freq_divider/count_int<13>  | U1/U_freq_divider/count_int<14>  | U1/U_freq_divider/count_int<15>  | U1/U_freq_divider/count_int<16>  | U1/U_freq_divider/count_int<17>
-INPUTMC | 18 | 0 | 15 | 2 | 3 | 1 | 15 | 1 | 14 | 1 | 13 | 1 | 10 | 1 | 8 | 1 | 3 | 1 | 2 | 1 | 6 | 2 | 4 | 2 | 14 | 2 | 13 | 2 | 11 | 2 | 10 | 3 | 15 | 3 | 11 | 3 | 9
+INPUTMC | 18 | 0 | 15 | 2 | 4 | 1 | 14 | 1 | 13 | 1 | 10 | 1 | 8 | 1 | 3 | 1 | 2 | 1 | 6 | 2 | 7 | 2 | 6 | 2 | 3 | 2 | 13 | 2 | 11 | 2 | 10 | 2 | 9 | 2 | 5 | 2 | 1
 EQ | 11 | 
    U1/U_freq_divider/count_int<18>.T := U1/U_freq_divider/count_int<0> & 
 	U1/U_freq_divider/count_int<10> & U1/U_freq_divider/count_int<1> & 
@@ -344,11 +344,11 @@ EQ | 11 |
    U1/U_freq_divider/count_int<18>.CLK  =  clock;	// GCK	(0 pt, 0 inp)
 GLOBALS | 1 | 2 | clock
 
-MACROCELL | 3 | 7 | U1/U_freq_divider/count_int<19>_MC
+MACROCELL | 3 | 11 | U1/U_freq_divider/count_int<19>_MC
 ATTRIBUTES | 2151711488 | 0
-OUTPUTMC | 3 | 3 | 5 | 3 | 4 | 3 | 3
+OUTPUTMC | 3 | 3 | 9 | 3 | 8 | 3 | 7
 INPUTS | 19 | U1/U_freq_divider/count_int<0>  | U1/U_freq_divider/count_int<10>  | U1/U_freq_divider/count_int<1>  | U1/U_freq_divider/count_int<2>  | U1/U_freq_divider/count_int<3>  | U1/U_freq_divider/count_int<4>  | U1/U_freq_divider/count_int<5>  | U1/U_freq_divider/count_int<6>  | U1/U_freq_divider/count_int<7>  | U1/U_freq_divider/count_int<8>  | U1/U_freq_divider/count_int<9>  | U1/U_freq_divider/count_int<11>  | U1/U_freq_divider/count_int<12>  | U1/U_freq_divider/count_int<13>  | U1/U_freq_divider/count_int<14>  | U1/U_freq_divider/count_int<15>  | U1/U_freq_divider/count_int<16>  | U1/U_freq_divider/count_int<17>  | U1/U_freq_divider/count_int<18>
-INPUTMC | 19 | 0 | 15 | 2 | 3 | 1 | 15 | 1 | 14 | 1 | 13 | 1 | 10 | 1 | 8 | 1 | 3 | 1 | 2 | 1 | 6 | 2 | 4 | 2 | 14 | 2 | 13 | 2 | 11 | 2 | 10 | 3 | 15 | 3 | 11 | 3 | 9 | 3 | 8
+INPUTMC | 19 | 0 | 15 | 2 | 4 | 1 | 14 | 1 | 13 | 1 | 10 | 1 | 8 | 1 | 3 | 1 | 2 | 1 | 6 | 2 | 7 | 2 | 6 | 2 | 3 | 2 | 13 | 2 | 11 | 2 | 10 | 2 | 9 | 2 | 5 | 2 | 1 | 3 | 15
 EQ | 11 | 
    U1/U_freq_divider/count_int<19>.T := U1/U_freq_divider/count_int<0> & 
 	U1/U_freq_divider/count_int<10> & U1/U_freq_divider/count_int<1> & 
@@ -363,11 +363,11 @@ EQ | 11 |
    U1/U_freq_divider/count_int<19>.CLK  =  clock;	// GCK	(0 pt, 0 inp)
 GLOBALS | 1 | 2 | clock
 
-MACROCELL | 3 | 5 | U1/U_freq_divider/count_int<20>_MC
+MACROCELL | 3 | 9 | U1/U_freq_divider/count_int<20>_MC
 ATTRIBUTES | 2151711488 | 0
-OUTPUTMC | 2 | 3 | 4 | 3 | 3
+OUTPUTMC | 2 | 3 | 8 | 3 | 7
 INPUTS | 20 | U1/U_freq_divider/count_int<0>  | U1/U_freq_divider/count_int<10>  | U1/U_freq_divider/count_int<1>  | U1/U_freq_divider/count_int<2>  | U1/U_freq_divider/count_int<3>  | U1/U_freq_divider/count_int<4>  | U1/U_freq_divider/count_int<5>  | U1/U_freq_divider/count_int<6>  | U1/U_freq_divider/count_int<7>  | U1/U_freq_divider/count_int<8>  | U1/U_freq_divider/count_int<9>  | U1/U_freq_divider/count_int<11>  | U1/U_freq_divider/count_int<12>  | U1/U_freq_divider/count_int<13>  | U1/U_freq_divider/count_int<14>  | U1/U_freq_divider/count_int<15>  | U1/U_freq_divider/count_int<16>  | U1/U_freq_divider/count_int<17>  | U1/U_freq_divider/count_int<18>  | U1/U_freq_divider/count_int<19>
-INPUTMC | 20 | 0 | 15 | 2 | 3 | 1 | 15 | 1 | 14 | 1 | 13 | 1 | 10 | 1 | 8 | 1 | 3 | 1 | 2 | 1 | 6 | 2 | 4 | 2 | 14 | 2 | 13 | 2 | 11 | 2 | 10 | 3 | 15 | 3 | 11 | 3 | 9 | 3 | 8 | 3 | 7
+INPUTMC | 20 | 0 | 15 | 2 | 4 | 1 | 14 | 1 | 13 | 1 | 10 | 1 | 8 | 1 | 3 | 1 | 2 | 1 | 6 | 2 | 7 | 2 | 6 | 2 | 3 | 2 | 13 | 2 | 11 | 2 | 10 | 2 | 9 | 2 | 5 | 2 | 1 | 3 | 15 | 3 | 11
 EQ | 12 | 
    U1/U_freq_divider/count_int<20>.T := U1/U_freq_divider/count_int<0> & 
 	U1/U_freq_divider/count_int<10> & U1/U_freq_divider/count_int<1> & 
@@ -383,11 +383,11 @@ EQ | 12 |
    U1/U_freq_divider/count_int<20>.CLK  =  clock;	// GCK	(0 pt, 0 inp)
 GLOBALS | 1 | 2 | clock
 
-MACROCELL | 3 | 4 | U1/U_freq_divider/count_int<21>_MC
+MACROCELL | 3 | 8 | U1/U_freq_divider/count_int<21>_MC
 ATTRIBUTES | 2151711488 | 0
-OUTPUTMC | 1 | 3 | 3
+OUTPUTMC | 1 | 3 | 7
 INPUTS | 21 | U1/U_freq_divider/count_int<0>  | U1/U_freq_divider/count_int<10>  | U1/U_freq_divider/count_int<1>  | U1/U_freq_divider/count_int<2>  | U1/U_freq_divider/count_int<3>  | U1/U_freq_divider/count_int<4>  | U1/U_freq_divider/count_int<5>  | U1/U_freq_divider/count_int<6>  | U1/U_freq_divider/count_int<7>  | U1/U_freq_divider/count_int<8>  | U1/U_freq_divider/count_int<9>  | U1/U_freq_divider/count_int<11>  | U1/U_freq_divider/count_int<12>  | U1/U_freq_divider/count_int<13>  | U1/U_freq_divider/count_int<14>  | U1/U_freq_divider/count_int<15>  | U1/U_freq_divider/count_int<16>  | U1/U_freq_divider/count_int<17>  | U1/U_freq_divider/count_int<18>  | U1/U_freq_divider/count_int<19>  | U1/U_freq_divider/count_int<20>
-INPUTMC | 21 | 0 | 15 | 2 | 3 | 1 | 15 | 1 | 14 | 1 | 13 | 1 | 10 | 1 | 8 | 1 | 3 | 1 | 2 | 1 | 6 | 2 | 4 | 2 | 14 | 2 | 13 | 2 | 11 | 2 | 10 | 3 | 15 | 3 | 11 | 3 | 9 | 3 | 8 | 3 | 7 | 3 | 5
+INPUTMC | 21 | 0 | 15 | 2 | 4 | 1 | 14 | 1 | 13 | 1 | 10 | 1 | 8 | 1 | 3 | 1 | 2 | 1 | 6 | 2 | 7 | 2 | 6 | 2 | 3 | 2 | 13 | 2 | 11 | 2 | 10 | 2 | 9 | 2 | 5 | 2 | 1 | 3 | 15 | 3 | 11 | 3 | 9
 EQ | 12 | 
    U1/U_freq_divider/count_int<21>.T := U1/U_freq_divider/count_int<0> & 
 	U1/U_freq_divider/count_int<10> & U1/U_freq_divider/count_int<1> & 
@@ -403,11 +403,11 @@ EQ | 12 |
    U1/U_freq_divider/count_int<21>.CLK  =  clock;	// GCK	(0 pt, 0 inp)
 GLOBALS | 1 | 2 | clock
 
-MACROCELL | 2 | 6 | U1/U_counter_5bit/count_int<0>_MC
+MACROCELL | 0 | 12 | U1/U_counter_5bit/count_int<0>_MC
 ATTRIBUTES | 2155905792 | 0
-OUTPUTMC | 6 | 2 | 6 | 0 | 6 | 0 | 5 | 0 | 4 | 0 | 3 | 0 | 13
+OUTPUTMC | 6 | 0 | 12 | 0 | 6 | 0 | 5 | 0 | 4 | 0 | 3 | 0 | 13
 INPUTS | 3 | U1/U_counter_5bit/counter_rst_delay  | U1/U_counter_5bit/count_int<0>  | U1/counter_ena
-INPUTMC | 3 | 0 | 14 | 2 | 6 | 2 | 15
+INPUTMC | 3 | 0 | 14 | 0 | 12 | 1 | 15
 EQ | 5 | 
    U1/U_counter_5bit/count_int<0> := !U1/U_counter_5bit/counter_rst_delay & 
 	U1/U_counter_5bit/count_int<0> & !U1/counter_ena
@@ -416,12 +416,12 @@ EQ | 5 |
    U1/U_counter_5bit/count_int<0>.CLK  =  clock;	// GCK	(0 pt, 0 inp)
 GLOBALS | 1 | 2 | clock
 
-MACROCELL | 2 | 15 | U1/counter_ena_MC
+MACROCELL | 1 | 15 | U1/counter_ena_MC
 ATTRIBUTES | 2155905792 | 0
-OUTPUTMC | 5 | 2 | 6 | 0 | 6 | 0 | 5 | 0 | 4 | 0 | 3
+OUTPUTMC | 5 | 0 | 12 | 0 | 6 | 0 | 5 | 0 | 4 | 0 | 3
 INPUTS | 3 | anemometer  | U1/U_risingedge_detector/anemometer_reg  | code_select
-INPUTMC | 1 | 0 | 0
-INPUTP | 2 | 11 | 31
+INPUTMC | 1 | 2 | 14
+INPUTP | 2 | 55 | 59
 EQ | 5 | 
    U1/counter_ena := anemometer & 
 	!U1/U_risingedge_detector/anemometer_reg
@@ -430,9 +430,9 @@ EQ | 5 |
    U1/counter_ena.CLK  =  clock;	// GCK	(0 pt, 0 inp)
 GLOBALS | 1 | 2 | clock
 
-MACROCELL | 0 | 0 | U1/U_risingedge_detector/anemometer_reg_MC
+MACROCELL | 2 | 14 | U1/U_risingedge_detector/anemometer_reg_MC
 ATTRIBUTES | 2155905024 | 4
-OUTPUTMC | 1 | 2 | 15
+OUTPUTMC | 1 | 1 | 15
 INPUTS | 0 
 EQ | 4 | 
    
@@ -445,7 +445,7 @@ MACROCELL | 0 | 6 | U1/U_counter_5bit/count_int<1>_MC
 ATTRIBUTES | 2151711488 | 0
 OUTPUTMC | 5 | 0 | 6 | 0 | 5 | 0 | 4 | 0 | 3 | 0 | 7
 INPUTS | 4 | U1/U_counter_5bit/counter_rst_delay  | U1/U_counter_5bit/count_int<1>  | U1/U_counter_5bit/count_int<0>  | U1/counter_ena
-INPUTMC | 4 | 0 | 14 | 0 | 6 | 2 | 6 | 2 | 15
+INPUTMC | 4 | 0 | 14 | 0 | 6 | 0 | 12 | 1 | 15
 EQ | 5 | 
    U1/U_counter_5bit/count_int<1>.T := U1/U_counter_5bit/counter_rst_delay & 
 	U1/U_counter_5bit/count_int<1>
@@ -456,9 +456,9 @@ GLOBALS | 1 | 2 | clock
 
 MACROCELL | 0 | 5 | U1/U_counter_5bit/count_int<2>_MC
 ATTRIBUTES | 2151711488 | 0
-OUTPUTMC | 4 | 0 | 5 | 0 | 4 | 0 | 3 | 2 | 12
+OUTPUTMC | 4 | 0 | 5 | 0 | 4 | 0 | 3 | 2 | 15
 INPUTS | 5 | U1/U_counter_5bit/counter_rst_delay  | U1/U_counter_5bit/count_int<2>  | U1/U_counter_5bit/count_int<0>  | U1/counter_ena  | U1/U_counter_5bit/count_int<1>
-INPUTMC | 5 | 0 | 14 | 0 | 5 | 2 | 6 | 2 | 15 | 0 | 6
+INPUTMC | 5 | 0 | 14 | 0 | 5 | 0 | 12 | 1 | 15 | 0 | 6
 EQ | 5 | 
    U1/U_counter_5bit/count_int<2>.T := U1/U_counter_5bit/counter_rst_delay & 
 	U1/U_counter_5bit/count_int<2>
@@ -469,9 +469,9 @@ GLOBALS | 1 | 2 | clock
 
 MACROCELL | 0 | 4 | U1/U_counter_5bit/count_int<3>_MC
 ATTRIBUTES | 2151711488 | 0
-OUTPUTMC | 3 | 0 | 4 | 0 | 3 | 2 | 8
+OUTPUTMC | 3 | 0 | 4 | 0 | 3 | 2 | 12
 INPUTS | 6 | U1/U_counter_5bit/counter_rst_delay  | U1/U_counter_5bit/count_int<3>  | U1/U_counter_5bit/count_int<0>  | U1/counter_ena  | U1/U_counter_5bit/count_int<1>  | U1/U_counter_5bit/count_int<2>
-INPUTMC | 6 | 0 | 14 | 0 | 4 | 2 | 6 | 2 | 15 | 0 | 6 | 0 | 5
+INPUTMC | 6 | 0 | 14 | 0 | 4 | 0 | 12 | 1 | 15 | 0 | 6 | 0 | 5
 EQ | 6 | 
    U1/U_counter_5bit/count_int<3>.T := U1/U_counter_5bit/counter_rst_delay & 
 	U1/U_counter_5bit/count_int<3>
@@ -481,33 +481,33 @@ EQ | 6 |
    U1/U_counter_5bit/count_int<3>.CLK  =  clock;	// GCK	(0 pt, 0 inp)
 GLOBALS | 1 | 2 | clock
 
-MACROCELL | 2 | 8 | U1/speed_code<3>_MC
+MACROCELL | 2 | 12 | U1/speed_code<3>_MC
 ATTRIBUTES | 2155905856 | 0
-OUTPUTMC | 19 | 2 | 5 | 2 | 1 | 2 | 0 | 1 | 0 | 0 | 9 | 0 | 11 | 1 | 4 | 0 | 2 | 1 | 9 | 0 | 12 | 1 | 5 | 2 | 2 | 0 | 10 | 1 | 1 | 1 | 7 | 2 | 9 | 1 | 11 | 0 | 8 | 1 | 12
+OUTPUTMC | 19 | 1 | 12 | 3 | 0 | 3 | 1 | 3 | 6 | 2 | 2 | 1 | 1 | 1 | 4 | 1 | 5 | 1 | 7 | 1 | 9 | 1 | 11 | 2 | 0 | 0 | 11 | 0 | 10 | 0 | 8 | 0 | 2 | 0 | 1 | 0 | 0 | 1 | 0
 INPUTS | 2 | U1/U_counter_5bit/count_int<3>  | U1/counter_rst
-INPUTMC | 2 | 0 | 4 | 3 | 3
+INPUTMC | 2 | 0 | 4 | 3 | 7
 EQ | 3 | 
    U1/speed_code<3> := U1/U_counter_5bit/count_int<3>;	// (1 pt, 1 inp)
    U1/speed_code<3>.CLK  =  clock;	// GCK	(0 pt, 0 inp)
     U1/speed_code<3>.CE = U1/counter_rst;	// (1 pt, 1 inp)
 GLOBALS | 1 | 2 | clock
 
-MACROCELL | 2 | 12 | U1/speed_code<2>_MC
+MACROCELL | 2 | 15 | U1/speed_code<2>_MC
 ATTRIBUTES | 2155905856 | 0
-OUTPUTMC | 18 | 2 | 5 | 2 | 1 | 2 | 0 | 1 | 0 | 0 | 9 | 0 | 11 | 1 | 4 | 1 | 9 | 0 | 12 | 1 | 5 | 2 | 2 | 0 | 10 | 1 | 1 | 1 | 7 | 2 | 9 | 1 | 11 | 0 | 8 | 1 | 12
+OUTPUTMC | 18 | 1 | 12 | 3 | 0 | 3 | 1 | 3 | 6 | 2 | 2 | 1 | 1 | 1 | 4 | 1 | 7 | 1 | 9 | 1 | 11 | 2 | 0 | 0 | 11 | 0 | 10 | 0 | 8 | 0 | 2 | 0 | 1 | 0 | 0 | 1 | 0
 INPUTS | 2 | U1/U_counter_5bit/count_int<2>  | U1/counter_rst
-INPUTMC | 2 | 0 | 5 | 3 | 3
+INPUTMC | 2 | 0 | 5 | 3 | 7
 EQ | 3 | 
    U1/speed_code<2> := U1/U_counter_5bit/count_int<2>;	// (1 pt, 1 inp)
    U1/speed_code<2>.CLK  =  clock;	// GCK	(0 pt, 0 inp)
     U1/speed_code<2>.CE = U1/counter_rst;	// (1 pt, 1 inp)
 GLOBALS | 1 | 2 | clock
 
-MACROCELL | 2 | 1 | code_wind_speed<1>_MC
+MACROCELL | 3 | 0 | code_wind_speed<1>_MC
 ATTRIBUTES | 1074004738 | 0
 INPUTS | 10 | mode_select  | weathercock<1>  | weathercock<3>  | weathercock<2>  | code_select  | U1/speed_code<4>  | U1/speed_code<3>  | U1/speed_code<2>  | U1/speed_code<0>  | U1/speed_code<1>
-INPUTMC | 5 | 2 | 7 | 2 | 8 | 2 | 12 | 0 | 13 | 0 | 7
-INPUTP | 5 | 60 | 56 | 32 | 55 | 31
+INPUTMC | 5 | 2 | 8 | 2 | 12 | 2 | 15 | 0 | 13 | 0 | 7
+INPUTP | 5 | 61 | 48 | 51 | 49 | 59
 EQ | 9 | 
    code_wind_speed<1> = !mode_select & weathercock<1>
 	$ !mode_select & weathercock<3> & !weathercock<2> & 
@@ -521,9 +521,9 @@ EQ | 9 |
 
 MACROCELL | 0 | 13 | U1/speed_code<0>_MC
 ATTRIBUTES | 2155905856 | 0
-OUTPUTMC | 10 | 2 | 1 | 1 | 0 | 1 | 4 | 1 | 9 | 1 | 5 | 2 | 2 | 1 | 1 | 1 | 7 | 1 | 11 | 1 | 12
+OUTPUTMC | 10 | 3 | 0 | 3 | 6 | 1 | 4 | 1 | 7 | 1 | 11 | 2 | 0 | 0 | 10 | 0 | 8 | 0 | 1 | 1 | 0
 INPUTS | 2 | U1/U_counter_5bit/count_int<0>  | U1/counter_rst
-INPUTMC | 2 | 2 | 6 | 3 | 3
+INPUTMC | 2 | 0 | 12 | 3 | 7
 EQ | 3 | 
    U1/speed_code<0> := U1/U_counter_5bit/count_int<0>;	// (1 pt, 1 inp)
    U1/speed_code<0>.CLK  =  clock;	// GCK	(0 pt, 0 inp)
@@ -532,42 +532,42 @@ GLOBALS | 1 | 2 | clock
 
 MACROCELL | 0 | 7 | U1/speed_code<1>_MC
 ATTRIBUTES | 2155905856 | 0
-OUTPUTMC | 15 | 2 | 1 | 2 | 0 | 1 | 0 | 0 | 11 | 1 | 4 | 1 | 9 | 0 | 12 | 1 | 5 | 2 | 2 | 0 | 10 | 1 | 1 | 1 | 7 | 2 | 9 | 1 | 11 | 1 | 12
+OUTPUTMC | 15 | 3 | 0 | 3 | 1 | 3 | 6 | 1 | 1 | 1 | 4 | 1 | 7 | 1 | 9 | 1 | 11 | 2 | 0 | 0 | 11 | 0 | 10 | 0 | 8 | 0 | 2 | 0 | 1 | 1 | 0
 INPUTS | 2 | U1/U_counter_5bit/count_int<1>  | U1/counter_rst
-INPUTMC | 2 | 0 | 6 | 3 | 3
+INPUTMC | 2 | 0 | 6 | 3 | 7
 EQ | 3 | 
    U1/speed_code<1> := U1/U_counter_5bit/count_int<1>;	// (1 pt, 1 inp)
    U1/speed_code<1>.CLK  =  clock;	// GCK	(0 pt, 0 inp)
     U1/speed_code<1>.CE = U1/counter_rst;	// (1 pt, 1 inp)
 GLOBALS | 1 | 2 | clock
 
-MACROCELL | 2 | 0 | code_wind_speed<2>_MC
+MACROCELL | 3 | 1 | code_wind_speed<2>_MC
 ATTRIBUTES | 1074004738 | 0
 INPUTS | 8 | mode_select  | weathercock<2>  | weathercock<3>  | code_select  | U1/speed_code<4>  | U1/speed_code<3>  | U1/speed_code<2>  | U1/speed_code<1>
-INPUTMC | 4 | 2 | 7 | 2 | 8 | 2 | 12 | 0 | 7
-INPUTP | 4 | 60 | 55 | 32 | 31
+INPUTMC | 4 | 2 | 8 | 2 | 12 | 2 | 15 | 0 | 7
+INPUTP | 4 | 61 | 49 | 51 | 59
 EQ | 4 | 
    code_wind_speed<2> = !mode_select & weathercock<2>
 	$ !mode_select & weathercock<3> & !code_select
 	# mode_select & !U1/speed_code<4> & 
 	!U1/speed_code<3> & !U1/speed_code<2> & !U1/speed_code<1>;	// (3 pt, 8 inp)
 
-MACROCELL | 1 | 0 | code_wind_speed<3>_MC
+MACROCELL | 3 | 6 | code_wind_speed<3>_MC
 ATTRIBUTES | 1074004738 | 0
 INPUTS | 7 | mode_select  | weathercock<3>  | U1/speed_code<4>  | U1/speed_code<3>  | U1/speed_code<2>  | U1/speed_code<0>  | U1/speed_code<1>
-INPUTMC | 5 | 2 | 7 | 2 | 8 | 2 | 12 | 0 | 13 | 0 | 7
-INPUTP | 2 | 60 | 32
+INPUTMC | 5 | 2 | 8 | 2 | 12 | 2 | 15 | 0 | 13 | 0 | 7
+INPUTP | 2 | 61 | 51
 EQ | 4 | 
    code_wind_speed<3> = !mode_select & weathercock<3>
 	# mode_select & !U1/speed_code<4> & 
 	!U1/speed_code<3> & !U1/speed_code<2> & !U1/speed_code<0> & 
 	!U1/speed_code<1>;	// (2 pt, 7 inp)
 
-MACROCELL | 0 | 9 | wind_dir_speed<0>_MC
+MACROCELL | 2 | 2 | wind_dir_speed<0>_MC
 ATTRIBUTES | 1074004738 | 0
 INPUTS | 8 | mode_select  | U1/speed_code<4>  | U1/speed_code<3>  | U1/speed_code<2>  | weathercock<0>  | weathercock<3>  | weathercock<2>  | weathercock<1>
-INPUTMC | 3 | 2 | 7 | 2 | 8 | 2 | 12
-INPUTP | 5 | 60 | 59 | 32 | 55 | 56
+INPUTMC | 3 | 2 | 8 | 2 | 12 | 2 | 15
+INPUTP | 5 | 61 | 46 | 51 | 49 | 48
 EQ | 6 | 
    !wind_dir_speed<0> = mode_select & U1/speed_code<4> & 
 	U1/speed_code<3>
@@ -576,11 +576,11 @@ EQ | 6 |
 	# weathercock<0> & !mode_select & !weathercock<3> & 
 	weathercock<2> & weathercock<1>;	// (3 pt, 8 inp)
 
-MACROCELL | 0 | 11 | wind_dir_speed<10>_MC
+MACROCELL | 1 | 1 | wind_dir_speed<10>_MC
 ATTRIBUTES | 1074004738 | 0
 INPUTS | 9 | mode_select  | U1/speed_code<4>  | U1/speed_code<3>  | U1/speed_code<2>  | U1/speed_code<1>  | weathercock<0>  | weathercock<3>  | weathercock<2>  | weathercock<1>
-INPUTMC | 4 | 2 | 7 | 2 | 8 | 2 | 12 | 0 | 7
-INPUTP | 5 | 60 | 59 | 32 | 55 | 56
+INPUTMC | 4 | 2 | 8 | 2 | 12 | 2 | 15 | 0 | 7
+INPUTP | 5 | 61 | 46 | 51 | 49 | 48
 EQ | 7 | 
    !wind_dir_speed<10> = mode_select & U1/speed_code<4>
 	# mode_select & U1/speed_code<3> & 
@@ -593,8 +593,8 @@ EQ | 7 |
 MACROCELL | 1 | 4 | wind_dir_speed<11>_MC
 ATTRIBUTES | 1074004738 | 0
 INPUTS | 10 | mode_select  | U1/speed_code<4>  | U1/speed_code<3>  | weathercock<0>  | weathercock<3>  | weathercock<2>  | weathercock<1>  | U1/speed_code<2>  | U1/speed_code<0>  | U1/speed_code<1>
-INPUTMC | 5 | 2 | 7 | 2 | 8 | 2 | 12 | 0 | 13 | 0 | 7
-INPUTP | 5 | 60 | 59 | 32 | 55 | 56
+INPUTMC | 5 | 2 | 8 | 2 | 12 | 2 | 15 | 0 | 13 | 0 | 7
+INPUTP | 5 | 61 | 46 | 51 | 49 | 48
 EQ | 7 | 
    !wind_dir_speed<11> = mode_select
 	$ mode_select & !U1/speed_code<4> & 
@@ -604,22 +604,22 @@ EQ | 7 |
 	# mode_select & !U1/speed_code<4> & 
 	!U1/speed_code<2> & !U1/speed_code<0> & !U1/speed_code<1>;	// (4 pt, 10 inp)
 
-MACROCELL | 0 | 2 | wind_dir_speed<12>_MC
+MACROCELL | 1 | 5 | wind_dir_speed<12>_MC
 ATTRIBUTES | 1074004738 | 0
 INPUTS | 7 | mode_select  | U1/speed_code<4>  | U1/speed_code<3>  | weathercock<0>  | weathercock<3>  | weathercock<2>  | weathercock<1>
-INPUTMC | 2 | 2 | 7 | 2 | 8
-INPUTP | 5 | 60 | 59 | 32 | 55 | 56
+INPUTMC | 2 | 2 | 8 | 2 | 12
+INPUTP | 5 | 61 | 46 | 51 | 49 | 48
 EQ | 4 | 
    !wind_dir_speed<12> = mode_select & U1/speed_code<4>
 	# mode_select & U1/speed_code<3>
 	# weathercock<0> & !mode_select & weathercock<3> & 
 	weathercock<2> & !weathercock<1>;	// (3 pt, 7 inp)
 
-MACROCELL | 1 | 9 | wind_dir_speed<13>_MC
+MACROCELL | 1 | 7 | wind_dir_speed<13>_MC
 ATTRIBUTES | 1074004738 | 0
 INPUTS | 10 | mode_select  | U1/speed_code<4>  | U1/speed_code<3>  | U1/speed_code<2>  | U1/speed_code<0>  | U1/speed_code<1>  | weathercock<0>  | weathercock<3>  | weathercock<2>  | weathercock<1>
-INPUTMC | 5 | 2 | 7 | 2 | 8 | 2 | 12 | 0 | 13 | 0 | 7
-INPUTP | 5 | 60 | 59 | 32 | 55 | 56
+INPUTMC | 5 | 2 | 8 | 2 | 12 | 2 | 15 | 0 | 13 | 0 | 7
+INPUTP | 5 | 61 | 46 | 51 | 49 | 48
 EQ | 6 | 
    !wind_dir_speed<13> = mode_select & U1/speed_code<4>
 	# mode_select & U1/speed_code<3>
@@ -628,11 +628,11 @@ EQ | 6 |
 	# !weathercock<0> & !mode_select & weathercock<3> & 
 	weathercock<2> & !weathercock<1>;	// (4 pt, 10 inp)
 
-MACROCELL | 0 | 12 | wind_dir_speed<14>_MC
+MACROCELL | 1 | 9 | wind_dir_speed<14>_MC
 ATTRIBUTES | 1074004738 | 0
 INPUTS | 9 | mode_select  | U1/speed_code<4>  | U1/speed_code<3>  | U1/speed_code<2>  | U1/speed_code<1>  | weathercock<0>  | weathercock<3>  | weathercock<2>  | weathercock<1>
-INPUTMC | 4 | 2 | 7 | 2 | 8 | 2 | 12 | 0 | 7
-INPUTP | 5 | 60 | 59 | 32 | 55 | 56
+INPUTMC | 4 | 2 | 8 | 2 | 12 | 2 | 15 | 0 | 7
+INPUTP | 5 | 61 | 46 | 51 | 49 | 48
 EQ | 6 | 
    !wind_dir_speed<14> = mode_select & U1/speed_code<4>
 	# mode_select & U1/speed_code<3>
@@ -641,11 +641,11 @@ EQ | 6 |
 	# !weathercock<0> & !mode_select & weathercock<3> & 
 	weathercock<2> & weathercock<1>;	// (4 pt, 9 inp)
 
-MACROCELL | 1 | 5 | wind_dir_speed<15>_MC
+MACROCELL | 1 | 11 | wind_dir_speed<15>_MC
 ATTRIBUTES | 1074004738 | 0
 INPUTS | 10 | mode_select  | U1/speed_code<4>  | U1/speed_code<3>  | U1/speed_code<2>  | weathercock<0>  | weathercock<3>  | weathercock<2>  | weathercock<1>  | U1/speed_code<0>  | U1/speed_code<1>
-INPUTMC | 5 | 2 | 7 | 2 | 8 | 2 | 12 | 0 | 13 | 0 | 7
-INPUTP | 5 | 60 | 59 | 32 | 55 | 56
+INPUTMC | 5 | 2 | 8 | 2 | 12 | 2 | 15 | 0 | 13 | 0 | 7
+INPUTP | 5 | 61 | 46 | 51 | 49 | 48
 EQ | 7 | 
    !wind_dir_speed<15> = mode_select
 	$ mode_select & !U1/speed_code<4> & 
@@ -655,11 +655,11 @@ EQ | 7 |
 	# mode_select & !U1/speed_code<4> & 
 	!U1/speed_code<3> & !U1/speed_code<0> & !U1/speed_code<1>;	// (4 pt, 10 inp)
 
-MACROCELL | 2 | 2 | wind_dir_speed<1>_MC
+MACROCELL | 2 | 0 | wind_dir_speed<1>_MC
 ATTRIBUTES | 1074004738 | 0
 INPUTS | 10 | mode_select  | U1/speed_code<4>  | U1/speed_code<3>  | U1/speed_code<2>  | U1/speed_code<0>  | U1/speed_code<1>  | weathercock<0>  | weathercock<3>  | weathercock<2>  | weathercock<1>
-INPUTMC | 5 | 2 | 7 | 2 | 8 | 2 | 12 | 0 | 13 | 0 | 7
-INPUTP | 5 | 60 | 59 | 32 | 55 | 56
+INPUTMC | 5 | 2 | 8 | 2 | 12 | 2 | 15 | 0 | 13 | 0 | 7
+INPUTP | 5 | 61 | 46 | 51 | 49 | 48
 EQ | 8 | 
    !wind_dir_speed<1> = mode_select & U1/speed_code<4> & 
 	U1/speed_code<3>
@@ -670,11 +670,11 @@ EQ | 8 |
 	# !weathercock<0> & !mode_select & !weathercock<3> & 
 	weathercock<2> & weathercock<1>;	// (4 pt, 10 inp)
 
-MACROCELL | 0 | 10 | wind_dir_speed<2>_MC
+MACROCELL | 0 | 11 | wind_dir_speed<2>_MC
 ATTRIBUTES | 1074004738 | 0
 INPUTS | 9 | mode_select  | U1/speed_code<4>  | weathercock<0>  | weathercock<3>  | weathercock<2>  | weathercock<1>  | U1/speed_code<3>  | U1/speed_code<2>  | U1/speed_code<1>
-INPUTMC | 4 | 2 | 7 | 2 | 8 | 2 | 12 | 0 | 7
-INPUTP | 5 | 60 | 59 | 32 | 55 | 56
+INPUTMC | 4 | 2 | 8 | 2 | 12 | 2 | 15 | 0 | 7
+INPUTP | 5 | 61 | 46 | 51 | 49 | 48
 EQ | 5 | 
    !wind_dir_speed<2> = mode_select & U1/speed_code<4>
 	$ !weathercock<0> & !mode_select & !weathercock<3> & 
@@ -682,11 +682,11 @@ EQ | 5 |
 	# mode_select & U1/speed_code<4> & 
 	!U1/speed_code<3> & !U1/speed_code<2> & !U1/speed_code<1>;	// (3 pt, 9 inp)
 
-MACROCELL | 1 | 1 | wind_dir_speed<3>_MC
+MACROCELL | 0 | 10 | wind_dir_speed<3>_MC
 ATTRIBUTES | 1074004738 | 0
 INPUTS | 10 | mode_select  | U1/speed_code<4>  | weathercock<0>  | weathercock<3>  | weathercock<2>  | weathercock<1>  | U1/speed_code<3>  | U1/speed_code<2>  | U1/speed_code<0>  | U1/speed_code<1>
-INPUTMC | 5 | 2 | 7 | 2 | 8 | 2 | 12 | 0 | 13 | 0 | 7
-INPUTP | 5 | 60 | 59 | 32 | 55 | 56
+INPUTMC | 5 | 2 | 8 | 2 | 12 | 2 | 15 | 0 | 13 | 0 | 7
+INPUTP | 5 | 61 | 46 | 51 | 49 | 48
 EQ | 6 | 
    !wind_dir_speed<3> = mode_select & U1/speed_code<4>
 	$ weathercock<0> & !mode_select & !weathercock<3> & 
@@ -695,21 +695,21 @@ EQ | 6 |
 	!U1/speed_code<3> & !U1/speed_code<2> & !U1/speed_code<0> & 
 	!U1/speed_code<1>;	// (3 pt, 10 inp)
 
-MACROCELL | 0 | 1 | wind_dir_speed<4>_MC
+MACROCELL | 0 | 9 | wind_dir_speed<4>_MC
 ATTRIBUTES | 1074004738 | 0
 INPUTS | 6 | mode_select  | U1/speed_code<4>  | weathercock<0>  | weathercock<3>  | weathercock<2>  | weathercock<1>
-INPUTMC | 1 | 2 | 7
-INPUTP | 5 | 60 | 59 | 32 | 55 | 56
+INPUTMC | 1 | 2 | 8
+INPUTP | 5 | 61 | 46 | 51 | 49 | 48
 EQ | 3 | 
    !wind_dir_speed<4> = mode_select & U1/speed_code<4>
 	# weathercock<0> & !mode_select & !weathercock<3> & 
 	!weathercock<2> & !weathercock<1>;	// (2 pt, 6 inp)
 
-MACROCELL | 1 | 7 | wind_dir_speed<5>_MC
+MACROCELL | 0 | 8 | wind_dir_speed<5>_MC
 ATTRIBUTES | 1074004738 | 0
 INPUTS | 10 | mode_select  | U1/speed_code<4>  | weathercock<0>  | weathercock<3>  | weathercock<2>  | weathercock<1>  | U1/speed_code<3>  | U1/speed_code<2>  | U1/speed_code<0>  | U1/speed_code<1>
-INPUTMC | 5 | 2 | 7 | 2 | 8 | 2 | 12 | 0 | 13 | 0 | 7
-INPUTP | 5 | 60 | 59 | 32 | 55 | 56
+INPUTMC | 5 | 2 | 8 | 2 | 12 | 2 | 15 | 0 | 13 | 0 | 7
+INPUTP | 5 | 61 | 46 | 51 | 49 | 48
 EQ | 5 | 
    !wind_dir_speed<5> = mode_select & U1/speed_code<4>
 	# !weathercock<0> & !mode_select & !weathercock<3> & 
@@ -717,11 +717,11 @@ EQ | 5 |
 	# mode_select & U1/speed_code<3> & 
 	U1/speed_code<2> & U1/speed_code<0> & U1/speed_code<1>;	// (3 pt, 10 inp)
 
-MACROCELL | 2 | 9 | wind_dir_speed<6>_MC
+MACROCELL | 0 | 2 | wind_dir_speed<6>_MC
 ATTRIBUTES | 1074004738 | 0
 INPUTS | 9 | mode_select  | U1/speed_code<4>  | U1/speed_code<3>  | U1/speed_code<2>  | U1/speed_code<1>  | weathercock<0>  | weathercock<3>  | weathercock<2>  | weathercock<1>
-INPUTMC | 4 | 2 | 7 | 2 | 8 | 2 | 12 | 0 | 7
-INPUTP | 5 | 60 | 59 | 32 | 55 | 56
+INPUTMC | 4 | 2 | 8 | 2 | 12 | 2 | 15 | 0 | 7
+INPUTP | 5 | 61 | 46 | 51 | 49 | 48
 EQ | 5 | 
    !wind_dir_speed<6> = mode_select & U1/speed_code<4>
 	# mode_select & U1/speed_code<3> & 
@@ -729,11 +729,11 @@ EQ | 5 |
 	# !weathercock<0> & !mode_select & !weathercock<3> & 
 	!weathercock<2> & weathercock<1>;	// (3 pt, 9 inp)
 
-MACROCELL | 1 | 11 | wind_dir_speed<7>_MC
+MACROCELL | 0 | 1 | wind_dir_speed<7>_MC
 ATTRIBUTES | 1074004738 | 0
 INPUTS | 10 | mode_select  | U1/speed_code<4>  | U1/speed_code<3>  | U1/speed_code<2>  | U1/speed_code<0>  | U1/speed_code<1>  | weathercock<0>  | weathercock<3>  | weathercock<2>  | weathercock<1>
-INPUTMC | 5 | 2 | 7 | 2 | 8 | 2 | 12 | 0 | 13 | 0 | 7
-INPUTP | 5 | 60 | 59 | 32 | 55 | 56
+INPUTMC | 5 | 2 | 8 | 2 | 12 | 2 | 15 | 0 | 13 | 0 | 7
+INPUTP | 5 | 61 | 46 | 51 | 49 | 48
 EQ | 7 | 
    !wind_dir_speed<7> = mode_select & U1/speed_code<4>
 	# mode_select & U1/speed_code<3> & 
@@ -743,11 +743,11 @@ EQ | 7 |
 	# weathercock<0> & !mode_select & !weathercock<3> & 
 	!weathercock<2> & weathercock<1>;	// (4 pt, 10 inp)
 
-MACROCELL | 0 | 8 | wind_dir_speed<8>_MC
+MACROCELL | 0 | 0 | wind_dir_speed<8>_MC
 ATTRIBUTES | 1074004738 | 0
 INPUTS | 8 | mode_select  | U1/speed_code<4>  | U1/speed_code<3>  | U1/speed_code<2>  | weathercock<0>  | weathercock<3>  | weathercock<2>  | weathercock<1>
-INPUTMC | 3 | 2 | 7 | 2 | 8 | 2 | 12
-INPUTP | 5 | 60 | 59 | 32 | 55 | 56
+INPUTMC | 3 | 2 | 8 | 2 | 12 | 2 | 15
+INPUTP | 5 | 61 | 46 | 51 | 49 | 48
 EQ | 5 | 
    !wind_dir_speed<8> = mode_select & U1/speed_code<4>
 	# mode_select & U1/speed_code<3> & 
@@ -755,11 +755,11 @@ EQ | 5 |
 	# weathercock<0> & !mode_select & weathercock<3> & 
 	!weathercock<2> & weathercock<1>;	// (3 pt, 8 inp)
 
-MACROCELL | 1 | 12 | wind_dir_speed<9>_MC
+MACROCELL | 1 | 0 | wind_dir_speed<9>_MC
 ATTRIBUTES | 1074004738 | 0
 INPUTS | 10 | mode_select  | U1/speed_code<4>  | U1/speed_code<3>  | U1/speed_code<2>  | U1/speed_code<0>  | U1/speed_code<1>  | weathercock<0>  | weathercock<3>  | weathercock<2>  | weathercock<1>
-INPUTMC | 5 | 2 | 7 | 2 | 8 | 2 | 12 | 0 | 13 | 0 | 7
-INPUTP | 5 | 60 | 59 | 32 | 55 | 56
+INPUTMC | 5 | 2 | 8 | 2 | 12 | 2 | 15 | 0 | 13 | 0 | 7
+INPUTP | 5 | 61 | 46 | 51 | 49 | 48
 EQ | 7 | 
    !wind_dir_speed<9> = mode_select & U1/speed_code<4>
 	# mode_select & U1/speed_code<3> & 
@@ -769,31 +769,31 @@ EQ | 7 |
 	# !weathercock<0> & !mode_select & weathercock<3> & 
 	!weathercock<2> & weathercock<1>;	// (4 pt, 10 inp)
 
-PIN | clock | 4096 | 16 | LVCMOS18 | 19 | 36 | 0 | 15 | 1 | 15 | 1 | 14 | 1 | 13 | 1 | 10 | 1 | 8 | 1 | 3 | 1 | 2 | 1 | 6 | 2 | 4 | 2 | 3 | 2 | 14 | 2 | 13 | 2 | 11 | 2 | 10 | 3 | 15 | 3 | 11 | 3 | 9 | 3 | 8 | 3 | 7 | 3 | 5 | 3 | 4 | 3 | 3 | 0 | 14 | 0 | 0 | 2 | 15 | 2 | 6 | 0 | 6 | 0 | 5 | 0 | 4 | 0 | 3 | 2 | 7 | 2 | 8 | 2 | 12 | 0 | 13 | 0 | 7
-PIN | code_select | 64 | 16 | LVCMOS18 | 31 | 4 | 2 | 15 | 2 | 5 | 2 | 1 | 2 | 0
-PIN | weathercock<0> | 64 | 16 | LVCMOS18 | 59 | 17 | 2 | 5 | 0 | 9 | 0 | 11 | 1 | 4 | 0 | 2 | 1 | 9 | 0 | 12 | 1 | 5 | 2 | 2 | 0 | 10 | 1 | 1 | 0 | 1 | 1 | 7 | 2 | 9 | 1 | 11 | 0 | 8 | 1 | 12
-PIN | mode_select | 64 | 16 | LVCMOS18 | 60 | 20 | 2 | 5 | 2 | 1 | 2 | 0 | 1 | 0 | 0 | 9 | 0 | 11 | 1 | 4 | 0 | 2 | 1 | 9 | 0 | 12 | 1 | 5 | 2 | 2 | 0 | 10 | 1 | 1 | 0 | 1 | 1 | 7 | 2 | 9 | 1 | 11 | 0 | 8 | 1 | 12
-PIN | weathercock<3> | 64 | 16 | LVCMOS18 | 32 | 20 | 2 | 5 | 2 | 1 | 2 | 0 | 1 | 0 | 0 | 9 | 0 | 11 | 1 | 4 | 0 | 2 | 1 | 9 | 0 | 12 | 1 | 5 | 2 | 2 | 0 | 10 | 1 | 1 | 0 | 1 | 1 | 7 | 2 | 9 | 1 | 11 | 0 | 8 | 1 | 12
-PIN | weathercock<2> | 64 | 16 | LVCMOS18 | 55 | 19 | 2 | 5 | 2 | 1 | 2 | 0 | 0 | 9 | 0 | 11 | 1 | 4 | 0 | 2 | 1 | 9 | 0 | 12 | 1 | 5 | 2 | 2 | 0 | 10 | 1 | 1 | 0 | 1 | 1 | 7 | 2 | 9 | 1 | 11 | 0 | 8 | 1 | 12
-PIN | weathercock<1> | 64 | 16 | LVCMOS18 | 56 | 18 | 2 | 5 | 2 | 1 | 0 | 9 | 0 | 11 | 1 | 4 | 0 | 2 | 1 | 9 | 0 | 12 | 1 | 5 | 2 | 2 | 0 | 10 | 1 | 1 | 0 | 1 | 1 | 7 | 2 | 9 | 1 | 11 | 0 | 8 | 1 | 12
-PIN | anemometer | 64 | 16 | LVCMOS18 | 11 | 2 | 2 | 15 | 0 | 0
-PIN | code_wind_speed<0> | 536871040 | 0 | LVCMOS18 | 65
-PIN | code_wind_speed<1> | 536871040 | 0 | LVCMOS18 | 72
-PIN | code_wind_speed<2> | 536871040 | 0 | LVCMOS18 | 73
-PIN | code_wind_speed<3> | 536871040 | 0 | LVCMOS18 | 12
-PIN | wind_dir_speed<0> | 536871040 | 0 | LVCMOS18 | 1
-PIN | wind_dir_speed<10> | 536871040 | 0 | LVCMOS18 | 80
-PIN | wind_dir_speed<11> | 536871040 | 0 | LVCMOS18 | 16
-PIN | wind_dir_speed<12> | 536871040 | 0 | LVCMOS18 | 9
-PIN | wind_dir_speed<13> | 536871040 | 0 | LVCMOS18 | 23
-PIN | wind_dir_speed<14> | 536871040 | 0 | LVCMOS18 | 78
-PIN | wind_dir_speed<15> | 536871040 | 0 | LVCMOS18 | 17
-PIN | wind_dir_speed<1> | 536871040 | 0 | LVCMOS18 | 71
-PIN | wind_dir_speed<2> | 536871040 | 0 | LVCMOS18 | 81
-PIN | wind_dir_speed<3> | 536871040 | 0 | LVCMOS18 | 13
-PIN | wind_dir_speed<4> | 536871040 | 0 | LVCMOS18 | 10
-PIN | wind_dir_speed<5> | 536871040 | 0 | LVCMOS18 | 20
-PIN | wind_dir_speed<6> | 536871040 | 0 | LVCMOS18 | 61
-PIN | wind_dir_speed<7> | 536871040 | 0 | LVCMOS18 | 25
-PIN | wind_dir_speed<8> | 536871040 | 0 | LVCMOS18 | 2
-PIN | wind_dir_speed<9> | 536871040 | 0 | LVCMOS18 | 26
+PIN | clock | 4096 | 16 | LVCMOS33 | 19 | 36 | 0 | 15 | 1 | 14 | 1 | 13 | 1 | 10 | 1 | 8 | 1 | 3 | 1 | 2 | 1 | 6 | 2 | 7 | 2 | 6 | 2 | 4 | 2 | 3 | 2 | 13 | 2 | 11 | 2 | 10 | 2 | 9 | 2 | 5 | 2 | 1 | 3 | 15 | 3 | 11 | 3 | 9 | 3 | 8 | 3 | 7 | 0 | 14 | 2 | 14 | 1 | 15 | 0 | 12 | 0 | 6 | 0 | 5 | 0 | 4 | 0 | 3 | 2 | 8 | 2 | 12 | 2 | 15 | 0 | 13 | 0 | 7
+PIN | code_select | 64 | 16 | LVCMOS33 | 59 | 4 | 1 | 15 | 1 | 12 | 3 | 0 | 3 | 1
+PIN | weathercock<0> | 64 | 16 | LVCMOS33 | 46 | 17 | 1 | 12 | 2 | 2 | 1 | 1 | 1 | 4 | 1 | 5 | 1 | 7 | 1 | 9 | 1 | 11 | 2 | 0 | 0 | 11 | 0 | 10 | 0 | 9 | 0 | 8 | 0 | 2 | 0 | 1 | 0 | 0 | 1 | 0
+PIN | mode_select | 64 | 16 | LVCMOS33 | 61 | 20 | 1 | 12 | 3 | 0 | 3 | 1 | 3 | 6 | 2 | 2 | 1 | 1 | 1 | 4 | 1 | 5 | 1 | 7 | 1 | 9 | 1 | 11 | 2 | 0 | 0 | 11 | 0 | 10 | 0 | 9 | 0 | 8 | 0 | 2 | 0 | 1 | 0 | 0 | 1 | 0
+PIN | weathercock<3> | 64 | 16 | LVCMOS33 | 51 | 20 | 1 | 12 | 3 | 0 | 3 | 1 | 3 | 6 | 2 | 2 | 1 | 1 | 1 | 4 | 1 | 5 | 1 | 7 | 1 | 9 | 1 | 11 | 2 | 0 | 0 | 11 | 0 | 10 | 0 | 9 | 0 | 8 | 0 | 2 | 0 | 1 | 0 | 0 | 1 | 0
+PIN | weathercock<2> | 64 | 16 | LVCMOS33 | 49 | 19 | 1 | 12 | 3 | 0 | 3 | 1 | 2 | 2 | 1 | 1 | 1 | 4 | 1 | 5 | 1 | 7 | 1 | 9 | 1 | 11 | 2 | 0 | 0 | 11 | 0 | 10 | 0 | 9 | 0 | 8 | 0 | 2 | 0 | 1 | 0 | 0 | 1 | 0
+PIN | weathercock<1> | 64 | 16 | LVCMOS33 | 48 | 18 | 1 | 12 | 3 | 0 | 2 | 2 | 1 | 1 | 1 | 4 | 1 | 5 | 1 | 7 | 1 | 9 | 1 | 11 | 2 | 0 | 0 | 11 | 0 | 10 | 0 | 9 | 0 | 8 | 0 | 2 | 0 | 1 | 0 | 0 | 1 | 0
+PIN | anemometer | 64 | 16 | LVCMOS33 | 55 | 2 | 1 | 15 | 2 | 14
+PIN | code_wind_speed<0> | 536871040 | 0 | LVCMOS33 | 26
+PIN | code_wind_speed<1> | 536871040 | 0 | LVCMOS33 | 31
+PIN | code_wind_speed<2> | 536871040 | 0 | LVCMOS33 | 32
+PIN | code_wind_speed<3> | 536871040 | 0 | LVCMOS33 | 38
+PIN | wind_dir_speed<0> | 536871040 | 0 | LVCMOS33 | 71
+PIN | wind_dir_speed<10> | 536871040 | 0 | LVCMOS33 | 13
+PIN | wind_dir_speed<11> | 536871040 | 0 | LVCMOS33 | 16
+PIN | wind_dir_speed<12> | 536871040 | 0 | LVCMOS33 | 17
+PIN | wind_dir_speed<13> | 536871040 | 0 | LVCMOS33 | 20
+PIN | wind_dir_speed<14> | 536871040 | 0 | LVCMOS33 | 23
+PIN | wind_dir_speed<15> | 536871040 | 0 | LVCMOS33 | 25
+PIN | wind_dir_speed<1> | 536871040 | 0 | LVCMOS33 | 73
+PIN | wind_dir_speed<2> | 536871040 | 0 | LVCMOS33 | 80
+PIN | wind_dir_speed<3> | 536871040 | 0 | LVCMOS33 | 81
+PIN | wind_dir_speed<4> | 536871040 | 0 | LVCMOS33 | 1
+PIN | wind_dir_speed<5> | 536871040 | 0 | LVCMOS33 | 2
+PIN | wind_dir_speed<6> | 536871040 | 0 | LVCMOS33 | 9
+PIN | wind_dir_speed<7> | 536871040 | 0 | LVCMOS33 | 10
+PIN | wind_dir_speed<8> | 536871040 | 0 | LVCMOS33 | 11
+PIN | wind_dir_speed<9> | 536871040 | 0 | LVCMOS33 | 12

@@ -1,0 +1,84 @@
+#UCF: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+#UCF: ~~~~~ Adder & Subtractor    ~~~~~ 
+#UCF: ~~~~~ XC2C64A - NewTech Inc ~~~~~ 
+#UCF: ~~~~~ Start of Constraints  ~~~~~ 
+#UCF: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+#UCF: Start of I/O Pin Assignments
+
+#UCF: ~~~~~ Inputs ~~~~~~
+# C-MOD : DIP PIN 1 (P12) 
+NET "weathercock[0]"   LOC = "P12"  | IOSTANDARD = LVCMOS33;
+# C-MOD : DIP PIN 2 (P13)
+NET "weathercock[1]"   LOC = "P13"  | IOSTANDARD = LVCMOS33;
+# C-MOD : DIP PIN 3 (P14)
+NET "weathercock[2]"   LOC = "P14"  | IOSTANDARD = LVCMOS33;
+# C-MOD : DIP PIN 4 (P16)
+NET "weathercock[3]"   LOC = "P16"  | IOSTANDARD = LVCMOS33;
+# C-MOD : DIP PIN 5 (NC)
+# C-MOD : DIP PIN 6 (NC)
+# C-MOD : DIP PIN 7 (NC)
+# C-MOD : DIP PIN 8 (NC)
+# C-MOD : DIP PIN 9 (P18)
+NET "anemometer"   	LOC = "P18"  | IOSTANDARD = LVCMOS33;
+# C-MOD : DIP PIN 10 (P19)
+# C-MOD : DIP PIN 11 (P20)
+NET "code_select"    LOC = "P20"  | IOSTANDARD = LVCMOS33;
+# C-MOD : DIP PIN 12 (P21)
+# C-MOD : DIP PIN 13 (P22)
+NET "mode_select"     LOC = "P22"  | IOSTANDARD = LVCMOS33;
+# C-MOD : DIP PIN 14 (P23)
+# C-MOD : DIP PIN 15 (P27)
+NET "wind_dir_speed[0]"    LOC = "P27"  | IOSTANDARD = LVCMOS33;
+# C-MOD : DIP PIN 16 (P28)
+
+# C-MOD : DIP PIN 17 (P29)
+NET "wind_dir_speed[1]"    LOC = "P29"  | IOSTANDARD = LVCMOS33;
+# C-MOD : DIP PIN 18 (P30-GSR)
+# C-MOD : DIP PIN 19 (NC)
+# C-MOD : DIP PIN 20 (VCC(P15), VCCIO(P7 and P26), VAUX(P35))
+
+
+#UCF: ~~~~~ Outputs ~~~~~~
+           
+# C-MOD : DIP PIN 21 --- (GND(P4, P17 and P25))
+# C-MOD : DIP PIN 22 --- (P31-GTS2)
+NET "wind_dir_speed[2]"    LOC = "P31"  | IOSTANDARD = LVCMOS33;
+# C-MOD : DIP PIN 23 --- (P32-GTS3) 
+NET "wind_dir_speed[3]"    LOC = "P32"  | IOSTANDARD = LVCMOS33;
+# C-MOD : DIP PIN 24 --- (P33-GTS0) 
+NET "wind_dir_speed[4]"    LOC = "P33"  | IOSTANDARD = LVCMOS33;
+# C-MOD : DIP PIN 25 --- (P34-GTS1) 
+NET "wind_dir_speed[5]"    LOC = "P34"  | IOSTANDARD = LVCMOS33; 
+# C-MOD : DIP PIN 26     (P36)
+NET "wind_dir_speed[6]"    LOC = "P36"  | IOSTANDARD = LVCMOS33; 
+# C-MOD : DIP PIN 27     (P37)
+NET "wind_dir_speed[7]"    LOC = "P37"  | IOSTANDARD = LVCMOS33; 
+# C-MOD : DIP PIN 28     (P38)
+NET "wind_dir_speed[8]"    LOC = "P38"  | IOSTANDARD = LVCMOS33; 
+# C-MOD : DIP PIN 29     (P39)
+NET "wind_dir_speed[9]"    LOC = "P39"  | IOSTANDARD = LVCMOS33; 
+# C-MOD : DIP PIN 30     (P40)
+NET "wind_dir_speed[10]"    LOC = "P40"  | IOSTANDARD = LVCMOS33; 
+# C-MOD : DIP PIN 31     (P41)
+NET "wind_dir_speed[11]"    LOC = "P41"  | IOSTANDARD = LVCMOS33; 
+# C-MOD : DIP PIN 32     (P42)
+NET "wind_dir_speed[12]"    LOC = "P42"  | IOSTANDARD = LVCMOS33; 
+# C-MOD : DIP PIN 33 --- (P43-GCK0)
+NET "clock"    LOC = "P43"  | IOSTANDARD = LVCMOS33; 
+# C-MOD : DIP PIN 34 --- (P44-GCK1)
+NET "wind_dir_speed[13]"    LOC = "P44"  | IOSTANDARD = LVCMOS33; 
+# C-MOD : DIP PIN 35 --- (P1-GCK2)
+NET "wind_dir_speed[14]"    LOC = "P1"  | IOSTANDARD = LVCMOS33; 
+# C-MOD : DIP PIN 36     (P2)
+NET "wind_dir_speed[15]"    LOC = "P2"  | IOSTANDARD = LVCMOS33; 
+# C-MOD : DIP PIN 37     (P3)
+NET "code_wind_speed[0]"    LOC = "P3"  | IOSTANDARD = LVCMOS33; 
+# C-MOD : DIP PIN 38     (P5)
+NET "code_wind_speed[1]"    LOC = "P5"  | IOSTANDARD = LVCMOS33;
+# C-MOD : DIP PIN 39     (P6)
+NET "code_wind_speed[2]"    LOC = "P6"  | IOSTANDARD = LVCMOS33; 
+# C-MOD : DIP PIN 40     (P8)
+NET "code_wind_speed[3]"    LOC = "P8"  | IOSTANDARD = LVCMOS33; 
+
+

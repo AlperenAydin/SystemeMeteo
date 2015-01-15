@@ -2,7 +2,8 @@ Release 14.7 ngdbuild P.20131013 (lin)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 Command Line: /softs/Xilinx/14.7/ISE_DS/ISE/bin/lin/unwrapped/ngdbuild -intstyle
-ise -dd _ngo -i -p xc2c64a-VQ44-7 weather_system.ngc weather_system.ngd
+ise -dd _ngo -uc weather_system.ucf -p xc2c64a-VQ44-7 weather_system.ngc
+weather_system.ngd
 
 Reading NGO file
 "/fs02/share/users/alperen.aydin/home/TPElec/ELN1/SysMeteo/weather_system.ngc"
@@ -10,6 +11,7 @@ Reading NGO file
 Gathering constraint information from source properties...
 Done.
 
+Annotating constraints to design from ucf file "weather_system.ucf" ...
 Resolving constraint associations...
 Checking Constraint Associations...
 Done...
@@ -27,7 +29,7 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:   0
 
-Total memory usage is 100568 kilobytes
+Total memory usage is 100616 kilobytes
 
 Writing NGD file "weather_system.ngd" ...
 Total REAL time to NGDBUILD completion:  5 sec

@@ -58,3 +58,8 @@ cpldfit -intstyle ise -p xc2c64a-7-VQ44 -ofmt vhdl -optimize density -htmlrpt -l
 tsim -intstyle ise weather_system weather_system.nga 
 hprep6 -s IEEE1149 -i weather_system 
 netgen -intstyle ise -rpw 100 -ar Structure -tm weather_system -w -dir netgen/fit -ofmt vhdl -sim weather_system.nga weather_system_timesim.vhd 
+xst -intstyle ise -ifn "/fs02/share/users/alperen.aydin/home/TPElec/ELN1/SysMeteo/weather_system.xst" -ofn "/fs02/share/users/alperen.aydin/home/TPElec/ELN1/SysMeteo/weather_system.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc weather_system.ucf -p xc2c64a-VQ44-7 weather_system.ngc weather_system.ngd  
+cpldfit -intstyle ise -p xc2c64a-7-VQ44 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 weather_system.ngd 
+tsim -intstyle ise weather_system weather_system.nga 
+hprep6 -s IEEE1149 -i weather_system 

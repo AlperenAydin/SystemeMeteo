@@ -6,44 +6,12 @@
 
 GCLK0: 1=clock.p
 ----------------- B l o c k 0 ------------------
-PLApt(28/56), Fanin(17/38), Clk(1/3), Bct(0/4), Pin(8/8), Mcell(16/16)
-PLApts[28/53] 24 49 54 39 50 57 27 48 33 55 38 64 30 25 68 69 73 81 74 83 75 84 76 85 () () () () () () () 77 
-              () () () () () () () () 45 () () () () () () () () 77 () () 77
-Fanins[17] U1/U_counter_5bit/count_int<0>.n U1/U_counter_5bit/count_int<1>.n U1/U_counter_5bit/count_int<2>.n 
+PLApt(30/56), Fanin(18/38), Clk(1/3), Bct(0/4), Pin(7/8), Mcell(16/16)
+PLApts[30/53] 28 66 26 58 59 40 60 38 64 36 25 57 30 68 69 73 81 74 83 75 84 76 85 82 86 () () () () () () 77 
+              () () () () () () () () 45 () () 45 () () () () () 77 () () 77
+Fanins[18] U1/U_counter_5bit/count_int<0>.n U1/U_counter_5bit/count_int<1>.n U1/U_counter_5bit/count_int<2>.n 
            U1/U_counter_5bit/count_int<3>.n U1/U_counter_5bit/count_int<4>.n 
-           U1/U_counter_5bit/counter_rst_delay.n U1/counter_ena.n U1/counter_rst.n U1/speed_code<1>.n 
-           U1/speed_code<2>.n U1/speed_code<3>.n U1/speed_code<4>.n mode_select.p weathercock<0>.p 
-           weathercock<1>.p weathercock<2>.p weathercock<3>.p
-clk[1] clock 
-CTC: 
-CTR: 
-CTS: 
-CTE: 
-vref: [0]
-Signal[17] [wind_dir_speed<0>(54),wind_dir_speed<0>(33)] [wind_dir_speed<10>(56),wind_dir_speed<10>(31)]  
-           [wind_dir_speed<12>(47),wind_dir_speed<12>(36)] [wind_dir_speed<14>(57),wind_dir_speed<14>(30)]  
-           [wind_dir_speed<2>(55),wind_dir_speed<2>(32)] [wind_dir_speed<4>(46),wind_dir_speed<4>(37)]  
-           [wind_dir_speed<8>(53),wind_dir_speed<8>(34)]  
-           [U1/U_risingedge_detector/anemometer_reg,anemometer(38)] [U1/U_freq_divider/count_int<0>(60)]  
-           [U1/U_counter_5bit/counter_rst_delay(59)] [U1/speed_code<0>(58)] [U1/speed_code<1>(52)]  
-           [U1/U_counter_5bit/count_int<1>(51)] [U1/U_counter_5bit/count_int<2>(50)]  
-           [U1/U_counter_5bit/count_int<3>(49)] [U1/U_counter_5bit/count_int<4>(48)] 
-Signal[17] [ 0: U1/U_risingedge_detector/anemometer_reg(45) anemometer(38)  ][ 1: wind_dir_speed<4>(46)  
-           wind_dir_speed<4>(37)  ][ 2: wind_dir_speed<12>(47) wind_dir_speed<12>(36)  ][ 3:  
-           U1/U_counter_5bit/count_int<4>(48)  ][ 4: U1/U_counter_5bit/count_int<3>(49)  ][ 5:  
-           U1/U_counter_5bit/count_int<2>(50)  ][ 6: U1/U_counter_5bit/count_int<1>(51)  ][ 7:  
-           U1/speed_code<1>(52)  ][ 8: wind_dir_speed<8>(53) wind_dir_speed<8>(34)  ][ 9:  
-           wind_dir_speed<0>(54) wind_dir_speed<0>(33)  ][ 10: wind_dir_speed<2>(55) wind_dir_speed<2>(32)  ] 
-           [ 11: wind_dir_speed<10>(56) wind_dir_speed<10>(31)  ][ 12: wind_dir_speed<14>(57)  
-           wind_dir_speed<14>(30)  ][ 13: U1/speed_code<0>(58)  ][ 14:  
-           U1/U_counter_5bit/counter_rst_delay(59)  ][ 15: U1/U_freq_divider/count_int<0>(60)  ]
------------------ B l o c k 1 ------------------
-PLApt(32/56), Fanin(18/38), Clk(1/3), Bct(0/4), Pin(9/9), Mcell(16/16)
-PLApts[32/56] 4 67 29 52 61 37 48 56 23 53 62 28 66 45 40 60 92 26 58 91 59 35 3 51 57 3 () () 93 () () () () 
-              () 90 () () () () () 89 () () () () () () () () 88 () () 87 () () 78
-Fanins[18] U1/U_freq_divider/count_int<0>.n U1/U_freq_divider/count_int<1>.n U1/U_freq_divider/count_int<2>.n 
-           U1/U_freq_divider/count_int<3>.n U1/U_freq_divider/count_int<4>.n U1/U_freq_divider/count_int<5>.n 
-           U1/U_freq_divider/count_int<6>.n U1/U_freq_divider/count_int<7>.n U1/speed_code<0>.n 
+           U1/U_counter_5bit/counter_rst_delay.n U1/counter_ena.n U1/counter_rst.n U1/speed_code<0>.n 
            U1/speed_code<1>.n U1/speed_code<2>.n U1/speed_code<3>.n U1/speed_code<4>.n mode_select.p 
            weathercock<0>.p weathercock<1>.p weathercock<2>.p weathercock<3>.p
 clk[1] clock 
@@ -52,36 +20,30 @@ CTR:
 CTS: 
 CTE: 
 vref: [0]
-Signal[17] [code_wind_speed<3>(61),code_wind_speed<3>(39)] [wind_dir_speed<11>(65),wind_dir_speed<11>(41)]  
-           [wind_dir_speed<13>(70),wind_dir_speed<13>(1)] [wind_dir_speed<15>(66),wind_dir_speed<15>(42)]  
-           [wind_dir_speed<3>(62),wind_dir_speed<3>(40)] [wind_dir_speed<5>(68),wind_dir_speed<5>(44)]  
-           [wind_dir_speed<7>(72),wind_dir_speed<7>(2)] [wind_dir_speed<9>(73),wind_dir_speed<9>(3)]  
-           [clock(43)] [U1/U_freq_divider/count_int<1>(76)] [U1/U_freq_divider/count_int<2>(75)]  
-           [U1/U_freq_divider/count_int<3>(74)] [U1/U_freq_divider/count_int<4>(71)]  
-           [U1/U_freq_divider/count_int<5>(69)] [U1/U_freq_divider/count_int<6>(64)]  
-           [U1/U_freq_divider/count_int<7>(63)] [U1/U_freq_divider/count_int<8>(67)] 
-Signal[17] [ 0: code_wind_speed<3>(61) code_wind_speed<3>(39)  ][ 1: wind_dir_speed<3>(62)  
-           wind_dir_speed<3>(40)  ][ 2: U1/U_freq_divider/count_int<7>(63)  ][ 3:  
-           U1/U_freq_divider/count_int<6>(64)  ][ 4: wind_dir_speed<11>(65) wind_dir_speed<11>(41)  ][ 5:  
-           wind_dir_speed<15>(66) wind_dir_speed<15>(42)  ][ 6: U1/U_freq_divider/count_int<8>(67) clock(43)  
-            ][ 7: wind_dir_speed<5>(68) wind_dir_speed<5>(44)  ][ 8: U1/U_freq_divider/count_int<5>(69)  ] 
-           [ 9: wind_dir_speed<13>(70) wind_dir_speed<13>(1)  ][ 10: U1/U_freq_divider/count_int<4>(71)  ] 
-           [ 11: wind_dir_speed<7>(72) wind_dir_speed<7>(2)  ][ 12: wind_dir_speed<9>(73)  
-           wind_dir_speed<9>(3)  ][ 13: U1/U_freq_divider/count_int<3>(74)  ][ 14:  
-           U1/U_freq_divider/count_int<2>(75)  ][ 15: U1/U_freq_divider/count_int<1>(76)  ]
------------------ B l o c k 2 ------------------
-PLApt(36/56), Fanin(34/38), Clk(1/3), Bct(0/4), Pin(9/9), Mcell(16/16)
-PLApts[36/53] 18 19 20 21 62 16 17 63 65 15 6 34 47 9 49 54 36 45 59 95 79 80 94 70 71 22 72 82 86 () () 77 
-              () () 77 () () () () () 99 () () 98 () () 77 () () 97 () () 96
-Fanins[34] U1/U_counter_5bit/count_int<0>.n U1/U_counter_5bit/count_int<2>.n U1/U_counter_5bit/count_int<3>.n 
-           U1/U_counter_5bit/count_int<4>.n U1/U_counter_5bit/counter_rst_delay.n 
-           U1/U_freq_divider/count_int<0>.n U1/U_freq_divider/count_int<10>.n 
-           U1/U_freq_divider/count_int<11>.n U1/U_freq_divider/count_int<12>.n 
-           U1/U_freq_divider/count_int<13>.n U1/U_freq_divider/count_int<1>.n 
-           U1/U_freq_divider/count_int<2>.n U1/U_freq_divider/count_int<3>.n U1/U_freq_divider/count_int<4>.n 
-           U1/U_freq_divider/count_int<5>.n U1/U_freq_divider/count_int<6>.n U1/U_freq_divider/count_int<7>.n 
-           U1/U_freq_divider/count_int<8>.n U1/U_freq_divider/count_int<9>.n 
-           U1/U_risingedge_detector/anemometer_reg.n U1/counter_ena.n U1/counter_rst.n U1/speed_code<0>.n 
+Signal[16] [wind_dir_speed<3>(55),wind_dir_speed<3>(32)] [wind_dir_speed<7>(46),wind_dir_speed<7>(37)]  
+           [wind_dir_speed<5>(53),wind_dir_speed<5>(34)] [wind_dir_speed<2>(56),wind_dir_speed<2>(31)]  
+           [wind_dir_speed<6>(47),wind_dir_speed<6>(36)] [wind_dir_speed<8>(45),wind_dir_speed<8>(38)]  
+           [wind_dir_speed<4>(54),wind_dir_speed<4>(33)] [U1/U_freq_divider/count_int<0>(60)]  
+           [U1/U_counter_5bit/counter_rst_delay(59)] [U1/speed_code<0>(58)] [U1/speed_code<1>(52)]  
+           [U1/U_counter_5bit/count_int<1>(51)] [U1/U_counter_5bit/count_int<2>(50)]  
+           [U1/U_counter_5bit/count_int<3>(49)] [U1/U_counter_5bit/count_int<4>(48)]  
+           [U1/U_counter_5bit/count_int<0>(57)] 
+Signal[16] [ 0: wind_dir_speed<8>(45) wind_dir_speed<8>(38)  ][ 1: wind_dir_speed<7>(46)  
+           wind_dir_speed<7>(37)  ][ 2: wind_dir_speed<6>(47) wind_dir_speed<6>(36)  ][ 3:  
+           U1/U_counter_5bit/count_int<4>(48)  ][ 4: U1/U_counter_5bit/count_int<3>(49)  ][ 5:  
+           U1/U_counter_5bit/count_int<2>(50)  ][ 6: U1/U_counter_5bit/count_int<1>(51)  ][ 7:  
+           U1/speed_code<1>(52)  ][ 8: wind_dir_speed<5>(53) wind_dir_speed<5>(34)  ][ 9:  
+           wind_dir_speed<4>(54) wind_dir_speed<4>(33)  ][ 10: wind_dir_speed<3>(55) wind_dir_speed<3>(32)  ] 
+           [ 11: wind_dir_speed<2>(56) wind_dir_speed<2>(31)  ][ 12: U1/U_counter_5bit/count_int<0>(57) (30)  
+            ][ 13: U1/speed_code<0>(58)  ][ 14: U1/U_counter_5bit/counter_rst_delay(59)  ][ 15:  
+           U1/U_freq_divider/count_int<0>(60)  ]
+----------------- B l o c k 1 ------------------
+PLApt(34/56), Fanin(20/38), Clk(1/3), Bct(0/4), Pin(9/9), Mcell(16/16)
+PLApts[34/53] 29 52 61 23 53 62 37 45 48 56 35 51 57 18 19 20 91 21 39 90 50 33 3 55 27 79 80 () 92 () () () 
+              () () 89 () () () () () 88 () () 3 () () 22 () () 87 () () 78
+Fanins[20] U1/U_freq_divider/count_int<0>.n U1/U_freq_divider/count_int<1>.n U1/U_freq_divider/count_int<2>.n 
+           U1/U_freq_divider/count_int<3>.n U1/U_freq_divider/count_int<4>.n U1/U_freq_divider/count_int<5>.n 
+           U1/U_freq_divider/count_int<6>.n U1/U_risingedge_detector/anemometer_reg.n U1/speed_code<0>.n 
            U1/speed_code<1>.n U1/speed_code<2>.n U1/speed_code<3>.n U1/speed_code<4>.n anemometer.p 
            code_select.p mode_select.p weathercock<0>.p weathercock<1>.p weathercock<2>.p weathercock<3>.p
 clk[1] clock 
@@ -90,28 +52,65 @@ CTR:
 CTS: 
 CTE: 
 vref: [0]
-Signal[20] [code_wind_speed<0>(82),code_wind_speed<0>(23)] [code_wind_speed<1>(78),code_wind_speed<1>(28)]  
-           [code_wind_speed<2>(77),code_wind_speed<2>(29)] [wind_dir_speed<1>(79),wind_dir_speed<1>(27)]  
-           [wind_dir_speed<6>(86),wind_dir_speed<6>(22)] [mode_select(21)] [weathercock<0>(20)]  
-           [weathercock<1>(19)] [weathercock<2>(18)] [U1/counter_ena(92)] [U1/speed_code<2>(89)]  
-           [U1/speed_code<3>(85)] [U1/speed_code<4>(84)] [U1/U_counter_5bit/count_int<0>(83)]  
-           [U1/U_freq_divider/count_int<9>(81)] [U1/U_freq_divider/count_int<10>(80)]  
-           [U1/U_freq_divider/count_int<11>(91)] [U1/U_freq_divider/count_int<12>(90)]  
-           [U1/U_freq_divider/count_int<13>(88)] [U1/U_freq_divider/count_int<14>(87)] 
-Signal[20] [ 0: code_wind_speed<2>(77) code_wind_speed<2>(29)  ][ 1: code_wind_speed<1>(78)  
-           code_wind_speed<1>(28)  ][ 2: wind_dir_speed<1>(79) wind_dir_speed<1>(27)  ][ 3:  
-           U1/U_freq_divider/count_int<10>(80)  ][ 4: U1/U_freq_divider/count_int<9>(81)  ][ 5:  
-           code_wind_speed<0>(82) code_wind_speed<0>(23)  ][ 6: U1/U_counter_5bit/count_int<0>(83)  ][ 7:  
-           U1/speed_code<4>(84)  ][ 8: U1/speed_code<3>(85)  ][ 9: wind_dir_speed<6>(86)  
-           wind_dir_speed<6>(22)  ][ 10: U1/U_freq_divider/count_int<14>(87) mode_select(21)  ][ 11:  
-           U1/U_freq_divider/count_int<13>(88) weathercock<0>(20)  ][ 12: U1/speed_code<2>(89)  ][ 13:  
-           U1/U_freq_divider/count_int<12>(90) weathercock<1>(19)  ][ 14:  
-           U1/U_freq_divider/count_int<11>(91) weathercock<2>(18)  ][ 15: U1/counter_ena(92)  ]
+Signal[17] [wind_dir_speed<11>(65),wind_dir_speed<11>(41)] [wind_dir_speed<15>(72),wind_dir_speed<15>(2)]  
+           [wind_dir_speed<13>(68),wind_dir_speed<13>(44)] [wind_dir_speed<9>(61),wind_dir_speed<9>(39)]  
+           [code_wind_speed<0>(73),code_wind_speed<0>(3)] [wind_dir_speed<10>(62),wind_dir_speed<10>(40)]  
+           [wind_dir_speed<14>(70),wind_dir_speed<14>(1)] [wind_dir_speed<12>(66),wind_dir_speed<12>(42)]  
+           [clock(43)] [U1/counter_ena(76)] [U1/U_freq_divider/count_int<1>(75)]  
+           [U1/U_freq_divider/count_int<2>(74)] [U1/U_freq_divider/count_int<3>(71)]  
+           [U1/U_freq_divider/count_int<4>(69)] [U1/U_freq_divider/count_int<5>(64)]  
+           [U1/U_freq_divider/count_int<6>(63)] [U1/U_freq_divider/count_int<7>(67)] 
+Signal[17] [ 0: wind_dir_speed<9>(61) wind_dir_speed<9>(39)  ][ 1: wind_dir_speed<10>(62)  
+           wind_dir_speed<10>(40)  ][ 2: U1/U_freq_divider/count_int<6>(63)  ][ 3:  
+           U1/U_freq_divider/count_int<5>(64)  ][ 4: wind_dir_speed<11>(65) wind_dir_speed<11>(41)  ][ 5:  
+           wind_dir_speed<12>(66) wind_dir_speed<12>(42)  ][ 6: U1/U_freq_divider/count_int<7>(67) clock(43)  
+            ][ 7: wind_dir_speed<13>(68) wind_dir_speed<13>(44)  ][ 8: U1/U_freq_divider/count_int<4>(69)  ] 
+           [ 9: wind_dir_speed<14>(70) wind_dir_speed<14>(1)  ][ 10: U1/U_freq_divider/count_int<3>(71)  ] 
+           [ 11: wind_dir_speed<15>(72) wind_dir_speed<15>(2)  ][ 12: code_wind_speed<0>(73)  
+           code_wind_speed<0>(3)  ][ 13: U1/U_freq_divider/count_int<2>(74)  ][ 14:  
+           U1/U_freq_divider/count_int<1>(75)  ][ 15: U1/counter_ena(76)  ]
+----------------- B l o c k 2 ------------------
+PLApt(21/56), Fanin(31/38), Clk(1/3), Bct(0/4), Pin(5/9), Mcell(16/16)
+PLApts[21/56] 34 47 49 54 24 70 71 72 () () () () () 102 () () () () () 96 () () 95 () () 101 () () 94 () () 
+              93 () () 77 () () 100 () () 99 () () 98 () () 77 () () 97 () () () () () 77
+Fanins[31] U1/U_counter_5bit/count_int<2>.n U1/U_counter_5bit/count_int<3>.n U1/U_counter_5bit/count_int<4>.n 
+           U1/U_freq_divider/count_int<0>.n U1/U_freq_divider/count_int<10>.n 
+           U1/U_freq_divider/count_int<11>.n U1/U_freq_divider/count_int<12>.n 
+           U1/U_freq_divider/count_int<13>.n U1/U_freq_divider/count_int<14>.n 
+           U1/U_freq_divider/count_int<15>.n U1/U_freq_divider/count_int<16>.n 
+           U1/U_freq_divider/count_int<1>.n U1/U_freq_divider/count_int<2>.n U1/U_freq_divider/count_int<3>.n 
+           U1/U_freq_divider/count_int<4>.n U1/U_freq_divider/count_int<5>.n U1/U_freq_divider/count_int<6>.n 
+           U1/U_freq_divider/count_int<7>.n U1/U_freq_divider/count_int<8>.n U1/U_freq_divider/count_int<9>.n 
+           U1/counter_rst.n U1/speed_code<0>.n U1/speed_code<1>.n U1/speed_code<2>.n U1/speed_code<3>.n 
+           U1/speed_code<4>.n mode_select.p weathercock<0>.p weathercock<1>.p weathercock<2>.p 
+           weathercock<3>.p
+clk[1] clock 
+CTC: 
+CTR: 
+CTS: 
+CTE: 
+vref: [0]
+Signal[19] [wind_dir_speed<1>(77),wind_dir_speed<1>(29)] [wind_dir_speed<0>(79),wind_dir_speed<0>(27)]  
+           [code_select(20)] [mode_select(22)] [U1/U_risingedge_detector/anemometer_reg,anemometer(18)]  
+           [U1/speed_code<2>(92)] [U1/speed_code<3>(89)] [U1/speed_code<4>(85)]  
+           [U1/U_freq_divider/count_int<8>(84)] [U1/U_freq_divider/count_int<9>(83)]  
+           [U1/U_freq_divider/count_int<10>(81)] [U1/U_freq_divider/count_int<11>(80)]  
+           [U1/U_freq_divider/count_int<12>(90)] [U1/U_freq_divider/count_int<13>(88)]  
+           [U1/U_freq_divider/count_int<14>(87)] [U1/U_freq_divider/count_int<15>(86)]  
+           [U1/U_freq_divider/count_int<16>(82)] [U1/U_freq_divider/count_int<17>(78)] 
+Signal[19] [ 0: wind_dir_speed<1>(77) wind_dir_speed<1>(29)  ][ 1: U1/U_freq_divider/count_int<17>(78) (28)  
+            ][ 2: wind_dir_speed<0>(79) wind_dir_speed<0>(27)  ][ 3: U1/U_freq_divider/count_int<11>(80)  ] 
+           [ 4: U1/U_freq_divider/count_int<10>(81)  ][ 5: U1/U_freq_divider/count_int<16>(82) (23)  ][ 6:  
+           U1/U_freq_divider/count_int<9>(83)  ][ 7: U1/U_freq_divider/count_int<8>(84)  ][ 8:  
+           U1/speed_code<4>(85)  ][ 9: U1/U_freq_divider/count_int<15>(86) mode_select(22)  ][ 10:  
+           U1/U_freq_divider/count_int<14>(87) (21)  ][ 11: U1/U_freq_divider/count_int<13>(88)  
+           code_select(20)  ][ 12: U1/speed_code<3>(89)  ][ 13: U1/U_freq_divider/count_int<12>(90) (19)  ] 
+           [ 14: U1/U_risingedge_detector/anemometer_reg(91) anemometer(18)  ][ 15: U1/speed_code<2>(92)  ]
 ----------------- B l o c k 3 ------------------
-PLApt(8/56), Fanin(22/38), Clk(1/3), Bct(0/4), Pin(2/7), Mcell(8/16)
-PLApts[8/56] () () () () () () () () () () () () () () () () () () () 107 () () 106 () () 105 () () () () () 
-             104 () () 103 () () 102 () () () () () 101 () () () () () () () () () () () 100
-Fanins[22] U1/U_freq_divider/count_int<0>.n U1/U_freq_divider/count_int<10>.n 
+PLApt(14/56), Fanin(32/38), Clk(1/3), Bct(0/4), Pin(7/7), Mcell(8/16)
+PLApts[14/56] 16 17 63 65 15 4 67 () () () 9 () () 6 () () () () () () () () () () () () () () () () () 107 
+              () () 106 () () 105 () () () () () 104 () () () () () () () () () () () 103
+Fanins[32] U1/U_freq_divider/count_int<0>.n U1/U_freq_divider/count_int<10>.n 
            U1/U_freq_divider/count_int<11>.n U1/U_freq_divider/count_int<12>.n 
            U1/U_freq_divider/count_int<13>.n U1/U_freq_divider/count_int<14>.n 
            U1/U_freq_divider/count_int<15>.n U1/U_freq_divider/count_int<16>.n 
@@ -120,19 +119,23 @@ Fanins[22] U1/U_freq_divider/count_int<0>.n U1/U_freq_divider/count_int<10>.n
            U1/U_freq_divider/count_int<20>.n U1/U_freq_divider/count_int<21>.n 
            U1/U_freq_divider/count_int<2>.n U1/U_freq_divider/count_int<3>.n U1/U_freq_divider/count_int<4>.n 
            U1/U_freq_divider/count_int<5>.n U1/U_freq_divider/count_int<6>.n U1/U_freq_divider/count_int<7>.n 
-           U1/U_freq_divider/count_int<8>.n U1/U_freq_divider/count_int<9>.n
+           U1/U_freq_divider/count_int<8>.n U1/U_freq_divider/count_int<9>.n U1/speed_code<0>.n 
+           U1/speed_code<1>.n U1/speed_code<2>.n U1/speed_code<3>.n U1/speed_code<4>.n code_select.p 
+           mode_select.p weathercock<1>.p weathercock<2>.p weathercock<3>.p
 clk[1] clock 
 CTC: 
 CTR: 
 CTS: 
 CTE: 
 vref: [0]
-Signal[10] [code_select(5)] [weathercock<3>(6)] [U1/U_freq_divider/count_int<15>(108)]  
-           [U1/U_freq_divider/count_int<16>(104)] [U1/U_freq_divider/count_int<17>(102)]  
-           [U1/U_freq_divider/count_int<18>(101)] [U1/U_freq_divider/count_int<19>(100)]  
-           [U1/U_freq_divider/count_int<20>(98)] [U1/U_freq_divider/count_int<21>(97)] [U1/counter_rst(96)] 
-Signal[10] [ 0: code_select(5)  ][ 1: weathercock<3>(6)  ][ 2:  ][ 3: U1/counter_rst(96)  ][ 4:  
-           U1/U_freq_divider/count_int<21>(97)  ][ 5: U1/U_freq_divider/count_int<20>(98)  ][ 6: (8)  ][ 7:  
-           U1/U_freq_divider/count_int<19>(100)  ][ 8: U1/U_freq_divider/count_int<18>(101)  ][ 9:  
-           U1/U_freq_divider/count_int<17>(102)  ][ 10: (12)  ][ 11: U1/U_freq_divider/count_int<16>(104)  ] 
-           [ 12: (13)  ][ 13: (14)  ][ 14: (16)  ][ 15: U1/U_freq_divider/count_int<15>(108)  ]
+Signal[12] [code_wind_speed<1>(93),code_wind_speed<1>(5)] [code_wind_speed<2>(94),code_wind_speed<2>(6)]  
+           [code_wind_speed<3>(99),code_wind_speed<3>(8)] [weathercock<0>(12)] [weathercock<1>(13)]  
+           [weathercock<2>(14)] [weathercock<3>(16)] [U1/U_freq_divider/count_int<18>(108)]  
+           [U1/U_freq_divider/count_int<19>(104)] [U1/U_freq_divider/count_int<20>(102)]  
+           [U1/U_freq_divider/count_int<21>(101)] [U1/counter_rst(100)] 
+Signal[12] [ 0: code_wind_speed<1>(93) code_wind_speed<1>(5)  ][ 1: code_wind_speed<2>(94)  
+           code_wind_speed<2>(6)  ][ 2:  ][ 3:  ][ 4:  ][ 5:  ][ 6: code_wind_speed<3>(99)  
+           code_wind_speed<3>(8)  ][ 7: U1/counter_rst(100)  ][ 8: U1/U_freq_divider/count_int<21>(101)  ] 
+           [ 9: U1/U_freq_divider/count_int<20>(102)  ][ 10: weathercock<0>(12)  ][ 11:  
+           U1/U_freq_divider/count_int<19>(104)  ][ 12: weathercock<1>(13)  ][ 13: weathercock<2>(14)  ] 
+           [ 14: weathercock<3>(16)  ][ 15: U1/U_freq_divider/count_int<18>(108)  ]
